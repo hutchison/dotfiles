@@ -1,9 +1,14 @@
 set nocompatible
 
+let mapleader=','
+
 set number
 set numberwidth=4
 set ruler
 set scrolloff=5
+
+set encoding=utf-8
+set showmode
 
 syntax on
 filetype plugin indent on
@@ -17,26 +22,25 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 set fileformats=unix,dos,mac
-set autochdir
+"set autochdir
 
 set hidden
 set mouse=a
 set wildmenu
+set wildmode=list:longest
 
 set incsearch
 set hlsearch
 set showmatch
 set ignorecase
 set smartcase
+" setzt automatisch das g Flag bei Textersetzungen:
+set gdefault
 
 colorscheme wombat
 set background=light
 if has("gui_running")
     colorscheme xoria256
-endif
-
-if has("autocmd")
-    autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
 set backspace=indent,eol,start
@@ -66,12 +70,9 @@ noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 "vmap ,c :w !pbcopy<CR><CR>
 "nmap ,v :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
-" my mapleader
-let mapleader = ","
-
 "latex:
 let g:tex_flavor='latex'
-map <leader>t <ESC>:!pdflatex %<CR><CR>
+map <leader>t <ESC>:!pdflatex %<CR><CR> 
 map <leader>z <ESC>:!ps4pdf %<CR><CR> 
 
 "make:
@@ -97,6 +98,5 @@ nmap <M-right> <ESC>:bnext<CR>
 nmap <M-left> <ESC>:bprevious<CR>
 nmap <M-l> <ESC>:bnext<CR>
 nmap <M-h> <ESC>:bprevious<CR>
-
-".vimrc einfach editieren:
-nmap <leader>v :e $MYVIMRC<CR>
+nmap <leader>x <ESC>:bnext<CR>
+nmap <leader>y <ESC>:bprevious<CR>
