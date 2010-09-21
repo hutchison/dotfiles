@@ -29,10 +29,14 @@ set showmatch
 set ignorecase
 set smartcase
 
-set background=dark
 colorscheme wombat
+set background=light
 if has("gui_running")
     colorscheme xoria256
+endif
+
+if has("autocmd")
+    autocmd bufwritepost .vimrc source $MYVIMRC
 endif
 
 set backspace=indent,eol,start
@@ -62,31 +66,37 @@ noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 "vmap ,c :w !pbcopy<CR><CR>
 "nmap ,v :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
+" my mapleader
+let mapleader = ","
+
 "latex:
 let g:tex_flavor='latex'
-map ,t <ESC>:!pdflatex %<CR><CR> 
-map ,z <ESC>:!ps4pdf %<CR><CR> 
+map <leader>t <ESC>:!pdflatex %<CR><CR>
+map <leader>z <ESC>:!ps4pdf %<CR><CR> 
 
 "make:
-map ,m <ESC>:!make<CR><CR>
+map <leader>m <ESC>:!make<CR><CR>
 
-"haskell, ghci:
-map ,g <ESC>:!ghci %<CR><CR>
+"haskell<leader> ghci:
+map <leader>g <ESC>:!ghci %<CR><CR>
 
 "java
-map ,j <ESC>:!javac -verbose %<CR>
+map <leader>j <ESC>:!javac -verbose %<CR>
 
 "gcc
-map ,b <ESC>:!gcc -Wall <C-R>=expand("%:t")<CR><CR><CR>
-map ,a <ESC>:!./a.out<CR>
+map <leader>b <ESC>:!gcc -Wall <C-R>=expand("%:t")<CR><CR><CR>
+map <leader>a <ESC>:!./a.out<CR>
 
 "coole vsplit maps:
 "verschiebt den Mittelbalken nach links bzw. rechts
-nmap ,- <C-W><
-nmap ,+ <C-W>>
+nmap <leader>- <C-W><
+nmap <leader>+ <C-W>>
 
 "buffer movement:
 nmap <M-right> <ESC>:bnext<CR>
 nmap <M-left> <ESC>:bprevious<CR>
 nmap <M-l> <ESC>:bnext<CR>
 nmap <M-h> <ESC>:bprevious<CR>
+
+".vimrc einfach editieren:
+nmap <leader>v :e $MYVIMRC<CR>

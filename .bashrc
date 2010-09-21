@@ -105,11 +105,11 @@ fi
 alias dimmer='redshift -l 54:12 -t 5700:4000 &'
 alias install='sudo apt-get install'
 alias g='gvim --remote-silent'
-alias vimrc='g ~/.vimrc'
+alias vimrc='vim ~/.vimrc'
 alias open='gnome-open'
 
 alias mathe='cd ~/Dropbox/Studium/Mathematik/'
-alias info='cd ~/Dropbox/Studium/Informatik/'
+alias inf='cd ~/Dropbox/Studium/Informatik/'
 
 #random Futurama quote:
 function futurama() { curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2; }
