@@ -7,6 +7,8 @@ set numberwidth=4
 set ruler
 set scrolloff=5
 
+set textwidth=200
+
 set encoding=utf-8
 set showmode
 
@@ -100,3 +102,6 @@ nmap <M-l> <ESC>:bnext<CR>
 nmap <M-h> <ESC>:bprevious<CR>
 nmap <leader>x <ESC>:bnext<CR>
 nmap <leader>y <ESC>:bprevious<CR>
+
+"Datum einfügen
+nmap <leader>d "=strftime("%Y-%m-%d %H:%M:%S")<CR>p

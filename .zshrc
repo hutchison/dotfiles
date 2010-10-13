@@ -15,5 +15,9 @@ alias ls="ls --color=auto"
 alias la="ls -a"
 alias ll="ls -al"
 alias vi="vim"
+alias g="gvim --remote-silent"
+
+alias dimmer='redshift -l 54:12 -t 5700:4000 &'
+alias open='gnome-open'
 
 export PS1="[%*]%~) "
