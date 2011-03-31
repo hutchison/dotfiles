@@ -40,7 +40,7 @@ set smartcase
 set gdefault
 
 colorscheme wombat
-set background=light
+set background=dark
 if has("gui_running")
     colorscheme xoria256
 endif
@@ -49,8 +49,8 @@ set backspace=indent,eol,start
 
 set nostartofline
 
-set listchars=tab:>-,trail:- " show tabs and trailing 
-set list " we do what to show tabs, to ensure we get them out of my files 
+set listchars=tab:>-,trail:- " show tabs and trailing
+set list " we do what to show tabs, to ensure we get them out of my files
 set shortmess=aOstT
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 set laststatus=2
@@ -74,8 +74,9 @@ noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 "latex:
 let g:tex_flavor='latex'
-map <leader>t <ESC>:!pdflatex %<CR><CR> 
-map <leader>z <ESC>:!ps4pdf %<CR><CR> 
+map <leader>t <ESC>:!pdflatex %<CR><CR>
+map <leader>z <ESC>:!ps4pdf %<CR><CR>
+vmap <leader>f <ESC>`>a}<ESC>`<i\textbf{<ESC>f}
 
 "make:
 map <leader>m <ESC>:!make<CR><CR>
@@ -105,3 +106,8 @@ nmap <leader>y <ESC>:bprevious<CR>
 
 "Datum einfügen
 nmap <leader>d "=strftime("%Y/%m/%d %H:%M:%S")<CR>p
+
+" Octave Syntax
+augroup filetypedetect
+    au! BufRead,BufNewFile *.m setfiletype octave
+augroup END
