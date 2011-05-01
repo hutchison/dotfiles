@@ -14,6 +14,9 @@ do
             mv -fv $(basename $f){,.bak}
         fi
     fi
-    #Softlinks erstellen:
-    ln -sv $f $(basename $f)
+    #Softlinks erstellen, aber nur wenn sie noch nicht existieren:
+    if [ ! -e $(basename $f) ];
+    then
+        ln -sv $f $(basename $f)
+    fi
 done
