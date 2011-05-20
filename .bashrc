@@ -1,5 +1,5 @@
 export HISTCONTROL=ignoreboth
-export PS1='\u@\h [\t] \w) '
+export PS1="\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w: "
 
 shopt -s histappend cdspell checkwinsize
 
