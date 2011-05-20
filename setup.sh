@@ -20,3 +20,6 @@ do
         ln -sv $f $(basename $f)
     fi
 done
+
+mkdir ~/.vim/backup
+mkdir ~/.vim/tmp
