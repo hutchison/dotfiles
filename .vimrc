@@ -7,7 +7,7 @@ set numberwidth=4
 set ruler
 set scrolloff=5
 
-set textwidth=200
+set textwidth=130
 
 set encoding=utf-8
 set showmode
