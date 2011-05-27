@@ -2,10 +2,12 @@ export HISTCONTROL=ignoreboth
 export PS1="\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w: "
 export PATH=$PATH:/opt/local/bin
 
+# Farben auf dem Terminal
+export CLICOLOR=1
+
 shopt -s histappend cdspell checkwinsize
 
 # some more ls aliases
-alias ls='ls -G'
 alias ll='ls -lhF'
 alias la='ls -AF'
 alias l='ls -CF'
