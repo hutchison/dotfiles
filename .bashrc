@@ -4,6 +4,11 @@ export PATH=$PATH:/opt/local/bin
 
 # Farben auf dem Terminal
 export CLICOLOR=1
+# falls 'ls' die Option '--color' versteht, wird $? auf 0 gesetzt, ansonsten auf 2
+ls --color=auto ~ > /dev/null 2> /dev/null
+if [ $? == 0 ]; then
+    alias ls='ls --color=auto'
+fi
 
 shopt -s histappend cdspell checkwinsize
 
