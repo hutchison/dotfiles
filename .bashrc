@@ -1,6 +1,12 @@
 export HISTCONTROL=ignoreboth
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 export PS1="\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w: "
 export PATH=$PATH:/opt/local/bin
+
+# Completion:
+if [ -f /etc/bash_completion ]; then
+    . /etc/bash_completion
+fi
 
 # Farben auf dem Terminal
 export CLICOLOR=1
@@ -35,3 +41,6 @@ function futurama() { curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 
 
 #eckige Klammern entfernen:
 function removebrackets() { rename 's/\[.*\]\_//' *; }
+
+# öffentliche IP-Adresse:
+alias myip='curl ifconfig.me'
