@@ -7,8 +7,6 @@ set numberwidth=4
 set ruler
 set scrolloff=5
 
-set textwidth=130
-
 set encoding=utf-8
 set showmode
 
@@ -57,11 +55,14 @@ set laststatus=2
 
 set nofen
 
-set shiftwidth=4
 set softtabstop=4
-set expandtab
+set noexpandtab
 set tabstop=8
+set shiftwidth=8
 set linebreak
+set textwidth=78
+set autoindent smartindent
+set smarttab
 
 "schaltet hlsearch aus
 noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
