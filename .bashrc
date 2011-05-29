@@ -2,6 +2,7 @@ export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 export PS1="\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w: "
 export PATH=$PATH:/opt/local/bin
+export LANG="de_DE.utf8"
 
 # Completion:
 if [ -f /etc/bash_completion ]; then
@@ -27,11 +28,22 @@ alias l='ls -CF'
 export EDITOR=vim
 export HISTCONTROL=ignoredups
 
+if [ "$TERM_PROGRAM" = "Apple_Terminal" ];
+then
+    alias g='mvim --remote-silent';
+    alias install='sudo port install';
+else
+    alias install='sudo apt-get install';
+    alias g='gvim --remote-silent';
+    alias open='gnome-open';
+fi
+
 alias dimmer='redshift -l 54:12 -t 5700:4000 &'
-alias install='sudo apt-get install'
-alias g='gvim --remote-silent'
+alias e='$EDITOR'
 alias vimrc='vim ~/.vimrc'
-alias open='gnome-open'
+
+# start bc with math library and in quiet mode
+alias bc="bc -lq"
 
 alias mathe='cd ~/Dropbox/Studium/Mathematik/'
 alias inf='cd ~/Dropbox/Studium/Informatik/'
