@@ -55,12 +55,12 @@ set laststatus=2
 
 set nofen
 
-set softtabstop=4
+"set softtabstop=4
 set noexpandtab
-set tabstop=8
-set shiftwidth=8
+set tabstop=4
+set shiftwidth=4
 set linebreak
-set textwidth=78
+set textwidth=100
 set autoindent smartindent
 set smarttab
 
