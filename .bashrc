@@ -10,6 +10,10 @@ if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
 source ~/dotfiles/git-completion.bash
+# zeigt an, ob in einem git-repo was geändert wurde:
+# '*' für unstaged
+# '+' für staged
+GIT_PS1_SHOWDIRTYSTATE=1
 
 # Farben auf dem Terminal
 export CLICOLOR=1
