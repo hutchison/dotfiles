@@ -1,6 +1,6 @@
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
-export PS1="\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w: "
+export PS1='\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w$(__git_ps1 " (%s)"): '
 export PATH=$PATH:/opt/local/bin
 export LANG="de_DE.utf8"
 export LC_ALL="de_DE.utf8"
