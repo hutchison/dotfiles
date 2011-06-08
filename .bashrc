@@ -33,7 +33,7 @@ alias l='ls -CF'
 export EDITOR=vim
 export HISTCONTROL=ignoredups
 
-if [ "$TERM_PROGRAM" = "Apple_Terminal" ];
+if [ $(uname) == "Darwin" ];
 then
     alias g='mvim --remote-silent';
     alias install='sudo port install';
