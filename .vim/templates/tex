@@ -107,8 +107,9 @@ a4paper, %apaper,	% alle weiteren Papierformat einstellbar
 %% Lochmarken; auskommentieren, falls unerwünscht
 \usepackage{eso-pic}
 \AddToShipoutPicture*{
-	\put(\LenToUnit{0mm},\LenToUnit{228.5mm}){\rule{\LenToUnit{20pt}}{\LenToUnit{0.5pt}}}
-	\put(\LenToUnit{0mm},\LenToUnit{68.5mm}){\rule{\LenToUnit{20pt}}{\LenToUnit{0.5pt}}}
+	\put(\LenToUnit{0mm},\LenToUnit{68.5mm}){\rule{\LenToUnit{15pt}}{\LenToUnit{0.5pt}}}
+	\put(\LenToUnit{0mm},\LenToUnit{148.5mm}){\rule{\LenToUnit{20pt}}{\LenToUnit{0.5pt}}}
+	\put(\LenToUnit{0mm},\LenToUnit{228.5mm}){\rule{\LenToUnit{15pt}}{\LenToUnit{0.5pt}}}
 }
 
 \begin{document}
