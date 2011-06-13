@@ -62,3 +62,7 @@ function removebrackets() { rename 's/\[.*\]\_//' *; }
 
 # öffentliche IP-Adresse:
 alias myip='curl ifconfig.me'
+
+# content search
+# [http://www.commandlinefu.com/commands/view/8615/content-search.]
+ff() { local IFS='|'; grep -rinE "$*" . ; }
