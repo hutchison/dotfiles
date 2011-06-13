@@ -1,8 +1,8 @@
 export HISTCONTROL=ignoreboth
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S "
 export PS1='\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w$(__git_ps1 " (%s)"): '
-export PATH=$PATH:/opt/local/bin
 export LC_ALL="de_DE.UTF-8"
+export PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:/usr/texbin:/usr/X11/bin"
 
 # Completion:
 if [ -f /etc/bash_completion ]; then
@@ -46,6 +46,7 @@ fi
 alias dimmer='redshift -l 54:12 -t 5700:4000 &'
 alias e='$EDITOR'
 alias vimrc='vim ~/.vimrc'
+alias py='python2.7'
 
 # start bc with math library and in quiet mode
 alias bc="bc -lq"
