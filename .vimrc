@@ -13,9 +13,6 @@ set showmode
 syntax on
 filetype plugin indent on
 
-"set spell
-"set spelllang=de
-
 set clipboard=unnamed
 
 set backup
@@ -23,6 +20,10 @@ set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 set fileformats=unix,dos,mac
 "set autochdir
+
+" hab ich noch drin, falls man es mal braucht
+"set spell
+"set spelllang=de
 
 set hidden
 set mouse=a
@@ -47,15 +48,14 @@ set backspace=indent,eol,start
 
 set nostartofline
 
-set listchars=tab:>-,trail:- " show tabs and trailing
-set list " we do what to show tabs, to ensure we get them out of my files
+" von hukl:
+set list listchars=tab:»·,trail:·
 set shortmess=aOstT
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
 set laststatus=2
 
 set nofen
 
-"set softtabstop=4
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
@@ -66,12 +66,6 @@ set smarttab
 
 "schaltet hlsearch aus
 noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-
-"copy & paste
-"kopiert die ganze Zeile: (mac-spezifisch)
-"nmap ,c :.w !pbcopy<CR><CR>
-"vmap ,c :w !pbcopy<CR><CR>
-"nmap ,v :set paste<CR>:r !pbpaste<CR>:set nopaste<CR>
 
 "latex:
 let g:tex_flavor='latex'
