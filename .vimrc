@@ -38,10 +38,10 @@ set smartcase
 " setzt automatisch das g Flag bei Textersetzungen:
 set gdefault
 
-colorscheme wombat
+colorscheme solarized
 set background=dark
 if has("gui_running")
-    colorscheme xoria256
+    colorscheme koehler
 endif
 
 set backspace=indent,eol,start
