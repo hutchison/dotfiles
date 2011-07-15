@@ -4,7 +4,6 @@ export PS1='\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w$(__git_ps1 "
 export LC_ALL="de_DE.UTF-8"
 PATH="/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/local/bin:/usr/texbin:/usr/X11/bin"
 export PATH="$PATH:~/.local/bin"
-#export TEXINPUTS="$TEXINPUTS:.:/home/hutch/.tex"
 
 # Completion:
 if [ -f /etc/bash_completion ]; then
@@ -40,8 +39,8 @@ then
     alias g='mvim --remote-silent';
     alias install='sudo port install';
 else
-    alias install='sudo apt-get install';
     alias g='gvim --remote-silent';
+    alias install='sudo apt-get install';
     alias open='gnome-open';
 fi
 
