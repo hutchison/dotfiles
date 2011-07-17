@@ -39,8 +39,8 @@ then
     alias g='mvim --remote-silent';
     alias install='sudo port install';
 else
-    alias install='sudo apt-get install';
     alias g='gvim --remote-silent';
+    alias install='sudo apt-get install';
     alias open='gnome-open';
 fi
 

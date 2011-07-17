@@ -39,12 +39,10 @@ set smartcase
 set gdefault
 
 " neues colorscheme, Testphase!
-"colorscheme wombat
 colorscheme solarized
 set background=dark
 if has("gui_running")
-	"colorscheme xoria256
-	colorscheme solarized
+    colorscheme koehler
 endif
 
 set backspace=indent,eol,start
