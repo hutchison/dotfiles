@@ -38,6 +38,7 @@ set smartcase
 " setzt automatisch das g Flag bei Textersetzungen:
 set gdefault
 
+" neues colorscheme, Testphase!
 colorscheme solarized
 set background=dark
 if has("gui_running")
@@ -104,5 +105,5 @@ nmap <leader>d "=strftime("%Y/%m/%d %H:%M:%S")<CR>p
 
 " Octave Syntax
 augroup filetypedetect
-    au! BufRead,BufNewFile *.m setfiletype octave
+	au! BufRead,BufNewFile *.m setfiletype octave
 augroup END
