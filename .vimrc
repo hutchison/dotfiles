@@ -42,10 +42,12 @@ set gdefault
 colorscheme solarized
 set background=dark
 if has("gui_running")
-    colorscheme koehler
+	colorscheme koehler
 endif
-set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
-hi ColorColumn ctermbg=DarkRed guibg=DarkRed "überschreibt Werte vom colorscheme
+if version >= 730
+	set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
+	hi ColorColumn ctermbg=DarkRed guibg=DarkRed "überschreibt Werte vom colorscheme
+endif
 
 set backspace=indent,eol,start
 
