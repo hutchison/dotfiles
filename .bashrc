@@ -32,7 +32,6 @@ alias l='ls -CF'
 
 # bare vim as standard editor
 export EDITOR=vim
-export HISTCONTROL=ignoredups
 
 if [ $(uname) == "Darwin" ];
 then
