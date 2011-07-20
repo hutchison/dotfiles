@@ -44,6 +44,8 @@ set background=dark
 if has("gui_running")
     colorscheme koehler
 endif
+set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
+hi ColorColumn ctermbg=DarkRed guibg=DarkRed "überschreibt Werte vom colorscheme
 
 set backspace=indent,eol,start
 
