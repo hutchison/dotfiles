@@ -39,7 +39,8 @@ set smartcase
 set gdefault
 
 " neues colorscheme, Testphase!
-colorscheme solarized
+" zurück auf xoria256, solarized verträgt sich nicht mit dem Terminal von Lion
+colorscheme xoria256
 set background=dark
 if has("gui_running")
 	colorscheme koehler
