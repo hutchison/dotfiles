@@ -81,7 +81,7 @@ noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 let g:tex_flavor='latex'
 map <leader>t <ESC>:!pdflatex %<CR><CR>
 map <leader>z <ESC>:!ps4pdf %<CR><CR>
-vmap <leader>f <ESC>`>a}<ESC>`<i\textbf{<ESC>f}
+vmap <leader>b <ESC>`>a}<ESC>`<i\textbf{<ESC>f}
 
 "make:
 map <leader>m <ESC>:!make<CR><CR>
@@ -116,3 +116,6 @@ nmap <leader>d "=strftime("%Y/%m/%d %H:%M:%S")<CR>p
 augroup filetypedetect
 	au! BufRead,BufNewFile *.m setfiletype octave
 augroup END
+
+" zum Tag/Funktionsdef. springen:
+nmap <leader>f <C-]>
