@@ -38,10 +38,14 @@ set smartcase
 " setzt automatisch das g Flag bei Textersetzungen:
 set gdefault
 
-" neues colorscheme, Testphase!
-" zurück auf xoria256, solarized verträgt sich nicht mit dem Terminal von Lion
-colorscheme xoria256
+if &term == "xterm"
+	colorscheme koehler
+else
+	colorscheme xoria256
+endif
+
 set background=dark
+
 if has("gui_running")
 	colorscheme koehler
 endif
