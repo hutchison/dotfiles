@@ -21,8 +21,18 @@ GIT_PS1_SHOWDIRTYSTATE=1
 export CLICOLOR=1
 # falls 'ls' die Option '--color' versteht, wird $? auf 0 gesetzt, ansonsten auf 2
 ls --color=auto ~ > /dev/null 2> /dev/null
-if [ $? == 0 ]; then
+if [ $? == 0 ];
+then
     alias ls='ls --color=auto'
+fi
+
+# was nehmen wir um manpages zu betrachten?
+hash most > /dev/null 2> /dev/null
+if [ $? == 0 ];
+then # falls es 'most' gibt, wird's genommen
+	export PAGER="most"
+else # ansonsten bleiben wir beim langweiligen less
+	export PAGER="less"
 fi
 
 shopt -s histappend cdspell checkwinsize
