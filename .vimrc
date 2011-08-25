@@ -119,3 +119,6 @@ augroup END
 
 " zum Tag/Funktionsdef. springen:
 nmap <leader>f <C-]>
+
+" vimwiki config:
+let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
