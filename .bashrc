@@ -81,3 +81,7 @@ ff() { local IFS='|'; grep -rinE "$*" . ; }
 
 # translate a word from English to German:
 tw() { dict -d eng-deu $1; }
+
+# connect via rdesktop to appwts.uni-rostock.de
+alias appwts='rdesktop -d rechenzentrum -u md261 -g 90% appwts.uni-rostock.de'
+alias netwts='rdesktop -d rechenzentrum -u md261 -g 90% netwts.uni-rostock.de'
