@@ -416,3 +416,9 @@ if VimwikiGet('auto_export')
 endif
 
 " AUTOCOMMANDS }}}
+
+" INDENTATION {{{
+setlocal shiftwidth=2
+setlocal tabstop=2
+setlocal expandtab
+" INDENTATION }}}
