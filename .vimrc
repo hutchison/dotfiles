@@ -110,7 +110,8 @@ nmap <leader>x <ESC>:bnext<CR>
 nmap <leader>y <ESC>:bprevious<CR>
 
 "Datum einfügen
-nmap <leader>d "=strftime("%Y/%m/%d %H:%M:%S")<CR>p
+nmap <leader>d "=strftime("%Y-%m-%d %H:%M:%S")<CR>p
+imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
 
 " Octave Syntax
 augroup filetypedetect
