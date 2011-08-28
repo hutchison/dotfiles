@@ -61,7 +61,7 @@ set nostartofline
 " von hukl:
 set list listchars=tab:»·,trail:·
 set shortmess=aOstT
-set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]
+set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]%=#%n
 set laststatus=2
 
 set nofen
