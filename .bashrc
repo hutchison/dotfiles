@@ -27,13 +27,8 @@ then
 fi
 
 # was nehmen wir um manpages zu betrachten?
-hash most > /dev/null 2> /dev/null
-if [ $? == 0 ];
-then # falls es 'most' gibt, wird's genommen
-	export PAGER="most"
-else # ansonsten bleiben wir beim langweiligen less
-	export PAGER="less"
-fi
+# less! => less hat j/k Unterstützung, most nicht
+export PAGER="less"
 
 shopt -s histappend cdspell checkwinsize
 
