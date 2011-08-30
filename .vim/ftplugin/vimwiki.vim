@@ -405,6 +405,10 @@ nnoremap <silent><buffer> - :call vimwiki#base#RemoveHeaderLevel()<CR>
 
 " }}}
 
+" my bindings
+" create link out of visual selection
+vnoremap <leader>ww y:s/<C-R>"/[[<C-R>"]]/<CR>:nohlsearch<CR>
+
 " KEYBINDINGS }}}
 
 " AUTOCOMMANDS {{{
