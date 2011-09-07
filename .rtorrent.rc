@@ -1,1 +1,8 @@
 #safe_sync = yes
+check_hash = yes
+directory = "~/Downloads/"
+session = "~/.torrents/"
+encryption = allow_incoming, try_outgoing
+schedule = ratio, 60, 60, "stop_on_ratio = 200"
+upload_rate = 50
+key_layout = qwertz
