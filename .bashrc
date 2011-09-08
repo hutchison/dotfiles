@@ -1,8 +1,10 @@
 export HISTCONTROL=ignoreboth
 export PS1='\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w$(__git_ps1 " (%s)"): '
 export LC_ALL="de_DE.UTF-8"
-PATH="/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/texbin:/usr/X11/bin"
-export PATH="$PATH:~/.local/bin"
+PATH="/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"
+LOCALBIN="~/.local/bin"
+TEXBIN="/usr/local/texlive/2011/bin/x86_64-linux/"
+export PATH="$PATH:$LOCALBIN:$TEXBIN"
 # go files:
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
