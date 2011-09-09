@@ -3,7 +3,7 @@ export PS1='\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\][\t] \w$(__git_ps1 "
 export LC_ALL="de_DE.UTF-8"
 PATH="/opt/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/X11/bin"
 LOCALBIN="~/.local/bin"
-TEXBIN="/usr/local/texlive/2011/bin/x86_64-linux/"
+TEXBIN="/usr/local/texlive/2011/bin/x86_64-linux/:/usr/local/texlive/2011/bin/x86_64-darwin/"
 export PATH="$PATH:$LOCALBIN:$TEXBIN"
 # go files:
 export GOROOT=$HOME/go
@@ -82,3 +82,6 @@ tw() { dict -d eng-deu $1; }
 # connect via rdesktop to appwts.uni-rostock.de
 alias appwts='rdesktop -d rechenzentrum -u md261 -g 90% appwts.uni-rostock.de'
 alias netwts='rdesktop -d rechenzentrum -u md261 -g 90% netwts.uni-rostock.de'
+
+# convert flac to mp3
+flac2mp3() { for f in $1; do flac -cd "$f" | lame -h - "${f%.flac}.mp3"; done; }
