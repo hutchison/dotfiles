@@ -15,7 +15,7 @@ set showmode
 syntax on
 filetype plugin indent on
 
-set clipboard=unnamed
+"set clipboard=unnamed
 
 set backup
 set backupdir=~/.vim/backup
@@ -41,19 +41,19 @@ set smartcase
 set gdefault
 
 if &term == "xterm"
-	colorscheme koehler
+    colorscheme koehler
 else
-	colorscheme xoria256
+    colorscheme xoria256
 endif
 
 set background=dark
 
 if has("gui_running")
-	colorscheme xoria256
+    colorscheme xoria256
 endif
 if version >= 703
-	set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
-	hi ColorColumn ctermbg=DarkRed guibg=DarkRed "überschreibt Werte vom colorscheme
+    set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
+    hi ColorColumn ctermbg=DarkRed guibg=DarkRed "überschreibt Werte vom colorscheme
 endif
 
 set backspace=indent,eol,start
@@ -66,7 +66,7 @@ set shortmess=aOstT
 set statusline=%F%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]%=#%n
 set laststatus=2
 
-set nofen
+set nofoldenable
 
 set expandtab
 set tabstop=4
@@ -118,7 +118,7 @@ imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 
 " Octave Syntax
 augroup filetypedetect
-	au! BufRead,BufNewFile *.m setfiletype octave
+    au! BufRead,BufNewFile *.m setfiletype octave
 augroup END
 
 " zum Tag/Funktionsdef. springen:
