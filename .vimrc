@@ -31,7 +31,6 @@ set hidden
 set mouse=a
 set wildmenu
 set wildmode=list:longest
-
 set incsearch
 set hlsearch
 set showmatch
@@ -40,17 +39,13 @@ set smartcase
 " setzt automatisch das g Flag bei Textersetzungen:
 set gdefault
 
-if &term == "xterm"
-    colorscheme koehler
-else
-    colorscheme xoria256
-endif
+" die richtige Farbwahl:
+colorscheme xoria256
+set background=light
 
-set background=dark
-
-if has("gui_running")
-    colorscheme xoria256
-endif
+"if has("gui_running")
+"    colorscheme xoria256
+"endif
 if version >= 703
     set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
     hi ColorColumn ctermbg=DarkRed guibg=DarkRed "überschreibt Werte vom colorscheme
@@ -73,7 +68,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set linebreak
-set textwidth=100
+set textwidth=150
 set autoindent smartindent
 set smarttab
 
@@ -115,6 +110,7 @@ nmap <leader>y <ESC>:bprevious<CR>
 "Datum einfügen
 nmap <leader>d "=strftime("%Y-%m-%d %H:%M")<CR>p
 imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
+imap <silent> <C-D><C-F> <C-R>=strftime("[%H:%M] ")<CR>
 
 " Octave Syntax
 augroup filetypedetect

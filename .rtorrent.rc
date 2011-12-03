@@ -17,3 +17,7 @@ ratio.max.set=200
 
 # Changing the command triggered when the ratio is reached.
 system.method.set = group.seeding.ratio.command, d.close=, d.erase=
+
+# Watch a directory for new torrents, and stop those that have been deleted.
+schedule = watch_directory,5,5,load_start="~/Downloads/*.torrent"
+schedule = untied_directory,5,5,stop_untied=

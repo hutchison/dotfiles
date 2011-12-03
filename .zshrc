@@ -11,13 +11,13 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-alias ls="ls --color=auto"
+alias ls="ls -G"
 alias la="ls -a"
 alias ll="ls -al"
 alias vi="vim"
-alias g="gvim --remote-silent"
+alias g="mvim --remote-silent"
 
 alias dimmer='redshift -l 54:12 -t 5700:4000 &'
-alias open='gnome-open'
+#alias open='gnome-open'
 
 export PS1="[%*]%~) "
