@@ -82,7 +82,7 @@ map <leader>z <ESC>:!ps4pdf %<CR><CR>
 vmap <leader>b <ESC>`>a}<ESC>`<i\textbf{<ESC>f}
 
 "make:
-map <leader>m <ESC>:!make<CR><CR>
+nmap <leader>m :make<CR>
 
 "haskell<leader> ghci:
 map <leader>g <ESC>:!ghci %<CR><CR>
