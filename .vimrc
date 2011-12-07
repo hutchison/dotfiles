@@ -42,10 +42,10 @@ set gdefault
 " die richtige Farbwahl:
 colorscheme xoria256
 set background=light
+if has("gui_macvim")
+    colorscheme ir_black
+endif
 
-"if has("gui_running")
-"    colorscheme xoria256
-"endif
 if version >= 703
     set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
     hi ColorColumn ctermbg=DarkRed guibg=DarkRed "überschreibt Werte vom colorscheme
