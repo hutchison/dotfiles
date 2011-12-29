@@ -10,6 +10,7 @@ set ruler
 set scrolloff=5
 
 set encoding=utf-8
+set fileencoding=utf-8
 set showmode
 
 syntax on
@@ -122,3 +123,4 @@ nmap <leader>f <C-]>
 
 " vimwiki config:
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
+"let g:vimwiki_listsyms = '✗○◐●✓'

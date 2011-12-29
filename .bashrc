@@ -28,6 +28,9 @@ then
     alias ls='ls --color=auto'
 fi
 
+# zeigt in der PS1 nur die letzten 2 Verzeichnisse an:
+export PROMPT_DIRTRIM=2
+
 # was nehmen wir um manpages zu betrachten?
 # less! => less hat j/k Unterstützung, most nicht
 export PAGER="less"
