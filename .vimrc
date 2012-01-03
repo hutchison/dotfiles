@@ -41,8 +41,16 @@ set smartcase
 set gdefault
 
 " die richtige Farbwahl:
-colorscheme xoria256
-set background=light
+colorscheme default
+set background=dark
+if &term == "xterm"
+    colorscheme xoria256
+    set background=light
+endif
+if &term == "xterm-256color"
+    colorscheme xoria256
+    set background=light
+endif
 if has("gui_macvim")
     colorscheme ir_black
 endif
