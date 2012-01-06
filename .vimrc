@@ -44,14 +44,15 @@ set gdefault
 colorscheme default
 set background=dark
 if &term == "xterm"
-    colorscheme xoria256
+    set t_Co=256
+    colorscheme wombat
     set background=light
 endif
 if &term == "xterm-256color"
     colorscheme xoria256
     set background=light
 endif
-if has("gui_macvim")
+if has("gui_macvim") || has("gui_running")
     colorscheme ir_black
 endif
 
