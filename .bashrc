@@ -35,7 +35,8 @@ export PROMPT_DIRTRIM=2
 
 # was nehmen wir um manpages zu betrachten?
 # less! => less hat j/k Unterstützung, most nicht
-export PAGER="less"
+# export PAGER="less"
+export PAGER="vimpager"
 
 shopt -s histappend cdspell checkwinsize
 
@@ -46,6 +47,7 @@ alias l='ls -CF'
 
 # bare vim as standard editor
 export EDITOR=vim
+set editing-mode vi
 
 if [ $(uname) == "Darwin" ];
 then

@@ -10,7 +10,9 @@ set ruler
 set scrolloff=5
 
 set encoding=utf-8
-set fileencoding=utf-8
+if &readonly == 0
+    set fileencoding=utf-8
+endif
 set showmode
 
 syntax on
