@@ -15,6 +15,9 @@ export PATH=$PATH:$GOROOT/bin
 if [ -f /etc/bash_completion ]; then
     . /etc/bash_completion
 fi
+if [ -f /usr/local/etc/bash_completion ]; then
+    . /usr/local/etc/bash_completion
+fi
 source ~/dotfiles/git-completion.bash
 # zeigt an, ob in einem git-repo was geändert wurde:
 # '*' für unstaged
