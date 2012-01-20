@@ -61,6 +61,7 @@ fi
 
 alias dimmer='redshift -l 54:12 -t 5700:4000 &'
 alias e='$EDITOR'
+alias p='$PAGER'
 alias vimrc='vim ~/.vimrc'
 alias py='python2.7'
 
