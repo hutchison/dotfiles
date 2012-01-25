@@ -26,6 +26,9 @@ GIT_PS1_SHOWDIRTYSTATE=1
 
 # Farben auf dem Terminal
 export CLICOLOR=1
+if [ $COLORTERM == "gnome-terminal" ]; then
+    export TERM="xterm-256color"
+fi
 # falls 'ls' die Option '--color' versteht, wird $? auf 0 gesetzt, ansonsten auf 2
 ls --color=auto ~ > /dev/null 2> /dev/null
 if [ $? == 0 ];
