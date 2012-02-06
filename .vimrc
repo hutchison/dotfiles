@@ -69,7 +69,7 @@ set backspace=indent,eol,start
 set nostartofline
 
 " von hukl:
-set list listchars=tab:»·,trail:·,trail:∷
+set list listchars=tab:»·,trail:·
 set shortmess=aOstT
 "set statusline=%f%m%r%h%w[%L][%{&ff}]%y[%p%%][%04l,%04v]%=#%n
 
