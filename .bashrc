@@ -54,14 +54,17 @@ alias l='ls -CF'
 export EDITOR=vim
 set editing-mode vi
 
-if [ $(uname) == "Darwin" ];
-then
+if [ $(uname) == "Darwin" ]; then
     alias g='mvim --remote-silent';
-    alias install='sudo port install';
+    alias install='brew install';
 else
-    alias g='gvim --remote-silent';
-    alias install='sudo apt-get install';
-    alias open='gnome-open';
+    if [ $(hostname) == "fitzgerald" ]; then
+        alias g='gvim --remote-silent';
+        alias open='xdg-open';
+    else
+        alias install='sudo apt-get install';
+        alias open='gnome-open';
+    fi
 fi
 
 alias dimmer='redshift -l 54:12 -t 5700:4000 &'
