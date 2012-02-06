@@ -1,7 +1,7 @@
 export HISTCONTROL=ignoreboth
 export HISTFILESIZE=10000
 export HISTSIZE=10000
-export PS1='\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\]\t \w$(__git_ps1 " (%s)") → '
+export PS1='\[\e[0;32m\]\u\[\e[0m\]@\[\e[0;34m\]\h \[\e[0m\]\t \w$(__git_ps1 " (%s)") $(randompromptsymbol) '
 export LC_ALL="de_DE.UTF-8"
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11/bin"
 LOCALBIN="~/.local/bin"
@@ -26,13 +26,12 @@ GIT_PS1_SHOWDIRTYSTATE=1
 
 # Farben auf dem Terminal
 export CLICOLOR=1
-if [ $COLORTERM == "gnome-terminal" ]; then
+if [ "$COLORTERM" = "gnome-terminal" ]; then
     export TERM="xterm-256color"
 fi
 # falls 'ls' die Option '--color' versteht, wird $? auf 0 gesetzt, ansonsten auf 2
 ls --color=auto ~ > /dev/null 2> /dev/null
-if [ $? == 0 ];
-then
+if [ $? -eq 0 ]; then
     alias ls='ls --color=auto'
 fi
 
@@ -101,3 +100,10 @@ alias netwts='rdesktop -d rechenzentrum -u md261 -g 90% netwts.uni-rostock.de'
 flac2mp3() { for f in $1; do flac -cd "$f" | lame -h - "${f%.flac}.mp3"; done; }
 
 einschlafen() { sudo shutdown -s +$1; }
+
+function randompromptsymbol {
+    local symbols=(→ ⚛ ☀ ☆ ★ ☺ ☯ ☞ ▹ ♥ ♡ ⧴ ✪)
+    local l=${#symbols[*]}
+    local sym=${symbols[$(($RANDOM % $l))]}
+    echo $sym
+}
