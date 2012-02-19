@@ -6,7 +6,8 @@ export LC_ALL="de_DE.UTF-8"
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11/bin"
 LOCALBIN="~/.local/bin"
 TEXBIN="/usr/local/texlive/2011/bin/x86_64-linux/:/usr/local/texlive/2011/bin/x86_64-darwin/"
-export PATH="$PATH:$LOCALBIN:$TEXBIN"
+PERLBIN="/usr/bin/vendor_perl/"
+export PATH="$PATH:$LOCALBIN:$TEXBIN:$PERLBIN"
 # go files:
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
@@ -48,7 +49,7 @@ shopt -s histappend cdspell checkwinsize
 # some more ls aliases
 alias ll='ls -lhF'
 alias la='ls -AF'
-alias l='ls -CF'
+alias l='ls++'
 
 # bare vim as standard editor
 export EDITOR=vim
@@ -65,6 +66,13 @@ else
         alias install='sudo apt-get install';
         alias open='gnome-open';
     fi
+fi
+
+# use the right notify depending on the existing ones
+if [ -x /usr/bin/notify-send ]; then
+    alias notify='/usr/bin/notify-send'
+elif [ -x /usr/local/bin/growlnotify ]; then
+    alias notify='/usr/local/bin/growlnotify'
 fi
 
 alias dimmer='redshift -l 54:12 -t 5700:4000 &'
