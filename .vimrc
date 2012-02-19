@@ -152,6 +152,8 @@ nmap <M-l> <ESC>:bnext<CR>
 nmap <M-h> <ESC>:bprevious<CR>
 nmap <leader>x <ESC>:bnext<CR>
 nmap <leader>y <ESC>:bprevious<CR>
+nmap <leader>w <ESC>:bnext<CR>
+nmap <leader>q <ESC>:bprevious<CR>
 
 "Datum einfügen
 nmap <leader>d "=strftime("%Y-%m-%d %H:%M")<CR>p
