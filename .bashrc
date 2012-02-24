@@ -62,6 +62,9 @@ else
     if [ $(hostname) == "fitzgerald" ]; then
         alias g='gvim --remote-silent';
         alias open='xdg-open';
+    elif [ $(hostname) == "kurtis" ]; then
+        alias g='gvim --remote-silent';
+        alias open='xdg-open';
     else
         alias install='sudo apt-get install';
         alias open='gnome-open';
