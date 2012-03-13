@@ -7,7 +7,8 @@ PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbi
 LOCALBIN="~/.local/bin"
 TEXBIN="/usr/local/texlive/2011/bin/x86_64-linux/:/usr/local/texlive/2011/bin/x86_64-darwin/"
 PERLBIN="/usr/bin/vendor_perl/"
-export PATH="$PATH:$LOCALBIN:$TEXBIN:$PERLBIN"
+AUSWERTUNGBIN="~/.auswertung/"
+export PATH="$PATH:$LOCALBIN:$TEXBIN:$PERLBIN:$AUSWERTUNGBIN"
 # go files:
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
@@ -83,6 +84,8 @@ alias e='$EDITOR'
 alias p='$PAGER'
 alias vimrc='vim ~/.vimrc'
 alias py='python2.7'
+
+alias servieren='python -m http.server'
 
 # start bc with math library and in quiet mode
 alias bc="bc -lq"
