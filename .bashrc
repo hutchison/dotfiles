@@ -20,6 +20,10 @@ fi
 if [ -f /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion
 fi
+# Homebrew bash completion (falls sie existiert)
+if [ -f /usr/local/Library/Contributions/brew_bash_completion.sh ]; then
+    . /usr/local/Library/Contributions/brew_bash_completion.sh
+fi
 source ~/dotfiles/git-completion.bash
 # zeigt an, ob in einem git-repo was geändert wurde:
 # '*' für unstaged
