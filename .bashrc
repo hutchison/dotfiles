@@ -41,7 +41,11 @@ export PROMPT_DIRTRIM=2
 # was nehmen wir um manpages zu betrachten?
 # less! => less hat j/k Unterstützung, most nicht
 # export PAGER="less"
-export PAGER="vimpager"
+if which vimpager >/dev/null 2>/dev/null; then
+    export PAGER="vimpager"
+else
+    export PAGER="less"
+fi
 
 shopt -s histappend cdspell checkwinsize
 
