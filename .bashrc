@@ -6,7 +6,10 @@ export LC_ALL="de_DE.UTF-8"
 PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11/bin"
 LOCALBIN="~/.local/bin"
 TEXBIN="/usr/local/texlive/2011/bin/x86_64-linux/:/usr/local/texlive/2011/bin/x86_64-darwin/"
-export PATH="$PATH:$LOCALBIN:$TEXBIN"
+PERLBIN="/usr/bin/vendor_perl/"
+AUSWERTUNGBIN="~/.auswertung/"
+RUBYPATH="~/.gem/ruby/1.9.1/bin/"
+export PATH="$PATH:$LOCALBIN:$TEXBIN:$PERLBIN:$AUSWERTUNGBIN:$RUBYPATH"
 # go files:
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
@@ -17,6 +20,10 @@ if [ -f /etc/bash_completion ]; then
 fi
 if [ -f /usr/local/etc/bash_completion ]; then
     . /usr/local/etc/bash_completion
+fi
+# Homebrew bash completion (falls sie existiert)
+if [ -f /usr/local/Library/Contributions/brew_bash_completion.sh ]; then
+    . /usr/local/Library/Contributions/brew_bash_completion.sh
 fi
 source ~/dotfiles/git-completion.bash
 # zeigt an, ob in einem git-repo was geändert wurde:
@@ -52,7 +59,7 @@ shopt -s histappend cdspell checkwinsize
 # some more ls aliases
 alias ll='ls -lhF'
 alias la='ls -AF'
-alias l='ls -CF'
+alias l='ls++'
 
 # bare vim as standard editor
 export EDITOR=vim
@@ -65,10 +72,20 @@ else
     if [ $(hostname) == "fitzgerald" ]; then
         alias g='gvim --remote-silent';
         alias open='xdg-open';
+    elif [ $(hostname) == "kurtis" ]; then
+        alias g='gvim --remote-silent';
+        alias open='xdg-open';
     else
         alias install='sudo apt-get install';
         alias open='gnome-open';
     fi
+fi
+
+# use the right notify depending on the existing ones
+if [ -x /usr/bin/notify-send ]; then
+    alias notify='/usr/bin/notify-send'
+elif [ -x /usr/local/bin/growlnotify ]; then
+    alias notify='/usr/local/bin/growlnotify'
 fi
 
 alias dimmer='redshift -l 54:12 -t 5700:4000 &'
@@ -76,6 +93,8 @@ alias e='$EDITOR'
 alias p='$PAGER'
 alias vimrc='vim ~/.vimrc'
 alias py='python2.7'
+
+alias servieren='python -m http.server'
 
 # start bc with math library and in quiet mode
 alias bc="bc -lq"

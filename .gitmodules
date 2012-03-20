@@ -24,3 +24,9 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = git://github.com/scrooloose/nerdtree.git
+[submodule ".vim/colors/smyck"]
+	path = .vim/colors/smyck
+	url = git@github.com:hutchison/Smyck-Color-Scheme.git
+[submodule ".vim/colors/hemisu"]
+	path = .vim/colors/hemisu
+	url = git://github.com/noahfrederick/Hemisu.git
