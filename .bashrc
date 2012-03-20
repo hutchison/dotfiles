@@ -8,7 +8,8 @@ LOCALBIN="~/.local/bin"
 TEXBIN="/usr/local/texlive/2011/bin/x86_64-linux/:/usr/local/texlive/2011/bin/x86_64-darwin/"
 PERLBIN="/usr/bin/vendor_perl/"
 AUSWERTUNGBIN="~/.auswertung/"
-export PATH="$PATH:$LOCALBIN:$TEXBIN:$PERLBIN:$AUSWERTUNGBIN"
+RUBYPATH="~/.gem/ruby/1.9.1/bin/"
+export PATH="$PATH:$LOCALBIN:$TEXBIN:$PERLBIN:$AUSWERTUNGBIN:$RUBYPATH"
 # go files:
 export GOROOT=$HOME/go
 export PATH=$PATH:$GOROOT/bin
