@@ -102,9 +102,6 @@ alias bc="bc -lq"
 alias mathe='cd ~/Dropbox/Studium/Mathematik/'
 alias inf='cd ~/Dropbox/Studium/Informatik/'
 
-# random Futurama quote:
-function futurama() { curl -Is slashdot.org | egrep '^X-(F|B|L)' | cut -d \- -f 2; }
-
 # eckige Klammern entfernen:
 function removebrackets() { rename 's/\[.*\]\_//' *; }
 
