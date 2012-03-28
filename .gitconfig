@@ -1,0 +1,19 @@
+[user]
+	name = Martin Darmüntzel
+	email = git@trivilanalog.de
+[core]
+	editor = vim
+[color]
+	ui = auto
+[diff]
+	mnemonicprefix = true
+[merge]
+	tool = vimdiff
+[alias]
+	st = status
+	ci = commit
+	b = branch
+	co = checkout
+	d = diff
+	l = log
+	a = add
