@@ -88,7 +88,7 @@ elif [ -x /usr/local/bin/growlnotify ]; then
     alias notify='/usr/local/bin/growlnotify'
 fi
 
-alias dimmer='redshift -l 54:12 -t 5700:4000 &'
+alias dimmer='redshift -l 54:12 -t 5700:4000 -m randr 2> /dev/null &'
 alias e='$EDITOR'
 alias p='$PAGER'
 alias vimrc='vim ~/.vimrc'
