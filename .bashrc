@@ -59,27 +59,27 @@ shopt -s histappend cdspell checkwinsize
 # some more ls aliases
 alias ll='ls -lhF'
 alias la='ls -AF'
-alias l='ls++'
+# only alias ls++ if it's available:
+if which 'ls++' >/dev/null 2>&1; then
+    alias l='ls++'
+fi
 
-# bare vim as standard editor
-export EDITOR=vim
+# edit with what's on the system (vim vi nano - in that order):
+export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
 set editing-mode vi
 
-if [ $(uname) == "Darwin" ]; then
-    alias g='mvim --remote-silent';
-    alias install='brew install';
-else
-    if [ $(hostname) == "fitzgerald" ]; then
+# host-depending aliases (now with better overview):
+case $(hostname -s) in
+    rupert)
+        alias g='mvim --remote-silent';
+        alias inst='brew install';
+        ;;
+    fitzgerald|kurtis)
         alias g='gvim --remote-silent';
         alias open='xdg-open';
-    elif [ $(hostname) == "kurtis" ]; then
-        alias g='gvim --remote-silent';
-        alias open='xdg-open';
-    else
-        alias install='sudo apt-get install';
-        alias open='gnome-open';
-    fi
-fi
+        alias inst='sudo pacman -S'
+        ;;
+esac
 
 # use the right notify depending on the existing ones
 if [ -x /usr/bin/notify-send ]; then

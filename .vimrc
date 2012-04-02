@@ -156,6 +156,9 @@ nmap <leader>y <ESC>:bprevious<CR>
 nmap <leader>w <ESC>:bnext<CR>
 nmap <leader>q <ESC>:bprevious<CR>
 
+" fixups for annoyances:
+cmap Q q
+
 "Datum einfügen
 nmap <leader>d "=strftime("%Y-%m-%d %H:%M")<CR>p
 imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>

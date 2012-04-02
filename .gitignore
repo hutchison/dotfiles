@@ -1,4 +1,6 @@
+.vim/colors/smyck.vim
 .vim/backup/*
 .vim/tmp/*
 .vim/.netrwhist
 .vim/spell
+.DS_Store
