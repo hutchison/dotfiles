@@ -69,15 +69,17 @@ export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
 set editing-mode vi
 
 # host-depending aliases (now with better overview):
-case $(hostname -s) in
-    rupert)
+case $(hostname) in
+    rupert.local)   # <-- because on `hostname -s` returns "localhost" on the other hosts >m(
         alias g='mvim --remote-silent';
         alias inst='brew install';
+        alias gvimwiki='mvim -c ":VimwikiIndex"';
         ;;
     fitzgerald|kurtis)
         alias g='gvim --remote-silent';
         alias open='xdg-open';
-        alias inst='sudo pacman -S'
+        alias inst='sudo pacman -S';
+        alias gvimwiki='gvim -c ":VimwikiIndex" --name gvimwiki';
         ;;
 esac
 
