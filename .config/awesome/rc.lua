@@ -35,7 +35,7 @@ end
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
 --beautiful.init("/home/hutch/.config/awesome/themes/zenburn/theme.lua")
-beautiful.init("/home/hutch/.config/awesome/themes/hephaistos/theme.lua")
+beautiful.init(os.getenv("HOME") .. "/.config/awesome/themes/hephaistos/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "gnome-terminal"
