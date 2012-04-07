@@ -13,6 +13,9 @@ fi
 
 xset -b
 
+# Set the NASA Image Of The Day as the current background:
+sh $HOME/dotfiles/bin/NASABackground.sh
+
 # A dimmer for the evening hours:
 redshift -l 54:12 -t 5500:3600 -m randr 2> /dev/null &
 
