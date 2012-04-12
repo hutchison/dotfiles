@@ -13,9 +13,6 @@ fi
 
 xset -b
 
-# Set the NASA Image Of The Day as the current background:
-sh $HOME/dotfiles/bin/NASABackground.sh
-
 # A dimmer for the evening hours:
 redshift -l 54:12 -t 5500:3600 -m randr 2> /dev/null &
 
@@ -26,11 +23,30 @@ setxkbmap -option terminate:ctrl_alt_bksp
 # gvim vimwiki:
 gvim -c ":VimwikiIndex" --name "gvimwiki" &
 
-# Chrome:
-google-chrome &
+# Chrom(e|ium)
+if [ -x /usr/bin/google-chrome ]; then
+    google-chrome &
+elif [ -x /usr/bin/chromium ]; then
+    chromium &
+fi
 
+# Socializing stuff:
 # mutt in a gnome-terminal:
 gnome-terminal --title="mailer" -e 'bash -c "export TERM=xterm-256color; mutt; bash"' &
+# xchat:
+if [ -x /usr/bin/xchat ]; then
+    xchat &
+fi
+# pidgin:
+if [ -x /usr/bin/pidgin ]; then
+    pidgin &
+fi
+
+# a gnome-terminal for maintenance:
+gnome-terminal --title="admin" &
+
+# Set the NASA Image Of The Day as the current background:
+sh $HOME/dotfiles/bin/NASABackground.sh
 
 # exec gnome-session
 # exec startkde
