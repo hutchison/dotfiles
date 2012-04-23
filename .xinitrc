@@ -52,7 +52,7 @@ sh $HOME/dotfiles/bin/NASABackground.sh
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
-exec awesome
+exec ck-launch-session dbus-launch --exit-with-session awesome
 #exec herbstluftwm
 # exec openbox-session
 #exec ck-launch-session dbus-launch --exit-with-session startxfce4
