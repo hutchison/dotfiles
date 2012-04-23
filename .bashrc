@@ -75,7 +75,7 @@ case $(hostname) in
         alias inst='brew install';
         alias gvimwiki='mvim -c ":VimwikiIndex"';
         ;;
-    fitzgerald|kurtis)
+    fitzgerald|kurtis|marquis)
         alias g='gvim --remote-silent';
         alias open='xdg-open';
         alias inst='sudo pacman -S';
@@ -97,6 +97,10 @@ alias vimrc='vim ~/.vimrc'
 alias py='python2.7'
 
 alias servieren='python -m http.server'
+alias neuespw='pwgen -B 12 1'
+
+# Alias for taskwarrior
+alias tw='task'
 
 # start bc with math library and in quiet mode
 alias bc="bc -lq"
@@ -115,11 +119,11 @@ alias myip='curl ifconfig.me'
 ff() { local IFS='|'; grep -rinE "$*" . ; }
 
 # translate a word from English to German:
-tw() { dict -d eng-deu $1; }
+trw() { dict -d eng-deu $1; }
 
 # connect via rdesktop to appwts.uni-rostock.de
-alias appwts='rdesktop -d rechenzentrum -u md261 -g 90% appwts.uni-rostock.de'
-alias netwts='rdesktop -d rechenzentrum -u md261 -g 90% netwts.uni-rostock.de'
+alias appwts='rdesktop -d rechenzentrum -u md261 -g 95% appwts.uni-rostock.de'
+alias netwts='rdesktop -d rechenzentrum -u md261 -g 95% netwts.uni-rostock.de'
 
 # convert flac to mp3
 flac2mp3() { for f in $1; do flac -cd "$f" | lame -h - "${f%.flac}.mp3"; done; }
