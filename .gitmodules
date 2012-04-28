@@ -33,3 +33,6 @@
 [submodule ".vim/bundle/vim-indent-object"]
 	path = .vim/bundle/vim-indent-object
 	url = git://github.com/michaeljsmith/vim-indent-object.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = git@github.com:hutchison/oh-my-zsh.git
