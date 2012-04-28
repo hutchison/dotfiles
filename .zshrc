@@ -35,5 +35,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+alias la='ls -AF'
+
 export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
 alias e=$EDITOR
