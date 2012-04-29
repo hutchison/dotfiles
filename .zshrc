@@ -39,3 +39,12 @@ alias la='ls -AF'
 
 export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
 alias e=$EDITOR
+if which vimpager >/dev/null 2>&1; then
+    export PAGER="vimpager"
+else
+    export PAGER="less"
+fi
+
+if [ "$COLORTERM" = "gnome-terminal" ]; then
+    export TERM="xterm-256color"
+fi
