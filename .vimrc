@@ -61,7 +61,7 @@ if has("gui_macvim") || has("gui_running")
     colorscheme solarized
 endif
 " Powerline setup:
-let g:Powerline_symbols='fancy'
+let g:Powerline_symbols='unicode'
 
 if version >= 703
     set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
