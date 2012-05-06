@@ -9,6 +9,10 @@ require("beautiful")
 -- Notification library
 require("naughty")
 require("menubar")
+require("vicious")
+
+-- set locale to German (for displaying time):
+os.setlocale("de_DE.UTF-8", "all")
 
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
@@ -105,8 +109,38 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- {{{ Wibox
+-- my widgets
+smallseparator = wibox.widget.textbox()
+smallseparator:set_text(" ")
+
+widgetseparator = wibox.widget.textbox()
+widgetseparator:set_text("  ∷  ")
+widgetseparator:set_valign("center")
+
+memwidget = wibox.widget.textbox()
+vicious.register(memwidget, vicious.widgets.mem, "Mem: $1%", 13)
+
+memgwidget = awful.widget.progressbar()
+memgwidget:set_width(8)
+memgwidget:set_height(10)
+memgwidget:set_vertical(true)
+memgwidget:set_background_color(beautiful.bg_widget)
+memgwidget:set_border_color(nil)
+memgwidget:set_color(beautiful.fg_widget)
+vicious.register(memgwidget, vicious.widgets.mem, "$1", 13)
+
+cpugraph = awful.widget.progressbar()
+cpugraph:set_width(40)
+cpugraph:set_height(10)
+cpugraph:set_background_color(beautiful.bg_widget)
+cpugraph:set_color(beautiful.fg_widget)
+vicious.register(cpugraph, vicious.widgets.cpu, "$1")
+
+cputwidget = wibox.widget.textbox()
+vicious.register(cputwidget, vicious.widgets.cpu, "CPU: $1%", 2)
+
 -- Create a textclock widget
-mytextclock = awful.widget.textclock()
+mytextclock = awful.widget.textclock("  %R – %a %e. %B %Y (%V)")
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -175,12 +209,18 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the left
     local left_layout = wibox.layout.fixed.horizontal()
-    left_layout:add(mylauncher)
     left_layout:add(mytaglist[s])
     left_layout:add(mypromptbox[s])
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
+    right_layout:add(cputwidget)
+    right_layout:add(widgetseparator)
+    right_layout:add(memwidget)
+    right_layout:add(smallseparator)
+    right_layout:add(smallseparator)
+    right_layout:add(memgwidget)
+    right_layout:add(widgetseparator)
     if s == 1 then right_layout:add(wibox.widget.systray()) end
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])

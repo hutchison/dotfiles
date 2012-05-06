@@ -15,38 +15,42 @@ theme.wallpaper_cmd = {}
 -- {{{ Styles
 theme.font = "Lucida Grande 8"
 
+theme.base03  = "#002b36"
+theme.base02  = "#073642"
+theme.base01  = "#586e75"
+theme.base00  = "#657b83"
+theme.base0   = "#839496"
+theme.base1   = "#93a1a1"
+theme.base2   = "#eee8d5"
+theme.base3   = "#fdf6e3"
+theme.yellow  = "#b58900"
+theme.orange  = "#cb4b16"
+theme.red     = "#dc322f"
+theme.magenta = "#d33682"
+theme.violet  = "#6c71c4"
+theme.blue    = "#268bd2"
+theme.cyan    = "#2aa198"
+theme.green   = "#859900"
+
 -- {{{ Colors
---theme.fg_normal = "#DCDCCC"
-theme.fg_normal = "#839496" -- base0
---theme.fg_focus  = "#F0DFAF"
-theme.fg_focus  = "#cb4b16" -- orange
---theme.fg_urgent = "#CC9393"
-theme.fg_urgent = "#dc322f" -- red
---theme.bg_normal = "#3F3F3F"
-theme.bg_normal = "#002b36" -- base03
---theme.bg_focus  = "#1E2320"
-theme.bg_focus  = "#073642" -- base02
---theme.bg_urgent = "#3F3F3F"
-theme.bg_urgent = "#586e75" -- base01 -- not sure, if it's the right choice
+theme.fg_normal = theme.base0
+theme.fg_focus  = theme.orange
+theme.fg_urgent = theme.red
+theme.bg_normal = theme.base03
+theme.bg_focus  = theme.base02
+theme.bg_urgent = theme.base01 -- not sure, if it's the right choice
 -- }}}
 
 -- {{{ Borders
 theme.border_width  = "1"
---theme.border_normal = "#3F3F3F"
-theme.border_normal = "#657b83" -- base00
---theme.border_focus  = "#6F6F6F" -- default
---theme.border_focus  = "#550000" -- dark red
---theme.border_focus = "#cd8b00" -- decent yellow
---theme.border_focus = "#93a1a1"  -- base1
-theme.border_focus = "#b58900"  -- Solarized yellow
+theme.border_normal = theme.base00
+theme.border_focus = theme.yellow
 theme.border_marked = "#CC9393"
 -- }}}
 
 -- {{{ Titlebars
---theme.titlebar_bg_focus  = "#3F3F3F"
-theme.titlebar_bg_focus  = "#073642" -- base02
---theme.titlebar_bg_normal = "#3F3F3F"
-theme.titlebar_bg_normal = "#002b36" -- base03
+theme.titlebar_bg_focus  = theme.base02
+theme.titlebar_bg_normal = theme.base03
 -- }}}
 
 -- There are other variable sets
@@ -63,10 +67,10 @@ theme.titlebar_bg_normal = "#002b36" -- base03
 -- You can add as many variables as
 -- you wish and access them by using
 -- beautiful.variable in your rc.lua
---theme.fg_widget        = "#AECF96"
+theme.fg_widget        = theme.base2
 --theme.fg_center_widget = "#88A175"
 --theme.fg_end_widget    = "#FF5656"
---theme.bg_widget        = "#494B4F"
+theme.bg_widget        = theme.bg_normal
 --theme.border_widget    = "#3F3F3F"
 -- }}}
 
