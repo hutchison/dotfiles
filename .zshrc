@@ -57,3 +57,7 @@ fi
 if [ "$COLORTERM" = "gnome-terminal" ]; then
     export TERM="xterm-256color"
 fi
+
+# connect via rdesktop to appwts.uni-rostock.de
+alias appwts='rdesktop -d rechenzentrum -u md261 -g 95% appwts.uni-rostock.de'
+alias netwts='rdesktop -d rechenzentrum -u md261 -g 95% netwts.uni-rostock.de'
