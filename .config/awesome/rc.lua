@@ -118,7 +118,7 @@ widgetseparator:set_text("  ∷  ")
 widgetseparator:set_valign("center")
 
 memwidget = wibox.widget.textbox()
-vicious.register(memwidget, vicious.widgets.mem, "Mem: $1%", 13)
+vicious.register(memwidget, vicious.widgets.mem, "Mem: $1%", 3)
 
 memgwidget = awful.widget.progressbar()
 memgwidget:set_width(8)
@@ -129,20 +129,46 @@ memgwidget:set_border_color(nil)
 memgwidget:set_color(beautiful.fg_widget)
 vicious.register(memgwidget, vicious.widgets.mem, "$1", 3)
 
-cpugraph = awful.widget.progressbar()
-cpugraph:set_width(8)
-cpugraph:set_height(10)
-cpugraph:set_vertical(true)
-cpugraph:set_background_color(beautiful.bg_widget)
-cpugraph:set_color(beautiful.fg_widget)
-cpugraph:set_border_color(nil)
-vicious.register(cpugraph, vicious.widgets.cpu, "$1", 3)
+uptimetwidget = wibox.widget.textbox()
+vicious.register(uptimetwidget, vicious.widgets.uptime, "up: $2:$3", 60)
+
+--uptimegdescwidget = wibox.widget.textbox()
+--uptimegdescwidget:set_text("load:")
+
+--uptimegwidgets = {}
+--uptimegwidgets["1"] = awful.widget.progressbar()
+--uptimegwidgets["5"] = awful.widget.progressbar()
+--uptimegwidgets["15"] = awful.widget.progressbar()
+--for _,w in pairs(uptimegwidgets) do
+    --w:set_width(8)
+    --w:set_height(10)
+    --w:set_max_value(0.5)
+    --w:set_vertical(true)
+    --w:set_color(beautiful.fg_widget)
+    --w:set_background_color(beautiful.bg_widget)
+    --w:set_border_color(nil)
+--end
+
+--uptimegwidgets["1"] = wibox.widget.textbox()
+--uptimegwidgets["5"] = wibox.widget.textbox()
+--uptimegwidgets["15"] = wibox.widget.textbox()
+
+--vicious.register(uptimegwidgets["1"], vicious.widgets.uptime, "$4", 3)
+--vicious.register(uptimegwidgets["5"], vicious.widgets.uptime, "$5", 3)
+--vicious.register(uptimegwidgets["15"], vicious.widgets.uptime, "$6", 3)
 
 cputwidget = wibox.widget.textbox()
-vicious.register(cputwidget, vicious.widgets.cpu, "CPU: $1%", 2)
+cputwidget:set_text("CPU:")
+
+cpugraph = awful.widget.graph()
+cpugraph:set_width(60)
+cpugraph:set_height(10)
+cpugraph:set_color(beautiful.fg_widget)
+cpugraph:set_background_color(beautiful.bg_widget)
+vicious.register(cpugraph, vicious.widgets.cpu, "$1", 60)
 
 -- Create a textclock widget
-mytextclock = awful.widget.textclock("  %R – %a %e. %B %Y (%V)")
+mytextclock = awful.widget.textclock("%a %e. %B %Y (%V) – %R")
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -216,6 +242,8 @@ for s = 1, screen.count() do
 
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
+    right_layout:add(uptimetwidget)
+    right_layout:add(widgetseparator)
     right_layout:add(cputwidget)
     right_layout:add(smallseparator)
     right_layout:add(cpugraph)
@@ -226,6 +254,7 @@ for s = 1, screen.count() do
     right_layout:add(memgwidget)
     right_layout:add(widgetseparator)
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(widgetseparator)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 
