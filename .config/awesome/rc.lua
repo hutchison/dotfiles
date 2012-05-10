@@ -158,7 +158,8 @@ vicious.register(uptimetwidget, vicious.widgets.uptime, "up: $2:$3", 60)
 --vicious.register(uptimegwidgets["15"], vicious.widgets.uptime, "$6", 3)
 
 cputwidget = wibox.widget.textbox()
-cputwidget:set_text("CPU:")
+vicious.register(cputwidget, vicious.widgets.cpu, "CPU: $1%", 1)
+--cputwidget:set_text("CPU:")
 
 cpugraph = awful.widget.graph()
 cpugraph:set_width(60)
@@ -166,6 +167,9 @@ cpugraph:set_height(10)
 cpugraph:set_color(beautiful.fg_widget)
 cpugraph:set_background_color(beautiful.bg_widget)
 vicious.register(cpugraph, vicious.widgets.cpu, "$1", 60)
+
+netwidget = wibox.widget.textbox()
+vicious.register(netwidget, vicious.widgets.net, "net: ↓ ${eth1 down_kb}  ↑ ${eth1 up_kb}", 0.25)
 
 -- Create a textclock widget
 mytextclock = awful.widget.textclock("%a %e. %B %Y (%V) – %R")
@@ -244,6 +248,8 @@ for s = 1, screen.count() do
     local right_layout = wibox.layout.fixed.horizontal()
     right_layout:add(uptimetwidget)
     right_layout:add(widgetseparator)
+    right_layout:add(netwidget)
+    right_layout:add(widgetseparator)
     right_layout:add(cputwidget)
     right_layout:add(smallseparator)
     right_layout:add(cpugraph)
@@ -313,6 +319,7 @@ globalkeys = awful.util.table.join(
     -- Standard program
     awful.key({ modkey, "Shift"   }, "Return", function () awful.util.spawn(terminal) end),
     awful.key({ modkey,           }, "F10",    function () awful.util.spawn("pcmanfm") end),
+    awful.key({ modkey,           }, "F12",    function () awful.util.spawn("gksudo halt") end),
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
