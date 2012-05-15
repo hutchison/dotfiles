@@ -39,7 +39,8 @@ DEFAULTPATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
 RUBYPATH="$HOME/.gem/ruby/1.9.1/bin/"
 TEXPATH="/usr/texbin"
-export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH"
+MYPYTHONPATH="$HOME/.local/bin/"
+export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH"
 if [ -d "$HOME/.auswertung/" ]; then
     export PATH="$PATH:$HOME/.auswertung/"
 fi
