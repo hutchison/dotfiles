@@ -169,7 +169,7 @@ cpugraph:set_background_color(beautiful.bg_widget)
 vicious.register(cpugraph, vicious.widgets.cpu, "$1", 60)
 
 netwidget = wibox.widget.textbox()
-vicious.register(netwidget, vicious.widgets.net, "net: ↓ ${eth1 down_kb}  ↑ ${eth1 up_kb}", 0.25)
+vicious.register(netwidget, vicious.widgets.net, "net: ↓ ${eth0 down_kb}  ↑ ${eth0 up_kb}", 0.25)
 
 -- Create a textclock widget
 mytextclock = awful.widget.textclock("%a %e. %B %Y (%V) – %R")
