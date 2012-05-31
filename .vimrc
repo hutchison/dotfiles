@@ -60,6 +60,9 @@ if has("gui_macvim") || has("gui_running")
     set background=dark
     colorscheme solarized
 endif
+if has("gui_macvim")
+    set guifont=Inconsolata:h16
+endif
 if has("gui_gtk2")
     set guifont=Inconsolata\ 12
 endif
