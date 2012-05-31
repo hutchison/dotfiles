@@ -41,6 +41,7 @@ RUBYPATH="$HOME/.gem/ruby/1.9.1/bin/"
 TEXPATH="/usr/texbin"
 MYPYTHONPATH="$HOME/.local/bin/"
 export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH"
+export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 if [ -d "$HOME/.auswertung/" ]; then
     export PATH="$PATH:$HOME/.auswertung/"
 fi
