@@ -166,7 +166,7 @@ cpugraph:set_width(60)
 cpugraph:set_height(10)
 cpugraph:set_color(beautiful.fg_widget)
 cpugraph:set_background_color(beautiful.bg_widget)
-vicious.register(cpugraph, vicious.widgets.cpu, "$1", 60)
+vicious.register(cpugraph, vicious.widgets.cpu, "$1", 0.5)
 
 netwidget = wibox.widget.textbox()
 vicious.register(netwidget, vicious.widgets.net, "net: ↓ ${eth1 down_kb}  ↑ ${eth1 up_kb}", 0.25)
