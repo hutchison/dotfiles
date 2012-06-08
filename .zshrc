@@ -64,5 +64,7 @@ fi
 alias appwts='rdesktop -d rechenzentrum -u md261 -g 95% appwts.uni-rostock.de'
 alias netwts='rdesktop -d rechenzentrum -u md261 -g 95% netwts.uni-rostock.de'
 
+alias uniapps='xfreerdp --sec tls -d uni-rostock.de -u aw089 -x b -g 95% uniapps.uni-rostock.de'
+
 # generate new passwords:
 alias neuespw='pwgen -B 12 1'
