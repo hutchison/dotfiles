@@ -37,12 +37,11 @@ source $ZSH/oh-my-zsh.sh
 
 DEFAULTPATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
-RUBYPATH="$HOME/.gem/ruby/1.9.1/bin"
 TEXPATH="/usr/texbin"
 HOMEBIN="$HOME/bin"
 MYPYTHONPATH="$HOME/.local/bin"
 COREUTILSPATH="$(brew --prefix coreutils)/libexec/gnubin"
-export PATH="$COREUTILSPATH:$DEFAULTPATH:$HOMEBIN:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH"
+export PATH="$COREUTILSPATH:$DEFAULTPATH:$HOMEBIN:$PERLPATH:$TEXPATH:$MYPYTHONPATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 alias la='ls -AF'
