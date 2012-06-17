@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/dotfiles/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -8,7 +8,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="hutch"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="$EDITOR ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
@@ -29,7 +29,7 @@ ZSH_THEME="hutch"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git archlinux)
+plugins=(git taskwarrior brew nyan vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,29 +37,16 @@ source $ZSH/oh-my-zsh.sh
 
 DEFAULTPATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
-RUBYPATH="$HOME/.gem/ruby/1.9.1/bin/"
+RUBYPATH="$HOME/.gem/ruby/1.9.1/bin"
 TEXPATH="/usr/texbin"
-MYPYTHONPATH="$HOME/.local/bin/"
-export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH"
+HOMEBIN="$HOME/bin"
+MYPYTHONPATH="$HOME/.local/bin"
+COREUTILSPATH="$(brew --prefix coreutils)/libexec/gnubin"
+export PATH="$COREUTILSPATH:$DEFAULTPATH:$HOMEBIN:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-if [ -d "$HOME/.auswertung/" ]; then
-    export PATH="$PATH:$HOME/.auswertung/"
-fi
 
 alias la='ls -AF'
 
-export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
+export EDITOR=vim
 alias e=$EDITOR
-if which vimpager >/dev/null 2>&1; then
-    export PAGER="vimpager"
-else
-    export PAGER="less"
-fi
-
-if [ "$COLORTERM" = "gnome-terminal" ]; then
-    export TERM="xterm-256color"
-fi
-
-# connect via rdesktop to appwts.uni-rostock.de
-alias appwts='rdesktop -d rechenzentrum -u md261 -g 95% appwts.uni-rostock.de'
-alias netwts='rdesktop -d rechenzentrum -u md261 -g 95% netwts.uni-rostock.de'
+export PAGER="vimpager"
