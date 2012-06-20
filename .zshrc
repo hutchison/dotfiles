@@ -42,7 +42,7 @@ HOMEBIN="$HOME/bin"
 MYPYTHONPATH="$HOME/.local/bin"
 COREUTILSPATH="$(brew --prefix coreutils)/libexec/gnubin"
 export PATH="$COREUTILSPATH:$DEFAULTPATH:$HOMEBIN:$PERLPATH:$TEXPATH:$MYPYTHONPATH"
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+export PYTHONPATH="$HOME/Library/Python/2.7/site-packages:/usr/local/lib/python2.7/site-packages"
 
 alias la='ls -AF'
 
