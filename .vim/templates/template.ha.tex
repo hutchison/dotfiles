@@ -1,0 +1,132 @@
+\documentclass[%
+a4paper, %apaper, % alle weiteren Papierformat einstellbar
+%empty,           % keine Seitenzahlen
+9pt,              % Schriftgröße (12pt, 11pt (Standard))
+leqno,            % Nummerierung von Gleichungen links
+fleqn,            % Ausgabe von Gleichungen linksbündig
+]
+{scrartcl}
+
+%\pagestyle{headings}
+
+%% Deutsche Anpassungen
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+
+\usepackage[sc]{mathpazo}
+\linespread{1.05}
+
+\usepackage[utf8]{inputenc}
+
+%obligatorischer Mathekram:
+\usepackage{amssymb,amstext}
+\usepackage{stmaryrd}
+\usepackage[sumlimits]{amsmath}
+\usepackage{eulervm}
+
+%nützliche Extras:
+\usepackage{
+  %array,
+  %hhline,
+  %longtable,
+  %tabularx,
+  %enumerate,
+  %hyperref,
+  %color,
+  %setspace,
+  %booktabs,
+  %cite,
+  %caption,
+  %lineno,
+  %lastpage,
+  %algorithm,
+  %algorithmic,
+  %listings,
+  %bussproofs,
+  %ulem,
+}
+
+%nötig für Querformat
+%\usepackage[landscape]{geometry}
+
+%Kommando für Schriftarten
+\newcommand{\changefont}[3]{\fontfamily{#1}\fontseries{#2}\fontshape{#3}\selectfont}
+
+%bietet gestrichelte vert. Linien in Tabellen (':')
+%\usepackage{arydshln}
+
+%nützlicher Mathekram:
+% TODO: auf \newmathoperator ändern!
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\K}{\mathbb{K}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\off}{\text{off}\,}
+\newcommand{\rg}{\text{rg}\,}
+\newcommand{\Sp}{\text{Sp}\,}
+\newcommand{\charpol}{\text{charpol}\,}
+\newcommand{\id}{\text{id}\,}
+\newcommand{\kgV}{\text{kgV}}
+\newcommand{\ggT}{\text{ggT}}
+\newcommand{\ora}{\overrightarrow}
+\newcommand{\TV}{\text{TV}}
+\newcommand{\Aut}{\text{Aut}}
+\newcommand{\Zw}{\textit{Zw}}
+\newcommand{\Rot}[2]{\text{Rot}_{#1,#2}}
+\newcommand{\conv}{\text{conv}}
+
+%\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm,includeheadfoot]{geometry}
+\usepackage[
+  cm,
+  headings
+]{fullpage}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+
+% Veranstaltung:
+\fancyhead[L]{}
+% Seriennummer:
+\fancyhead[C]{}
+% Name und Matrikelnummer:
+\fancyhead[R]{}
+
+% \fancyfoot[L]{}
+\fancyfoot[C]{\thepage}
+% \fancyfoot[R]{\thepage / \pageref{LastPage}}
+
+%Linie oben/unten
+%\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\parindent 0pt
+
+%% Packages für Grafiken & Abbildungen
+%\usepackage{pgf,tikz}      %%TeX ist kein Zeichenprogramm
+%\usetikzlibrary{arrows}
+
+% Lochmarken:
+\usepackage{eso-pic}
+\AddToShipoutPicture*{
+  \put(\LenToUnit{0mm},\LenToUnit{228.5mm})
+    {\rule{\LenToUnit{20pt}}{\LenToUnit{0.5pt}}}
+  \put(\LenToUnit{0mm},\LenToUnit{68.5mm})
+    {\rule{\LenToUnit{20pt}}{\LenToUnit{0.5pt}}}
+}
+
+\begin{document}
+% Punktetabelle:
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+& & & & $\Sigma$\\\hline
+& & & & \\
+\end{tabular}
+\end{center}
+
+\end{document}
