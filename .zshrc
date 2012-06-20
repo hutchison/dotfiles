@@ -52,19 +52,8 @@ if [ -d "$HOME/.auswertung/" ]; then
 fi
 
 alias la='ls -AF'
+alias reload='source ~/.zshrc'
 
-export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
+export EDITOR=vim
 alias e=$EDITOR
-if which vimpager >/dev/null 2>&1; then
-    export PAGER="vimpager"
-else
-    export PAGER="less"
-fi
-
-if [ "$COLORTERM" = "gnome-terminal" ]; then
-    export TERM="xterm-256color"
-fi
-
-# connect via rdesktop to appwts.uni-rostock.de
-alias appwts='rdesktop -d rechenzentrum -u md261 -g 95% appwts.uni-rostock.de'
-alias netwts='rdesktop -d rechenzentrum -u md261 -g 95% netwts.uni-rostock.de'
+export PAGER=less
