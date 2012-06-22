@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+ZSH=$HOME/dotfiles/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -15,7 +15,7 @@ ZSH_THEME="hutch"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -40,29 +40,19 @@ PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
 RUBYPATH="$HOME/.gem/ruby/1.9.1/bin/"
 TEXPATH="/usr/texbin"
 MYPYTHONPATH="$HOME/.local/bin/"
-export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH"
+MEDAUSWERTUNGPATH=":$HOME/.auswertung/"
+export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH:$MEDAUSWERTUNGPATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-if [ -d "$HOME/.auswertung/" ]; then
-    export PATH="$PATH:$HOME/.auswertung/"
-fi
 
 alias la='ls -AF'
 
-export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
+export EDITOR=vim
 alias e=$EDITOR
-if which vimpager >/dev/null 2>&1; then
-    export PAGER="vimpager"
-else
-    export PAGER="less"
-fi
+export PAGER="vimpager"
 
 if [ "$COLORTERM" = "gnome-terminal" ]; then
     export TERM="xterm-256color"
 fi
-
-# connect via rdesktop to appwts.uni-rostock.de
-alias appwts='rdesktop -d rechenzentrum -u md261 -g 95% appwts.uni-rostock.de'
-alias netwts='rdesktop -d rechenzentrum -u md261 -g 95% netwts.uni-rostock.de'
 
 alias uniapps='xfreerdp --sec tls -d uni-rostock.de -u aw089 -x b -g 95% uniapps.uni-rostock.de'
 
