@@ -1,8 +1,9 @@
 [user]
 	name = Martin Darmüntzel
-	email = git@trivilanalog.de
+	email = git@trivialanalog.de
 [core]
 	editor = vim
+	pager = less
 [color]
 	ui = auto
 [diff]
@@ -11,9 +12,9 @@
 	tool = vimdiff
 [alias]
 	st = status
-	ci = commit
-	b = branch
+	ci = commit -v
+	br = branch
 	co = checkout
-	d = diff
-	l = log
-	a = add
+	df = diff
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	ad = add
