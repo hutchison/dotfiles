@@ -60,6 +60,8 @@ if [ "$COLORTERM" = "gnome-terminal" ]; then
     export TERM="xterm-256color"
 fi
 
+alias dimmer='redshift -l 54:12 -t 5700:3600 -m randr 2> /dev/null &'
+
 # connect via rdesktop to appwts.uni-rostock.de
 alias appwts='rdesktop -d rechenzentrum -u md261 -g 95% appwts.uni-rostock.de'
 alias netwts='rdesktop -d rechenzentrum -u md261 -g 95% netwts.uni-rostock.de'
