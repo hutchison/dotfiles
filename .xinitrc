@@ -23,6 +23,8 @@ redshift -l 54:12 -t 5500:3600 -m randr 2> /dev/null &
 # This enables it again.
 setxkbmap -option terminate:ctrl_alt_bksp
 
+export TERMINAL=gnome-terminal
+
 # gvim vimwiki:
 gvim -c ":VimwikiIndex" --name "gvimwiki" &
 
@@ -55,7 +57,8 @@ sh $HOME/dotfiles/bin/NASABackground.sh
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
-exec ck-launch-session dbus-launch --exit-with-session awesome
+#exec ck-launch-session dbus-launch --exit-with-session awesome
+exec i3
 #exec herbstluftwm
 # exec openbox-session
 #exec ck-launch-session dbus-launch --exit-with-session startxfce4
