@@ -11,6 +11,8 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+export TERMINAL="gnome-terminal"
+
 # disable bell:
 xset -b
 # disable CAPS LOCK and map ESC to it:
@@ -55,7 +57,8 @@ sh $HOME/dotfiles/bin/NASABackground.sh
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
-exec ck-launch-session dbus-launch --exit-with-session awesome
+#exec ck-launch-session dbus-launch --exit-with-session awesome
+exec i3
 #exec herbstluftwm
 # exec openbox-session
 #exec ck-launch-session dbus-launch --exit-with-session startxfce4
