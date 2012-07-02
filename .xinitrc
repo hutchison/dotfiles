@@ -11,7 +11,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
-export TERMINAL="gnome-terminal"
+export TERMINAL="terminator"
 
 # disable bell:
 xset -b
@@ -36,8 +36,8 @@ elif [ -x /usr/bin/chromium ]; then
 fi
 
 # Socializing stuff:
-# mutt in a gnome-terminal:
-gnome-terminal --title="mailer" -e 'zsh -c "export TERM=xterm-256color; mutt; zsh"' &
+# mutt in a $terminal:
+$TERMINAL --title="mailer" -e 'zsh -c "export TERM=xterm-256color; mutt; zsh"' &
 # xchat:
 if [ -x /usr/bin/xchat ]; then
     xchat &
@@ -47,8 +47,8 @@ if [ -x /usr/bin/pidgin ]; then
     pidgin &
 fi
 
-# a gnome-terminal for maintenance:
-gnome-terminal --title="admin" &
+# a $terminal for maintenance:
+$TERMINAL --title="admin" &
 
 # Set the NASA Image Of The Day as the current background:
 sh $HOME/dotfiles/bin/NASABackground.sh
