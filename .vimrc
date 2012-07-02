@@ -52,8 +52,7 @@ if &term == "xterm"
     set background=light
 endif
 if &term == "xterm-256color"
-    colorscheme xoria256
-    set background=light
+    colorscheme smyck
 endif
 if has("gui_macvim") || has("gui_running")
     set guioptions=aeirL
