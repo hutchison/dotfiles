@@ -38,9 +38,10 @@ source $ZSH/oh-my-zsh.sh
 DEFAULTPATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
 RUBYPATH="$HOME/.gem/ruby/1.9.1/bin/"
+HASKELLPATH="$HOME/.cabal/bin"
 TEXPATH="/usr/texbin"
 MYPYTHONPATH="$HOME/.local/bin/"
-export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH"
+export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH:$HASKELLPATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 if [ -d "$HOME/.auswertung/" ]; then
     export PATH="$PATH:$HOME/.auswertung/"
