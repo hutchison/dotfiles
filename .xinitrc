@@ -53,6 +53,9 @@ gnome-terminal --title="admin" &
 # Set the NASA Image Of The Day as the current background:
 sh $HOME/dotfiles/bin/NASABackground.sh
 
+# start Dropbox
+dropbox start &
+
 # exec gnome-session
 # exec startkde
 # exec startxfce4
