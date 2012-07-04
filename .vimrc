@@ -52,8 +52,8 @@ if &term == "xterm"
     set background=light
 endif
 if &term == "xterm-256color"
-    colorscheme xoria256
     set background=light
+    colorscheme smyck
 endif
 if has("gui_macvim") || has("gui_running")
     set guioptions=aeirL
@@ -67,7 +67,7 @@ if has("gui_gtk2")
     set guifont=Inconsolata\ 12
 endif
 " Powerline setup:
-let g:Powerline_symbols='unicode'
+let g:Powerline_symbols='fancy'
 
 if version >= 703
     set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
