@@ -16,6 +16,9 @@ xset -b
 # disable CAPS LOCK and map ESC to it:
 xmodmap ~/.xmodmap
 
+# start networkmanager applet
+ck-launch-session nm-applet --sm-disable &
+
 # A dimmer for the evening hours:
 redshift -l 54:12 -t 5500:3600 -m randr 2> /dev/null &
 
@@ -61,7 +64,7 @@ dropbox start &
 # exec startxfce4
 # ...or the Window Manager of your choice
 #exec ck-launch-session dbus-launch --exit-with-session awesome
-exec i3
+exec ck-launch-session i3
 #exec herbstluftwm
 # exec openbox-session
 #exec ck-launch-session dbus-launch --exit-with-session startxfce4
