@@ -23,7 +23,7 @@ redshift -l 54:12 -t 5500:3600 -m randr 2> /dev/null &
 # This enables it again.
 setxkbmap -option terminate:ctrl_alt_bksp
 
-export TERMINAL=gnome-terminal
+export TERMINAL=terminator
 
 # gvim vimwiki:
 gvim -c ":VimwikiIndex" --name "gvimwiki" &
@@ -37,7 +37,7 @@ fi
 
 # Socializing stuff:
 # mutt in a gnome-terminal:
-gnome-terminal --title="mailer" -e 'zsh -c "export TERM=xterm-256color; mutt; zsh"' &
+$TERMINAL --title="mailer" -e 'zsh -c "export TERM=xterm-256color; mutt; zsh"' &
 # xchat:
 if [ -x /usr/bin/xchat ]; then
     xchat &
@@ -48,7 +48,7 @@ if [ -x /usr/bin/pidgin ]; then
 fi
 
 # a gnome-terminal for maintenance:
-gnome-terminal --title="admin" &
+$TERMINAL --title="admin" &
 
 # Set the NASA Image Of The Day as the current background:
 sh $HOME/dotfiles/bin/NASABackground.sh
