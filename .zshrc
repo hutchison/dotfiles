@@ -9,6 +9,7 @@ ZSH_THEME="hutch"
 
 # Example aliases
 alias zshconfig="$EDITOR ~/.zshrc"
+alias reload="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
