@@ -8,14 +8,15 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="hutch"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
+alias reload="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -29,12 +30,7 @@ ZSH_THEME="hutch"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-case $(hostname -s) in
-    fornax) plugins=(git);
-            ;;
-    *)      plugins=(git archlinux);
-            ;;
-esac
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -47,12 +43,8 @@ TEXPATH="/usr/texbin"
 MYPYTHONPATH="$HOME/.local/bin/"
 export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-if [ -d "$HOME/.auswertung/" ]; then
-    export PATH="$PATH:$HOME/.auswertung/"
-fi
 
 alias la='ls -AF'
-alias reload='source ~/.zshrc'
 
 export EDITOR=vim
 alias e=$EDITOR
