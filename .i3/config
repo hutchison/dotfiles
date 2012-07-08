@@ -149,3 +149,4 @@ assign [instance="google-chrome"] → 2
 assign [instance="xchat"] → 3
 assign [class="Pidgin"] → 3
 assign [title="mailer"] → 3
+assign [instance="gvimwiki"] → 4
