@@ -61,13 +61,12 @@ if has("gui_macvim") || has("gui_running")
     colorscheme solarized
 endif
 if has("gui_macvim")
-    set guifont=Inconsolata:h16
+    set guifont=Menlo\ Regular\ for\ Powerline:h14
 endif
 if has("gui_gtk2")
     set guifont=Inconsolata\ 12
 endif
 " Powerline setup:
-"let g:Powerline_symbols='unicode'
 let g:Powerline_symbols='fancy'
 
 if version >= 703
