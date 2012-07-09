@@ -66,7 +66,7 @@ if has("gui_gtk2")
     set guifont=Inconsolata\ 12
 endif
 " Powerline setup:
-let g:Powerline_symbols='unicode'
+let g:Powerline_symbols='fancy'
 
 if version >= 703
     set colorcolumn=+1 "die Spalte 'textwidth+1' wird markiert
