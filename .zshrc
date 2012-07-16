@@ -42,6 +42,7 @@ RUBYPATH="$HOME/.gem/ruby/1.9.1/bin/"
 HASKELLPATH="$HOME/.cabal/bin"
 TEXPATH="/usr/texbin"
 MYPYTHONPATH="$HOME/.local/bin/"
+GAMESPATH="/usr/local/games/"
 export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH:$HASKELLPATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 if [ -d "$HOME/.auswertung/" ]; then
@@ -64,6 +65,5 @@ fi
 
 alias dimmer='redshift -l 54:12 -t 5700:3600 -m randr 2> /dev/null &'
 
-# connect via rdesktop to appwts.uni-rostock.de
-alias appwts='rdesktop -d rechenzentrum -u md261 -g 95% appwts.uni-rostock.de'
-alias netwts='rdesktop -d rechenzentrum -u md261 -g 95% netwts.uni-rostock.de'
+# connect via xfreerdp to uniapps.uni-rostock.de
+alias uniapps='xfreerdp --sec tls -d uni-rostock.de -u md261 -x b -g 95% uniapps.uni-rostock.de'
