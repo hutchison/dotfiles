@@ -8,7 +8,7 @@ ZSH=$HOME/dotfiles/.oh-my-zsh
 ZSH_THEME="hutch"
 
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
+alias zshconfig="vim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
@@ -58,3 +58,5 @@ alias uniapps='xfreerdp --sec tls -d uni-rostock.de -u aw089 -x b -g 95% uniapps
 
 # generate new passwords:
 alias neuespw='pwgen -B 12 1'
+
+alias open="xdg-open"
