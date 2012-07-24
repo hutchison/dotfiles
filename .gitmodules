@@ -41,3 +41,18 @@
 [submodule ".vim/bundle/solarized"]
 	path = .vim/bundle/solarized
 	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule ".vim/bundle/mw-utils"]
+	path = .vim/bundle/mw-utils
+	url = git://github.com/MarcWeber/vim-addon-mw-utils.git
+[submodule ".vim/bundle/tlib_vim"]
+	path = .vim/bundle/tlib_vim
+	url = git://github.com/tomtom/tlib_vim.git
+[submodule ".vim/bundle/snipmate"]
+	path = .vim/bundle/snipmate
+	url = git://github.com/garbas/vim-snipmate.git
+[submodule ".vim/bundle/snipmate-snippets"]
+	path = .vim/bundle/snipmate-snippets
+	url = git://github.com/honza/snipmate-snippets.git
+[submodule ".vim/bundle/supertab"]
+	path = .vim/bundle/supertab
+	url = git://github.com/ervandew/supertab.git
