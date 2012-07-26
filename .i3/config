@@ -150,3 +150,5 @@ assign [instance="xchat"] → 3
 assign [class="Pidgin"] → 3
 assign [title="mailer"] → 3
 assign [instance="gvimwiki"] → 4
+
+for_window [class="Xfce4-notifyd"] floating enable
