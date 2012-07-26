@@ -58,6 +58,8 @@ sh $HOME/dotfiles/bin/NASABackground.sh
 
 # start Dropbox
 dropbox start &
+# and SparkleShare
+sparkleshare start &
 
 # exec gnome-session
 # exec startkde
