@@ -45,6 +45,7 @@ COREUTILSPATH="$(brew --prefix coreutils)/libexec/gnubin"
 export PATH="$COREUTILSPATH:$DEFAULTPATH:$HOMEBIN:$PERLPATH:$TEXPATH:$MYPYTHONPATH"
 export PYTHONPATH="$HOME/Library/Python/2.7/site-packages:/usr/local/lib/python2.7/site-packages"
 
+alias ls='ls --color=auto'
 alias la='ls -AF'
 
 export EDITOR=vim
