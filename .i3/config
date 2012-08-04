@@ -112,6 +112,8 @@ bindsym $mod+Shift+E exit
 
 # shutdown
 bindsym $mod+F12 exec gksudo halt
+# start pcmanfm
+bindsym $mod+F10 exec pcmanfm
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
