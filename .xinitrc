@@ -67,6 +67,7 @@ sparkleshare start &
 # ...or the Window Manager of your choice
 #exec ck-launch-session dbus-launch --exit-with-session awesome
 exec ck-launch-session i3
+#exec ck-launch-session gnome-session
 #exec herbstluftwm
 # exec openbox-session
 #exec ck-launch-session dbus-launch --exit-with-session startxfce4
