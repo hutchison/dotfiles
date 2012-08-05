@@ -48,6 +48,8 @@ export PYTHONPATH="$HOME/Library/Python/2.7/site-packages:/usr/local/lib/python2
 alias ls='ls --color=auto'
 alias la='ls -AF'
 
+alias bc='bc -l'
+
 export EDITOR=vim
 alias e=$EDITOR
 export PAGER="vimpager"
