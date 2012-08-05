@@ -45,8 +45,8 @@ MYPYTHONPATH="$HOME/.local/bin/"
 GAMESPATH="/usr/local/games/"
 export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH:$HASKELLPATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-if [ -d "$HOME/.auswertung/" ]; then
-    export PATH="$PATH:$HOME/.auswertung/"
+if [ -d "$HOME/.auswertung" ]; then
+    export PATH="$PATH:$HOME/.auswertung"
 fi
 
 alias la='ls -AF'
