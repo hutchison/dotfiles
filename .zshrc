@@ -61,3 +61,4 @@ alias uniapps='xfreerdp --sec tls -d uni-rostock.de -u aw089 -x b -g 95% uniapps
 alias neuespw='pwgen -B 12 1'
 
 alias open="xdg-open"
+alias bc="bc -l"
