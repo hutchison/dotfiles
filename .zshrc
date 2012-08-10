@@ -38,10 +38,10 @@ source $ZSH/oh-my-zsh.sh
 
 DEFAULTPATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
-RUBYPATH="$HOME/.gem/ruby/1.9.1/bin/"
+RUBYPATH="$HOME/.gem/ruby/1.9.1/bin"
 TEXPATH="/usr/texbin"
-MYPYTHONPATH="$HOME/.local/bin/"
-MEDAUSWERTUNGPATH=":$HOME/.auswertung/"
+MYPYTHONPATH="$HOME/.local/bin"
+MEDAUSWERTUNGPATH=":$HOME/.auswertung"
 export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH:$MEDAUSWERTUNGPATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
