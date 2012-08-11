@@ -30,7 +30,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git archlinux)
+plugins=(git archlinux taskwarrior)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -38,11 +38,11 @@ source $ZSH/oh-my-zsh.sh
 
 DEFAULTPATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
-RUBYPATH="$HOME/.gem/ruby/1.9.1/bin/"
+RUBYPATH="$HOME/.gem/ruby/1.9.1/bin"
 HASKELLPATH="$HOME/.cabal/bin"
 TEXPATH="/usr/texbin"
-MYPYTHONPATH="$HOME/.local/bin/"
-GAMESPATH="/usr/local/games/"
+MYPYTHONPATH="$HOME/.local/bin"
+GAMESPATH="/usr/local/games"
 export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH:$HASKELLPATH"
 export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 if [ -d "$HOME/.auswertung" ]; then
