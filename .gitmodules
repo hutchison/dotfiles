@@ -62,6 +62,3 @@
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
-[submodule ".vim/bundle/simple-pairs"]
-	path = .vim/bundle/simple-pairs
-	url = git://github.com/vim-scripts/simple-pairs.git
