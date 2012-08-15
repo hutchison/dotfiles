@@ -112,6 +112,8 @@ bindsym $mod+Shift+E exit
 
 # shutdown
 bindsym $mod+F12 exec gksudo halt
+# reboot
+bindsym $mod+Shift+F12 exec gksudo reboot
 # start pcmanfm
 bindsym $mod+F10 exec pcmanfm
 
