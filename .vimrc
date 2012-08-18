@@ -127,6 +127,14 @@ set textwidth=150
 set autoindent smartindent
 set smarttab
 
+" Templates für die jeweligen Dateiendungen
+" normales LaTeX
+autocmd BufNewFile *.tex,*.latex 0r ~/.vim/templates/latex
+" XeLaTeX
+autocmd BufNewFile *.xtex,*.xelatex 0r ~/.vim/templates/xelatex
+" Python
+autocmd BufNewFile *.py 0r ~/.vim/templates/python
+
 "schaltet hlsearch aus
 noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
