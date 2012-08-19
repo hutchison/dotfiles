@@ -192,3 +192,6 @@ let g:vimwiki_listsyms = '✗○◐●✓'
 
 " NERDTree ein-/ausblenden:
 nmap <F9> :NERDTreeToggle<CR>
+
+" mittels CTRL + [hjkl] durch die Buffer springen:
+let g:miniBufExplMapWindowNavVim = 1
