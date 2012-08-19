@@ -189,3 +189,6 @@ nmap <leader>f <C-]>
 " vimwiki config:
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 let g:vimwiki_listsyms = '✗○◐●✓'
+
+" NERDTree ein-/ausblenden:
+nmap <F9> :NERDTreeToggle<CR>
