@@ -184,6 +184,9 @@ nmap <leader>f <C-]>
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 let g:vimwiki_listsyms = '✗○◐●✓'
 
+" Toggles NERDTree:
+nmap <F9> :NERDTreeToggle<CR>
+
 "" Templates:
 " Python
 autocmd BufNewFile *.py 0r ~/.vim/templates/python
