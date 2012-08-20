@@ -187,3 +187,7 @@ let g:vimwiki_listsyms = '✗○◐●✓'
 "" Templates:
 " Python
 autocmd BufNewFile *.py 0r ~/.vim/templates/python
+
+"" Syntax:
+" Jinja2
+autocmd BufNewFile,BufRead *.j2 setfiletype jinja
