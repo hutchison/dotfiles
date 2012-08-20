@@ -187,6 +187,9 @@ let g:vimwiki_listsyms = '✗○◐●✓'
 " Toggles NERDTree:
 nmap <F9> :NERDTreeToggle<CR>
 
+" mittels CTRL + [hjkl] durch die Buffer springen:
+let g:miniBufExplMapWindowNavVim = 1
+
 "" Templates:
 " Python
 autocmd BufNewFile *.py 0r ~/.vim/templates/python
