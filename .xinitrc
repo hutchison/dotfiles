@@ -53,12 +53,26 @@ $TERMINAL --title="admin" &
 # Set the NASA Image Of The Day as the current background:
 sh $HOME/dotfiles/bin/NASABackground.sh
 
+
+DEFAULT_SESSION=i3
+
+case $1 in
+    i3)
+        exec i3
+        ;;
+    xfce4)
+        exec dbus-launch --exit-with-session startxfce4
+        ;;
+    *)
+        exec $DEFAULT_SESSION
+        ;;
+esac
 # exec gnome-session
 # exec startkde
 # exec startxfce4
 # ...or the Window Manager of your choice
 #exec ck-launch-session dbus-launch --exit-with-session awesome
-exec i3
+#exec i3
 #exec herbstluftwm
 # exec openbox-session
 #exec ck-launch-session dbus-launch --exit-with-session startxfce4
