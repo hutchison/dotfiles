@@ -61,14 +61,16 @@ dropbox start &
 # and SparkleShare
 sparkleshare start &
 
-# exec gnome-session
-# exec startkde
-# exec startxfce4
-# ...or the Window Manager of your choice
-#exec ck-launch-session dbus-launch --exit-with-session awesome
-exec ck-launch-session i3
-#exec ck-launch-session gnome-session
-#exec herbstluftwm
-# exec openbox-session
-#exec ck-launch-session dbus-launch --exit-with-session startxfce4
-#exec xmonad
+DEFAULT_SESSION=i3
+
+case $1 in
+    i3)
+        exec ck-launch-session i3
+        ;;
+    gnome)
+        exec ck-launch-session gnome-session
+        ;;
+    *)
+        exec $DEFAULT_SESSION
+        ;;
+esac
