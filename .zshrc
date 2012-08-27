@@ -62,3 +62,7 @@ alias neuespw='pwgen -B 12 1'
 
 alias open="xdg-open"
 alias bc="bc -l"
+
+function ev {
+    evince $1 &
+}
