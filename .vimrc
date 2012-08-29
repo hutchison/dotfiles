@@ -193,6 +193,9 @@ let g:vimwiki_listsyms = '✗○◐●✓'
 " NERDTree ein-/ausblenden:
 nmap <F9> :NERDTreeToggle<CR>
 
+" Opens BufExplorer:
+nmap <F4> :BufExplorer<CR>
+
 " Jinja2 Support:
 autocmd BufRead,BufNewFile *.jinja2 setfiletype htmljinja
 autocmd BufRead,BufNewFile *.j2 setfiletype jinja
