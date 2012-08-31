@@ -4,5 +4,5 @@ setlocal shiftwidth=4
 setlocal expandtab
 setlocal textwidth=79
 
-setlocal makeprg=python\ %
+setlocal makeprg=python2\ %
 setlocal keywordprg=pydoc
