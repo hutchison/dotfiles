@@ -16,9 +16,6 @@ xset -b
 # disable CAPS LOCK and map ESC to it:
 xmodmap ~/.xmodmap
 
-# start networkmanager applet
-ck-launch-session nm-applet --sm-disable &
-
 # A dimmer for the evening hours:
 redshift -l 54:12 -t 5500:3600 -m randr 2> /dev/null &
 
@@ -31,12 +28,8 @@ export TERMINAL=terminator
 # gvim vimwiki:
 gvim -c ":VimwikiIndex" --name "gvimwiki" &
 
-# Chrom(e|ium)
-if [ -x /usr/bin/google-chrome ]; then
-    google-chrome &
-elif [ -x /usr/bin/chromium ]; then
-    chromium &
-fi
+# Chrome
+google-chrome &
 
 # Socializing stuff:
 # xchat:
@@ -61,16 +54,16 @@ dropbox start &
 # and SparkleShare
 sparkleshare start &
 
-DEFAULT_SESSION=i3
-
 case $1 in
-    i3)
-        exec ck-launch-session i3
-        ;;
     gnome)
-        exec ck-launch-session gnome-session
+        exec ck-launch-session dbus-launch gnome-session
         ;;
-    *)
-        exec $DEFAULT_SESSION
+    xfce)
+        exec dbus-launch startxfce4
+        ;;
+    *)  # default session:
+        # start networkmanager applet
+        nm-applet --sm-disable &
+        exec ck-launch-session i3
         ;;
 esac
