@@ -73,7 +73,7 @@ a4paper, %apaper,
 % Ändert den Zeilenabstand:
 \usepackage[
   % nur eine Möglichkeit auswählen:
-  singespacing
+  singlespacing
   %onehalfspacing
   %doublespacing
 ]{setspace}
