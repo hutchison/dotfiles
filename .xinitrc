@@ -41,7 +41,7 @@ if [ -x /usr/bin/pidgin ]; then
     pidgin &
 fi
 # mutt in a gnome-terminal:
-$TERMINAL --title="mailer" -e 'zsh -c "export TERM=xterm-256color; mutt; zsh"' &
+#$TERMINAL --title="mailer" -e 'zsh -c "export TERM=xterm-256color; mutt; zsh"' &
 
 # a gnome-terminal for maintenance:
 $TERMINAL --title="admin" &
