@@ -1,0 +1,23 @@
+# ich vertraue meinem Server
+unset ssl_verify_host
+
+# Server Einstellungen:
+set from = "hutch@trivialanalog.de"
+set hostname = "trivialanalog.de"
+set folder = "imaps://hutch@trivialanalog.de@trivialanalog.de/INBOX"
+set imap_user = "hutch@trivialanalog.de"
+set imap_pass = `gnome-keyring-query get hutch_ta`
+set smtp_url = "smtp://trivialanalog.de:587"
+set smtp_pass = $imap_pass
+
+# alte Mailboxen löschen:
+unmailboxes "$mbox" "$spoolfile" "$postponed" "$record"
+
+# Ordner:
+set spoolfile = "+INBOX"
+set mbox = "+Archive"
+set record = "+Sent Messages"
+set postponed = "+Drafts"
+
+# und neue Mailboxen speichern:
+mailboxes "$mbox" "$spoolfile" "$postponed" "$record"

@@ -200,5 +200,8 @@ nmap <F4> :BufExplorer<CR>
 autocmd BufRead,BufNewFile *.jinja2 setfiletype htmljinja
 autocmd BufRead,BufNewFile *.j2 setfiletype jinja
 
+" muttrc:
+autocmd BufRead,BufNewFile *.muttrc set filetype=muttrc
+
 " mittels CTRL + [hjkl] durch die Buffer springen:
 let g:miniBufExplMapWindowNavVim = 1

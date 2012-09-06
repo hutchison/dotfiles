@@ -1,0 +1,141 @@
+# Formate
+#
+# Datum: yyyy-mm-dd @ hh:mm
+set date_format = "%F ★ %H:%M"
+# Der Index (die Übersicht):
+# - 3 Stellen für die „current message number“
+# - die Statusflags
+# - das Datum im obigen Format
+# - Name des Autors oder der Liste (min. und max. 20 Stellen)
+# - der Betreff
+set index_format = "%3C %Z %D %-20.20L %s"
+
+# Dateien
+#
+# Die alias-Datei (quasi mein Adressbuch).
+# Vielleicht sollte ich auch hier mal auf abook umsteien.
+set alias_file = ~/.mutt/aliases
+# Diese muss auch eingelesen werden, sonst funktioniert’s nicht.
+source ~/.mutt/aliases
+# Datei für Zertifikate:
+set certificate_file = ~/.mutt/certificates
+# Datei für die Signatur (~/.signature wäre auch der default Wert):
+set signature = ~/.signature
+# Ordner für temporäre Dateien:
+set tmpdir = ~/.mutt/temp
+
+# Farben:
+#
+# Solarized
+source ~/.mutt/solarized/mutt-colors-solarized-dark-256.muttrc
+# Zenburnt ist auch ganz nett:
+#source ~/.mutt/zenburnt-color.muttrc
+
+# Befehle
+#
+# der Standardeditor:
+set editor = vim
+
+# Einstellungen
+#
+# E-Mails von der spool-Mailbox zur mbox verschieben?
+set move = no
+# die übergeile Sortierfunktion:
+set sort=threads
+# und sonst sortieren wir so:
+set sort_aux = last-date-received
+
+# Pager-Einstellung
+#
+# Zeige immer den Pager und zwar wie viele Zeilen?
+set pager_index_lines = 10
+# nicht automatisch zur nächsten Nachricht springen:
+set pager_stop
+# in Menüs scrollen:
+set menu_scroll
+# Wörter beim wrappen nicht aufspalten:
+set smart_wrap
+# Tilden wie in vim:
+set tilde
+# Keine „+“ Zeichen:
+unset markers
+# wenn möglich den Namen aus der Alias-Datei anzeigen:
+set reverse_alias
+
+# E-Mails schreiben
+#
+# mein richtiger Name
+set realname = "Martin Darmüntzel"
+# beim Erstellen Zieladresse und Betreff erfragen:
+set noautoedit
+# Header editieren macht Spaß:
+set edit_headers
+# gleich editieren, wenn wir antworten:
+# (macht aber irgendwie keinen Unterschied)
+set fast_reply
+# Zitierüberschrift:
+set attribution = "Zur Sternzeit %d schrieb %n:"
+# dem Reply to: Header antworten:
+set reply_to
+# für den Fall der Fälle antworten wir unter richtigem Namen:
+set reverse_name
+# in Antworten automatisch zitieren:
+set include
+# auch in Weiterleitungen die Nachricht einbinden:
+set forward_quote
+
+# Header Einstellungen
+#
+# erstmal alle ignorieren:
+ignore *
+# und diese dann doch anzeigen:
+unignore from to cc date subject X-Mailer User-Agent reply-to
+# und zwar in dieser Reihenfolge:
+hdr_order from to cc date subject
+
+# Hotkeys
+#
+# im Pager:
+bind pager 'w' previous-page
+bind pager 'j' next-line
+bind pager 'k' previous-line
+# ^b ist urlview:
+macro index \cb |urlview\n
+macro pager \cb |urlview\n
+# E-Mails abholen:
+bind index 'G' imap-fetch-mail
+# E-Mails durchsuchen:
+macro index B "<limit>~b " "search message bodies"
+# sofort zur Inbox gehen:
+macro index I "<change-folder>!<enter>" "go to inbox"
+
+# die abonnierten Mailinglisten:
+subscribe raumzeitlabor hackerspace-rostock
+
+# generelle Servereinstellungen
+#
+# TLS, falls verfügbar:
+set ssl_starttls
+# immer SSL benutzen:
+set ssl_force_tls
+# automatisch abonnierte Mailboxen checken:
+#set imap_check_subscribed
+# wie oft schauen wie nach, ob neue Mails da sind?
+set mail_check = 60
+# die aktuelle Mailbox ist aber öfter dran:
+set timeout = 10
+
+mailboxes imaps://hutch@trivialanalog.de@trivialanalog.de
+folder-hook imaps://hutch@trivialanalog.de@trivialanalog.de source ~/.mutt/accounts/hutch_ta.muttrc
+
+mailboxes imaps://martin@trivialanalog.de@trivialanalog.de
+folder-hook imaps://martin@trivialanalog.de@trivialanalog.de source ~/.mutt/accounts/martin_ta.muttrc
+
+mailboxes imaps://md261@email.uni-rostock.de
+folder-hook imaps://md261@email.uni-rostock.de source ~/.mutt/accounts/uni.muttrc
+
+mailboxes imaps://martin.darmuentzel@imap.gmail.com/
+folder-hook imaps://martin.darmuentzel@imap.gmail.com/ source ~/.mutt/accounts/gmail.muttrc
+
+# default ist hutch@trivialanalog.de
+source ~/.mutt/accounts/hutch_ta.muttrc

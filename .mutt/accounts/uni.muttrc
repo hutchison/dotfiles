@@ -1,0 +1,20 @@
+# Server Einstellungen:
+set from = "martin.darmuentzel@uni-rostock.de"
+set hostname = "uni-rostock.de"
+set folder = "imaps://md261@email.uni-rostock.de/INBOX"
+set imap_user = "md261"
+set imap_pass = `gnome-keyring-query get uni`
+set smtp_url = "smtp://martin.darmuentzel@uni-rostock.de@email.uni-rostock.de:587/"
+set smtp_pass = $imap_pass
+
+# alte Mailboxen löschen:
+unmailboxes "$mbox" "$spoolfile" "$postponed" "$record"
+
+# Ordner:
+set spoolfile = "+INBOX"
+set mbox = "+Archive"
+set record = "+Sent"
+set postponed = "+Drafts"
+
+# und neue Mailboxen speichern:
+mailboxes "$mbox" "$spoolfile" "$postponed" "$record"

@@ -5,3 +5,8 @@
 .vim/spell
 .DS_Store
 tags
+
+# stuff in .mutt
+.mutt/temp/*
+.mutt/certificates
+.mutt/aliases
