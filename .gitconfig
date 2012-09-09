@@ -11,7 +11,7 @@
 [merge]
 	tool = vimdiff
 [alias]
-	st = status
+	st = status -sb
 	ci = commit -v
 	br = branch
 	co = checkout
