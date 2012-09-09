@@ -60,7 +60,7 @@ if has("gui_macvim") || has("gui_running")
     colorscheme solarized
 endif
 if has("gui_macvim")
-    set guifont=Menlo\ Regular\ for\ Powerline:h14
+    set guifont=Menlo\ Regular\ for\ Powerline:h12
 endif
 if has("gui_gtk2")
     set guifont=Inconsolata\ 12
@@ -123,7 +123,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set linebreak
-set textwidth=150
+set textwidth=80
 set autoindent smartindent
 set smarttab
 
