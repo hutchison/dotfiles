@@ -133,6 +133,7 @@ set smarttab
 autocmd BufNewFile *.tex,*.latex 0r ~/.vim/templates/latex
 " XeLaTeX
 autocmd BufNewFile *.xtex,*.xelatex 0r ~/.vim/templates/xelatex
+autocmd BufRead,BufNewFile *.xtex,*.xelatex setfiletype tex
 " Python
 autocmd BufNewFile *.py 0r ~/.vim/templates/python
 
