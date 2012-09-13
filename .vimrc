@@ -148,6 +148,7 @@ vmap <leader>b <ESC>`>a}<ESC>`<i\textbf{<ESC>f}
 
 "make:
 nmap <leader>m :make<CR>
+nmap <F5> :make<CR>
 
 "haskell<leader> ghci:
 map <leader>g <ESC>:!ghci %<CR><CR>
