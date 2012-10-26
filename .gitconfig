@@ -9,7 +9,7 @@
 [diff]
 	mnemonicprefix = true
 [merge]
-	tool = vimdiff
+	tool = mvimdiff
 [alias]
 	st = status -sb
 	ci = commit -v
