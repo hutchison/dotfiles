@@ -44,7 +44,7 @@ fi
 #$TERMINAL --title="mailer" -e 'zsh -c "export TERM=xterm-256color; mutt; zsh"' &
 
 # a gnome-terminal for maintenance:
-$TERMINAL --title="admin" &
+$TERMINAL --title="admin" --geometry=1000x600 &
 
 # Set the NASA Image Of The Day as the current background:
 sh $HOME/dotfiles/bin/NASABackground.sh
