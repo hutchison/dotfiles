@@ -50,6 +50,7 @@ if [ -d "$HOME/.auswertung" ]; then
 fi
 
 alias la='ls -AF'
+alias open='xdg-open'
 
 export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
 alias e=$EDITOR
