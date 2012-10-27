@@ -71,3 +71,6 @@
 [submodule ".vim/bundle/python-folding"]
 	path = .vim/bundle/python-folding
 	url = git://github.com/vim-scripts/Efficient-python-folding.git
+[submodule ".vim/bundle/octave-syntax"]
+	path = .vim/bundle/octave-syntax
+	url = git://github.com/vim-scripts/octave.vim--.git
