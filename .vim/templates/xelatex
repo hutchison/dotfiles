@@ -58,13 +58,15 @@ a4paper, %apaper,
 % Breite
 \usepackage{array}
 % kann komplexe Linien in Tabellen ziehen:
-%\usepackage{hhline
+%\usepackage{hhline}
 % mehrseitige Tabellen:
 %\usepackage{longtable}
 % Tabellen mit gedehnten Spalten:
 %\usepackage{tabularx}
 % Pimpt enumerate auf (optionales Argument liefert Nummerierung):
 %\usepackage{enumerate}
+% Kann descriptions auf die selbe Höhe bringen:
+%\usepackage{enumitem}
 % Liefert Hyperlinks (\hyperref, \url, \href}
 %\usepackage{hyperref}
 % Farben (wie bei TikZ):
