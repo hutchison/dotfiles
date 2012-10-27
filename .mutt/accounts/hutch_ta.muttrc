@@ -7,7 +7,7 @@ set hostname = "trivialanalog.de"
 set folder = "imaps://hutch@trivialanalog.de@trivialanalog.de/INBOX"
 set imap_user = "hutch@trivialanalog.de"
 set imap_pass = `gnome-keyring-query get hutch_ta`
-set smtp_url = "smtp://trivialanalog.de:587"
+set smtp_url = "smtp://hutch-hutch@fornax.uberspace.de:587"
 set smtp_pass = $imap_pass
 
 # alte Mailboxen löschen:
