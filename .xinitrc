@@ -26,18 +26,16 @@ redshift -l 54:12 -t 5500:3600 -m randr 2> /dev/null &
 setxkbmap -option terminate:ctrl_alt_bksp
 
 # gvim vimwiki:
-gvim -c ":VimwikiIndex" --name "gvimwiki" &
+#gvim -c ":VimwikiIndex" --name "gvimwiki" &
 
 # Chrom(e|ium)
-if [ -x /usr/bin/google-chrome ]; then
-    google-chrome &
-elif [ -x /usr/bin/chromium ]; then
+if [ -x /usr/bin/chromium ]; then
     chromium &
 fi
 
 # Socializing stuff:
 # mutt in a $terminal:
-$TERMINAL --title="mailer" -e 'zsh -c "export TERM=xterm-256color; mutt; zsh"' &
+#$TERMINAL --title="mailer" -e 'zsh -c "export TERM=xterm-256color; mutt; zsh"' &
 # xchat:
 if [ -x /usr/bin/xchat ]; then
     xchat &
