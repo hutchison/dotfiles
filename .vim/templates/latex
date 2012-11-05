@@ -1,0 +1,170 @@
+\documentclass[
+%% alle weiteren Papierformat einstellbar:
+a4paper, %apaper,
+%% keine Seitenzahlen:
+%empty,
+%% Schriftgröße (12pt, 11pt (Standard)):
+10pt,
+%% kleinere Überschriften:
+%smallheadings,
+]
+{scrartcl}
+
+% Zeichenbelegung der Schrift:
+\usepackage[T1]{fontenc}
+% UTF-8 rockt:
+\usepackage[utf8]{inputenc}
+% typografische Feinheiten:
+\usepackage{microtype}
+% Schriftart sei Palatino:
+\usepackage[
+  % Minuskelziffern:
+  osf,
+  % echte Kapitälchen:
+  sc
+]{mathpazo}
+% und die braucht etwas mehr Platz pro Zeile:
+\linespread{1.05}
+% Schriftart für Mathematik:
+\usepackage[
+  % schrumpft die Größe auf 95%:
+  %small
+]{eulervm}
+% Deutsche Sprache bei Silbentrennung und Datum:
+\usepackage[ngerman]{babel}
+% Korrigiert den Weißraum um Auslassungspunkte:
+\usepackage{ellipsis}
+
+% viele mathematische Symbole:
+\usepackage{amssymb}
+% St. Mary Road, liefert Symbole für theoretische Informatik (z.B. \lightning):
+\usepackage{stmaryrd}
+% _das_ Mathepaket schlechthin:
+\usepackage[
+  %% Nummerierung von Gleichungen links:
+  leqno,
+  %% Ausgabe von Gleichungen linksbündig:
+  fleqn,
+]{amsmath}
+
+% nutze die volle Seite als Satzspiegel:
+\usepackage[
+  % Randbreite sei 1cm (sonst ist sie 1in):
+  cm,
+  % Kopf- und Fußzeile werden miteinbezogen:
+  headings
+]{fullpage}
+% verbesserte Tabellen
+% bietet u.a. die Spaltenmöglichkeit 'm{width}' = zentrierte Spalte mit fester
+% Breite
+\usepackage{array}
+% kann komplexe Linien in Tabellen ziehen:
+%\usepackage{hhline
+% mehrseitige Tabellen:
+%\usepackage{longtable}
+% Tabellen mit gedehnten Spalten:
+%\usepackage{tabularx}
+% Pimpt enumerate auf (optionales Argument liefert Nummerierung):
+%\usepackage{enumerate}
+% Liefert Hyperlinks (\hyperref, \url, \href}
+%\usepackage{hyperref}
+% Farben (wie bei TikZ):
+%\usepackage{xcolor}
+% Ändert den Zeilenabstand:
+\usepackage[
+  % nur eine Möglichkeit auswählen:
+  singlespacing
+  %onehalfspacing
+  %doublespacing
+]{setspace}
+% Schönere Tabellen
+% dazu gibt's neue Kommandos:
+% - \toprule[(Dicke)], \midrule[(Dicke)], \bottomrule[(Dicke)]
+% - \addlinespace: Extrahöhe zwischen Zeilen
+\usepackage{booktabs}
+% Schöne numerische Zitierungen:
+%\usepackage{cite}
+% Verbessert den Satz von Abbildungsüberschriften:
+%\usepackage{caption}
+% Ermöglicht durch \begin{linenumbers} Zeilennummern anzuzeigen:
+%\usepackage{lineno}
+% Ermöglicht Zugriff auf die letzte Seite (z.B. \pageref{LastPage}):
+\usepackage{lastpage}
+% Quelltext schön setzen:
+%\usepackage{listings}
+% Logische Beweise:
+%\usepackage{bussproofs}
+% Unterstreichungen (\uline, \uuline, \sout: durchgestrichen, \uwave):
+%\usepackage{ulem}
+% Kann alle möglichen Maße ändern
+% will man Querformat, dann:
+%\usepackage[landscape]{geometry}
+% bietet gestrichelte vert. Linien in Tabellen (':')
+%\usepackage{arydshln}
+
+% Kommando zum Ändern der Schriftart:
+\newcommand{\changefont}[3]{
+  \fontfamily{#1}\fontseries{#2}\fontshape{#3}\selectfont
+}
+
+% eigene Mathesymbole:
+\DeclareMathOperator{\R}{\mathbb{R}}
+\DeclareMathOperator{\C}{\mathbb{C}}
+\DeclareMathOperator{\Z}{\mathbb{Z}}
+\DeclareMathOperator{\K}{\mathbb{K}}
+\DeclareMathOperator{\N}{\mathbb{N}}
+\DeclareMathOperator{\Q}{\mathbb{Q}}
+\DeclareMathOperator{\F}{\mathbb{F}}
+\DeclareMathOperator{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\kgV}{kgV}
+\DeclareMathOperator{\ggT}{ggT}
+\DeclareMathOperator{\var}{var}
+
+
+\parindent 0pt
+
+% Coole Zeichnungen:
+%\usepackage{tikz}
+%\usetikzlibrary{calc}
+
+% eigens gebaute Lochmarken:
+%\usepackage{eso-pic}
+%\AddToShipoutPicture*{
+  %\put(\LenToUnit{0mm},\LenToUnit{228.5mm})
+    %{\rule{\LenToUnit{20pt}}{\LenToUnit{0.5pt}}}
+  %\put(\LenToUnit{0mm},\LenToUnit{68.5mm})
+    %{\rule{\LenToUnit{20pt}}{\LenToUnit{0.5pt}}}
+%}
+
+% coole Kopf- und Fußzeilen:
+\usepackage{fancyhdr}
+% Seitenstil ist natürlich fancy:
+\pagestyle{fancy}
+% alle Felder löschen:
+\fancyhf{}
+% Veranstaltung:
+\fancyhead[L]{}
+% Seriennummer:
+\fancyhead[C]{}
+% Name und Matrikelnummer:
+\fancyhead[R]{}
+%\fancyfoot[L]{}
+\fancyfoot[C]{\thepage}
+%\fancyfoot[R]{\thepage / \pageref{LastPage}}
+% Linie oben/unten:
+\renewcommand{\headrulewidth}{0.0pt}
+\renewcommand{\footrulewidth}{0.0pt}
+
+\begin{document}
+
+% Punktetabelle für Korrektoren:
+\begin{center}
+  \begin{tabular}{c|c|c|c|c}
+    \textbf{} & \textbf{} & \textbf{} & \textbf{} & $\Sigma$\\\hline
+              &           &           &           & \\
+  \end{tabular}
+\end{center}
+
+\end{document}
