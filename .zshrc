@@ -54,6 +54,7 @@ alias open='xdg-open'
 
 export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
 alias e=$EDITOR
+alias se="sudoedit"
 if which vimpager >/dev/null 2>&1; then
     export PAGER="vimpager"
 else
