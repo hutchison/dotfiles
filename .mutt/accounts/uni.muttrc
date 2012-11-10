@@ -4,7 +4,7 @@ set hostname = "uni-rostock.de"
 set folder = "imaps://md261@email.uni-rostock.de/INBOX"
 set imap_user = "md261"
 set imap_pass = `gnome-keyring-query get uni`
-set smtp_url = "smtp://martin.darmuentzel@uni-rostock.de@email.uni-rostock.de:587/"
+set smtp_url = "smtp://md261@email.uni-rostock.de:587/"
 set smtp_pass = $imap_pass
 
 # alte Mailboxen löschen:
