@@ -49,7 +49,11 @@ alias la='ls -AF'
 
 export EDITOR=vim
 alias e=$EDITOR
+alias se="sudoedit"
 export PAGER="vimpager"
+
+alias a='ack'
+alias aa='ack -a'
 
 if [ "$COLORTERM" = "gnome-terminal" ]; then
     export TERM="xterm-256color"
