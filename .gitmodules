@@ -56,3 +56,6 @@
 [submodule ".vim/bundle/flake8"]
 	path = .vim/bundle/flake8
 	url = git://github.com/nvie/vim-flake8.git
+[submodule ".vim/bundle/snipmate-snippets"]
+	path = .vim/bundle/snipmate-snippets
+	url = ssh://hutch@fornax.uberspace.de/home/hutch/lemnos/snipmate-snippets.git
