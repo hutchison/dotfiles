@@ -1,25 +1,30 @@
 #!/bin/bash
 
-FILES=$(find ~/dotfiles/ -maxdepth 1 -mindepth 1 \! -name ".git" -name ".*")
-cd ~
-for f in $FILES
+FILES=( .vimrc .vim .gitconfig .zshrc )
+PWD=$(pwd)
+
+for f in ${FILES[@]}
 do
-    #Backup:
-    if [ -e $(basename $f).bak ];
+    orig="~/$f"
+    # Backup:
+    if [ -e "$orig.bak" ];
     then
         echo "Backup von $f existiert schon"
     else
-        if [ ! -h $(basename $f) ]; #falls schon Softlinks existieren, wird nicht gebackuppt
+        if [ ! -L $orig ]; # falls kein Softlink existiert, wird gebackuppt
         then
-            mv -fv $(basename $f){,.bak}
+            mv -fv $orig{,.bak}
         fi
     fi
-    #Softlinks erstellen, aber nur wenn sie noch nicht existieren:
-    if [ ! -e $(basename $f) ];
+    # Softlinks erstellen, aber nur wenn sie noch nicht existieren:
+    if [ ! -e $orig ];
     then
-        ln -sv $f $(basename $f)
+        ln -sv "$PWD/$f" ~
     fi
 done
 
+# Ordner für vim erstellen:
 mkdir ~/.vim/backup
 mkdir ~/.vim/tmp
+# smyck color scheme verlinken:
+ln -s ~/.vim/colors/smyck/smyck.vim ~/.vim/colors/smyck.vim
