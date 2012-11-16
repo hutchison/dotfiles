@@ -50,7 +50,7 @@ alias la='ls -AF'
 export EDITOR=vim
 alias e=$EDITOR
 alias se="sudoedit"
-export PAGER="vimpager"
+export PAGER="less"
 
 alias a='ack'
 alias aa='ack -a'
