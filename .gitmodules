@@ -50,9 +50,6 @@
 [submodule ".vim/bundle/snipmate"]
 	path = .vim/bundle/snipmate
 	url = git://github.com/garbas/vim-snipmate.git
-[submodule ".vim/bundle/snipmate-snippets"]
-	path = .vim/bundle/snipmate-snippets
-	url = git://github.com/honza/snipmate-snippets.git
 [submodule ".vim/bundle/supertab"]
 	path = .vim/bundle/supertab
 	url = git://github.com/ervandew/supertab.git
@@ -74,3 +71,6 @@
 [submodule ".vim/bundle/octave-syntax"]
 	path = .vim/bundle/octave-syntax
 	url = git://github.com/vim-scripts/octave.vim--.git
+[submodule ".vim/bundle/snipmate-snippets"]
+	path = .vim/bundle/snipmate-snippets
+	url = ssh://hutch@fornax.uberspace.de/home/hutch/lemnos/snipmate-snippets.git
