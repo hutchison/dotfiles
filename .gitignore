@@ -5,3 +5,6 @@
 .vim/spell
 .DS_Store
 tags
+.mutt/hcache
+.mutt/mcache
+.mutt/temp
