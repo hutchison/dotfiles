@@ -8,3 +8,4 @@ tags
 .mutt/hcache
 .mutt/mcache
 .mutt/temp
+.mutt/certificates
