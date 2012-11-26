@@ -59,3 +59,6 @@
 [submodule ".vim/bundle/snipmate-snippets"]
 	path = .vim/bundle/snipmate-snippets
 	url = ssh://hutch@fornax.uberspace.de/home/hutch/lemnos/snipmate-snippets.git
+[submodule ".mutt/mutt-solarized"]
+	path = .mutt/mutt-solarized
+	url = git://github.com/altercation/mutt-colors-solarized.git
