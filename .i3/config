@@ -12,7 +12,8 @@
 set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
-font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+font xft:DejaVu Sans 10
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -90,6 +91,7 @@ bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
 bindsym $mod+Control+l workspace next
+bindsym $mod+Tab workspace next
 bindsym $mod+Control+h workspace prev
 
 # move focused container to workspace
@@ -112,7 +114,7 @@ bindsym $mod+Shift+R restart
 bindsym $mod+Shift+E exit
 
 # shutdown
-bindsym $mod+F12 exec gksudo halt
+bindsym $mod+F12 exec gksudo poweroff
 # reboot
 bindsym $mod+Shift+F12 exec gksudo reboot
 # start pcmanfm
