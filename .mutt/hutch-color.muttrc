@@ -1,0 +1,49 @@
+# basic colors:
+color normal        color241        color234
+color error         color160        color234
+color tilde         color235        color234
+color message       color37         color234
+color markers       color160        color254
+color attachment    color254        color234
+color search        color61         color234
+color status        color241        color234
+color indicator     color234        color241
+color tree          color136        color234
+
+# sidebar:
+color sidebar_new   color136        color234
+
+# index:
+color index         color64         color234        "~N"        # new
+color index         color238        color234        "~Q"        # replied
+color index         color135        color234        "~F"        # flagged
+color index         color160        color234        "~D"        # deleted
+color index         color235        color234        "~d >1m"    # older than 1 month
+color index         color234        color247        "~v"        # collapsed thread
+
+# header
+color hdrdefault    color240        color234
+color header        color33         color234        "^(From)"
+color header        color135        color234        "^(Subject)"
+
+# quotations:
+color quoted        color33         color234
+color quoted1       color64         color234
+color quoted2       color136        color234
+color quoted3       color160        color234
+color quoted4       color93         color234
+
+# signature:
+color signature     color136        color234
+
+# the insance URL regex:
+color body          color136        color234        "([a-z][a-z0-9+-]*://(((([a-z0-9_.!~*'();:&=+$,-]|%[0-9a-f][0-9a-f])*@)?((([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?|[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)(:[0-9]+)?)|([a-z0-9_.!~*'()$,;:@&=+-]|%[0-9a-f][0-9a-f])+)(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*(/([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*(;([a-z0-9_.!~*'():@&=+$,-]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?(#([a-z0-9_.!~*'();/?:@&=+$,-]|%[0-9a-f][0-9a-f])*)?|(www|ftp)\\.(([a-z0-9]([a-z0-9-]*[a-z0-9])?)\\.)*([a-z]([a-z0-9-]*[a-z0-9])?)\\.?(:[0-9]+)?(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*(/([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*(;([-a-z0-9_.!~*'():@&=+$,]|%[0-9a-f][0-9a-f])*)*)*)?(\\?([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?(#([-a-z0-9_.!~*'();/?:@&=+$,]|%[0-9a-f][0-9a-f])*)?)[^].,:;!)? \t\r\n<>\"]"
+
+# smilies:
+color body          color136        color234        " [;:]-*[})>{(<|]"  # :-) etc...
+# *bold*
+color body          color33         color234        "(^|[[:space:][:punct:]])\\*[^*]+\\*([[:space:][:punct:]]|$)"
+# _underline_
+color body          color33         color234        "(^|[[:space:][:punct:]])_[^_]+_([[:space:][:punct:]]|$)"
+# /italic/  (Sometimes gets directory names)
+color body          color33         color234        "(^|[[:space:][:punct:]])/[^/]+/([[:space:][:punct:]]|$)"
