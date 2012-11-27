@@ -1,0 +1,32 @@
+[general]
+ui = blinkenlights
+accounts = gmail
+pythonfile = ~/.mutt/offlineimap.py
+
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+status_backend = sqlite
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/Mail/gmail
+nametrans = lambda folder: {'drafts':   '[Google Mail]/Drafts',
+                            'sent':     '[Google Mail]/Sent Mail',
+                            'flagged':  '[Google Mail]/Starred',
+                            'trash':    '[Google Mail]/Trash',
+                            'archive':  '[Google Mail]/All Mail',
+                        }.get(folder, folder)
+
+[Repository gmail-remote]
+maxconnections = 4
+type = Gmail
+cert_fingerprint = 6d1b5b5ee0180ab493b71d3b94534b5ab937d042
+remoteuser = martin.darmuentzel@gmail.com
+remotepasseval = get_password("gmail")
+nametrans = lambda folder: {'[Google Mail]/Drafts':    'drafts',
+                            '[Google Mail]/Sent Mail': 'sent',
+                            '[Google Mail]/Starred':   'flagged',
+                            '[Google Mail]/Trash':     'trash',
+                            '[Google Mail]/All Mail':  'archive',
+                            }.get(folder, folder)
