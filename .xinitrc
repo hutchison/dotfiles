@@ -17,7 +17,10 @@ xset -b
 xmodmap ~/.xmodmap
 
 # A dimmer for the evening hours:
-redshift -l 54:12 -t 5500:3600 -m randr 2> /dev/null &
+#redshift -l 54:12 -t 5500:3600 -m randr 2> /dev/null &
+if [ -x $(which redshiftgui) ]; then
+    redshiftgui &
+fi
 
 # More recent X servers don't terminate on C-A-Backspace anymore.
 # This enables it again.
@@ -26,18 +29,20 @@ setxkbmap -option terminate:ctrl_alt_bksp
 export TERMINAL=terminator
 
 # gvim vimwiki:
-gvim -c ":VimwikiIndex" --name "gvimwiki" &
+#gvim -c ":VimwikiIndex" --name "gvimwiki" &
 
 # Chrome
-google-chrome &
+if [ -x $(which google-chrome) ]; then
+    google-chrome &
+fi
 
 # Socializing stuff:
 # xchat:
-if [ -x /usr/bin/xchat ]; then
+if [ -x $(which xchat) ]; then
     xchat &
 fi
 # pidgin:
-if [ -x /usr/bin/pidgin ]; then
+if [ -x $(which pidgin) ]; then
     pidgin &
 fi
 # mutt in a gnome-terminal:
@@ -50,20 +55,17 @@ $TERMINAL --title="admin" --geometry=1000x600 &
 sh $HOME/dotfiles/bin/NASABackground.sh
 
 # start Dropbox
-dropbox start &
+if [ -x $(which dropbox) ]; then
+    dropbox start &
+fi
 # and SparkleShare
-sparkleshare start &
+if [ -x $(which sparkleshare) ]; then
+    sparkleshare start &
+fi
 
-case $1 in
-    gnome)
-        exec ck-launch-session dbus-launch gnome-session
-        ;;
-    xfce)
-        exec dbus-launch startxfce4
-        ;;
-    *)  # default session:
-        # start networkmanager applet
-        nm-applet --sm-disable &
-        exec ck-launch-session i3
-        ;;
-esac
+# der GnuPG Agent:
+if [ -x $(which gpg-agent) ]; then
+    eval $(gpg-agent --daemon) &
+fi
+
+exec i3
