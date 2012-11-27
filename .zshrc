@@ -7,6 +7,8 @@ ZSH=$HOME/dotfiles/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="hutch"
 
+unsetopt BEEP
+
 # Example aliases
 alias zshconfig="vim ~/.zshrc"
 alias reload="source ~/.zshrc"
