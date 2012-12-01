@@ -1,20 +1,18 @@
-# Server Einstellungen:
+# Einstellungen für GMail
 set from = "martin.darmuentzel@gmail.com"
 set hostname = "gmail.com"
-set folder = "imaps://martin.darmuentzel@imap.gmail.com"
-set imap_user = "martin.darmuentzel"
-set imap_pass = `gnome-keyring-query get gmail`
-set smtp_url = "smtp://martin.darmuentzel@smtp.gmail.com:587"
-set smtp_pass = $imap_pass
 
-# alte Mailboxen löschen:
-unmailboxes "$mbox" "$spoolfile" "$postponed" "$record"
+# Wie wird gesendet?
+set sendmail = "/usr/bin/msmtp -a gmail"
 
-# Ordner:
-set spoolfile = "+INBOX"
-set mbox = "+[Google Mail]/All Mail"
-set record = "+[Google Mail]/Sent Mail"
-set postponed = "+[Google Mail]/Drafts"
+# relevante Ordner:
+set spoolfile = "+gmail/GMail"
+set mbox = "+gmail/archive"
+set postponed = "+gmail/drafts"
+set trash = "+gmail/trash"
 
-# und neue Mailboxen speichern:
-mailboxes "$mbox" "$spoolfile" "$postponed" "$record"
+# Gesendete E-Mails nicht speichern, das macht Google Mail allein:
+unset record
+
+# für den 'A'-Hotkey lesen wir hotkeys.muttrc nochmals ein:
+source ~/.mutt/hotkeys.muttrc

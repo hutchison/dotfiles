@@ -1,0 +1,14 @@
+# Formate
+#
+# Datum: yyyy-mm-dd @ hh:mm
+set date_format = "%F ★ %H:%M"
+# Der Index (die Übersicht):
+# - 3 Stellen für die „current message number“
+# - die Statusflags
+# - das Datum im obigen Format
+# - Name des Autors oder der Liste (min. und max. 20 Stellen)
+# - der Betreff
+set index_format = "%3C %Z %D %-20.20L %s"
+# Statusbar
+set status_chars  = " *%A"
+set status_format = "───[ Folder: %f ]───[%r%m messages%?n? (%n new)?%?d? (%d to delete)?%?t? (%t tagged)? ]───%>─%?p?( %p postponed )?───"

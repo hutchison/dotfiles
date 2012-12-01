@@ -1,0 +1,18 @@
+# Pager-Einstellung
+#
+# Zeige immer den Pager und zwar wie viele Zeilen?
+set pager_index_lines = 10
+# nicht automatisch zur nächsten Nachricht springen:
+set pager_stop
+# in Menüs scrollen:
+set menu_scroll
+# Wörter beim wrappen nicht aufspalten:
+set smart_wrap
+# Tilden wie in vim:
+set tilde
+# Keine „+“ Zeichen:
+unset markers
+# wenn möglich den Namen aus der Alias-Datei anzeigen:
+set reverse_alias
+# "old"? who cares?!
+set mark_old = no

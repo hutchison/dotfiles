@@ -1,0 +1,16 @@
+# Server Einstellungen:
+set from = "hutch@trivialanalog.de"
+set hostname = "trivialanalog.de"
+
+# Wie wird gesendet?
+set sendmail = "/usr/bin/msmtp -a hutch-ta"
+
+# relevante Ordner:
+set spoolfile = "+hutch-ta/hutch@ta"
+set mbox = "+hutch-ta/archive"
+set record = "+hutch-ta/sent"
+set postponed = "+hutch-ta/drafts"
+set trash = "+hutch-ta/trash"
+
+# für den 'A'-Hotkey lesen wir hotkeys.muttrc nochmals ein:
+source ~/.mutt/hotkeys.muttrc

@@ -1,6 +1,6 @@
 [general]
 ui = blinkenlights
-accounts = gmail
+accounts = gmail, uni, hutch-ta
 pythonfile = ~/.mutt/offlineimap.py
 
 [Account gmail]
@@ -11,12 +11,13 @@ status_backend = sqlite
 [Repository gmail-local]
 type = Maildir
 localfolders = ~/Mail/gmail
-nametrans = lambda folder: {'drafts':   '[Google Mail]/Drafts',
+nametrans = lambda folder: {'GMail':    'INBOX',
+                            'drafts':   '[Google Mail]/Drafts',
                             'sent':     '[Google Mail]/Sent Mail',
                             'flagged':  '[Google Mail]/Starred',
                             'trash':    '[Google Mail]/Trash',
                             'archive':  '[Google Mail]/All Mail',
-                        }.get(folder, folder)
+                            }.get(folder, folder)
 
 [Repository gmail-remote]
 maxconnections = 4
@@ -24,9 +25,64 @@ type = Gmail
 cert_fingerprint = 6d1b5b5ee0180ab493b71d3b94534b5ab937d042
 remoteuser = martin.darmuentzel@gmail.com
 remotepasseval = get_password("gmail")
-nametrans = lambda folder: {'[Google Mail]/Drafts':    'drafts',
-                            '[Google Mail]/Sent Mail': 'sent',
-                            '[Google Mail]/Starred':   'flagged',
-                            '[Google Mail]/Trash':     'trash',
-                            '[Google Mail]/All Mail':  'archive',
+nametrans = lambda folder: {'INBOX':                    'GMail',
+                            '[Google Mail]/Drafts':     'drafts',
+                            '[Google Mail]/Sent Mail':  'sent',
+                            '[Google Mail]/Starred':    'flagged',
+                            '[Google Mail]/Trash':      'trash',
+                            '[Google Mail]/All Mail':   'archive',
+                            }.get(folder, folder)
+
+[Account uni]
+localrepository = uni-local
+remoterepository = uni-remote
+status_backend = sqlite
+
+[Repository uni-local]
+type = Maildir
+localfolders = ~/Mail/uni
+nametrans = lambda folder:  {'Uni': 'INBOX',
+                            }.get(folder, folder)
+
+[Repository uni-remote]
+maxconnections = 4
+type = IMAP
+remotehost = email.uni-rostock.de
+remoteuser = martin.darmuentzel@uni-rostock.de
+remotepasseval = get_password("uni")
+nametrans = lambda folder:  {'INBOX': 'Uni',
+                            }.get(folder, folder)
+
+[Account hutch-ta]
+localrepository = hutch-ta-local
+remoterepository = hutch-ta-remote
+status_backend = sqlite
+
+[Repository hutch-ta-local]
+type = Maildir
+localfolders = ~/Mail/hutch-ta
+nametrans = lambda folder:  {'hutch@ta':    'INBOX',
+                             'archive':     'INBOX/Archive',
+                             'drafts':      'INBOX/Drafts',
+                             'sent':        'INBOX/Sent Messages',
+                             'hshro':       'INBOX/HSHRO',
+                             'rzl':         'INBOX/RZL',
+                             'spam':        'INBOX/Spam',
+                             'trash':       'INBOX/Trash',
+                            }.get(folder, folder)
+
+[Repository hutch-ta-remote]
+maxconnections = 4
+type = IMAP
+remotehost = fornax.uberspace.de
+remoteuser = hutch-hutch
+remotepasseval = get_password("hutch-ta")
+nametrans = lambda folder:  {'INBOX':                   'hutch@ta',
+                             'INBOX/Archive':           'archive',
+                             'INBOX/Drafts':            'drafts',
+                             'INBOX/Sent Messages':     'sent',
+                             'INBOX/HSHRO':             'hshro',
+                             'INBOX/RZL':               'rzl',
+                             'INBOX/Spam':              'spam',
+                             'INBOX/Trash':             'trash',
                             }.get(folder, folder)

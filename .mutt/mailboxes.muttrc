@@ -1,0 +1,16 @@
+# in der sidebar angezeigte Mailboxen:
+mailboxes = +gmail/GMail \
+            +gmail/MacHackers \
+            +gmail/archive \
+            +gmail/sent \
+            +gmail/drafts \
+            +uni/Uni \
+            +uni/Archive \
+            +uni/Sent \
+            +uni/Drafts \
+            +hutch-ta/hutch@ta \
+            +hutch-ta/rzl \
+            +hutch-ta/hshro \
+            +hutch-ta/archive \
+            +hutch-ta/sent \
+            +hutch-ta/drafts

@@ -1,0 +1,19 @@
+# Dateien
+#
+# Da sind die Mails:
+set folder = ~/Mail
+# eine kleine Feineinstellung:
+set mbox_type = Maildir
+# goobook als Adressbuch:
+set query_command = "goobook query '%s'"
+# Datei für Zertifikate:
+set certificate_file = ~/.mutt/certificates
+# Datei für die Signatur (~/.signature wäre auch der default Wert):
+set signature = ~/.signature
+# Ordner für temporäre Dateien:
+set tmpdir = ~/tmp
+# Caches:
+set header_cache = ~/.mutt/cache/headers
+set message_cachedir = ~/.mutt/cache/bodies
+# Was tun mit Anhängen?
+set mailcap_path = ~/.mutt/mailcap

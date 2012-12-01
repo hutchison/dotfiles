@@ -1,0 +1,9 @@
+# Farben:
+#
+# Die bisherigen Kandidaten:
+# meine Kreation:
+source ~/.mutt/hutch-color.muttrc
+# Solarized
+#source ~/.mutt/solarized/mutt-colors-solarized-dark-256.muttrc
+# Zenburnt ist auch ganz nett:
+#source ~/.mutt/zenburnt-color.muttrc
