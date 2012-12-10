@@ -1,2 +1,1 @@
-#text/html; elinks -dump -dump-charset ISO-8859-15 -default-mime-type text/html %s; needsterminal; copiousoutput;
-text/html; lynx -dump -force_html -assume_charset iso-8859-15 -localhost %s; copiousoutput
+text/html; ~/dotfiles/bin/htmlstrip.py %s; copiousoutput
