@@ -43,7 +43,7 @@ TEXPATH="/usr/texbin"
 MYPYTHONPATH="$HOME/.local/bin"
 MEDAUSWERTUNGPATH="$HOME/medauswertung"
 export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH:$MEDAUSWERTUNGPATH"
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+export PYTHONPATH="~/.local:/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 alias la='ls -AF'
 
