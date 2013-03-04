@@ -1,1 +1,1 @@
-text/html; ~/dotfiles/bin/htmlstrip.py %s; copiousoutput
+text/html; lynx -dump -force_html %s; copiousoutput; description=HTML Text;
