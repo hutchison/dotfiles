@@ -20,7 +20,7 @@ color index         color64         color234        "~N"        # new
 color index         color238        color234        "~Q"        # replied
 color index         color135        color234        "~F"        # flagged
 color index         color160        color234        "~D"        # deleted
-color index         color235        color234        "~d >1m"    # older than 1 month
+color index         color238        color234        "~d >1m"    # older than 1 month
 color index         color234        color247        "~v"        # collapsed thread
 
 # header
