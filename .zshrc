@@ -66,6 +66,7 @@ alias neuespw='pwgen -B 12 1'
 
 alias open="xdg-open"
 alias bc="bc -l"
+alias servieren="python3 -m http.server"
 
 function ev {
     evince $1 &
