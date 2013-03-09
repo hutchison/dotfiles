@@ -18,6 +18,7 @@ set showmode
 
 syntax on
 filetype plugin indent on
+source $HOME/.vim/filetype.vim
 
 "set clipboard=unnamed
 
@@ -129,16 +130,6 @@ set textwidth=150
 set autoindent smartindent
 set smarttab
 
-" Templates für die jeweligen Dateiendungen
-" normales LaTeX
-autocmd BufNewFile *.tex,*.latex 0r ~/.vim/templates/latex
-" XeLaTeX
-autocmd BufNewFile *.xtex,*.xelatex 0r ~/.vim/templates/xelatex
-autocmd BufRead,BufNewFile *.xtex,*.xelatex setfiletype tex
-autocmd BufRead,BufNewFile *.xtex,*.xelatex set makeprg=xelatex\ %
-" Python
-autocmd BufNewFile *.py 0r ~/.vim/templates/python
-
 "schaltet hlsearch aus
 noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
@@ -188,11 +179,6 @@ nmap <leader>d "=strftime("%Y-%m-%d %H:%M")<CR>p
 imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 imap <silent> <C-D><C-F> <C-R>=strftime("[%H:%M] ")<CR>
 
-" Octave Syntax
-augroup filetypedetect
-    au! BufRead,BufNewFile *.m setfiletype octave
-augroup END
-
 " zum Tag/Funktionsdef. springen:
 nmap <leader>f <C-]>
 
@@ -205,13 +191,6 @@ nmap <F9> :NERDTreeToggle<CR>
 
 " Opens BufExplorer:
 nmap <F4> :BufExplorer<CR>
-
-" Jinja2 Support:
-autocmd BufRead,BufNewFile *.jinja2 setfiletype htmljinja
-autocmd BufRead,BufNewFile *.j2 setfiletype jinja
-
-" muttrc:
-autocmd BufRead,BufNewFile *.muttrc set filetype=muttrc
 
 " mittels CTRL + [hjkl] durch die Buffer springen:
 let g:miniBufExplMapWindowNavVim = 1
