@@ -39,6 +39,7 @@ export TERMINAL=terminator
 # Chrome
 if [ -x $(which google-chrome) ]; then
     google-chrome &
+    export BROWSER=google-chrome
 fi
 
 # Socializing stuff:
