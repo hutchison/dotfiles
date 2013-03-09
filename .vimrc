@@ -177,6 +177,12 @@ nmap <leader>y <ESC>:bprevious<CR>
 nmap <leader>w <ESC>:bnext<CR>
 nmap <leader>q <ESC>:bprevious<CR>
 
+" window movement:
+nmap <M-h> <C-W>h
+nmap <M-l> <C-W>l
+nmap <M-j> <C-W>j
+nmap <M-k> <C-W>k
+
 "Datum einfügen
 nmap <leader>d "=strftime("%Y-%m-%d %H:%M")<CR>p
 imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
