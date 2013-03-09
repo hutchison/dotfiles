@@ -12,10 +12,15 @@ a4paper, %apaper,
 
 % Zeichenbelegung der Schrift:
 \usepackage[T1]{fontenc}
-% UTF-8 rockt:
-\usepackage[utf8]{inputenc}
 % typografische Feinheiten:
 \usepackage{microtype}
+% _das_ Mathepaket schlechthin:
+\usepackage[
+  %% Nummerierung von Gleichungen links:
+  leqno,
+  %% Ausgabe von Gleichungen linksbündig:
+  fleqn,
+]{mathtools}
 % XeLaTeX Pakete (z.B. zur Schriftauswahl):
 \usepackage{xltxtra, fontspec, xunicode}
 % Die Hauptschriftart:
@@ -38,13 +43,6 @@ a4paper, %apaper,
 \usepackage{amssymb}
 % St. Mary Road, liefert Symbole für theoretische Informatik (z.B. \lightning):
 \usepackage{stmaryrd}
-% _das_ Mathepaket schlechthin:
-\usepackage[
-  %% Nummerierung von Gleichungen links:
-  leqno,
-  %% Ausgabe von Gleichungen linksbündig:
-  fleqn,
-]{amsmath}
 
 % nutze die volle Seite als Satzspiegel:
 \usepackage[
