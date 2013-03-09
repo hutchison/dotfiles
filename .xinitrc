@@ -22,6 +22,11 @@ if [ -x $(which redshiftgui) ]; then
     redshiftgui &
 fi
 
+# ALSA-Tray for volume control:
+if [ -x $(which alsa-tray) ]; then
+    alsa-tray &
+fi
+
 # More recent X servers don't terminate on C-A-Backspace anymore.
 # This enables it again.
 setxkbmap -option terminate:ctrl_alt_bksp
