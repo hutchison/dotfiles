@@ -1,7 +1,7 @@
 # in der sidebar angezeigte Mailboxen:
 mailboxes = +gmail/GMail \
-            +gmail/MacHackers \
             +gmail/archive \
+            +gmail/MacHackers \
             +gmail/sent \
             +gmail/drafts \
             +uni/Uni \
@@ -9,8 +9,17 @@ mailboxes = +gmail/GMail \
             +uni/Sent \
             +uni/Drafts \
             +hutch-ta/hutch@ta \
+            +hutch-ta/archive \
             +hutch-ta/rzl \
             +hutch-ta/hshro \
-            +hutch-ta/archive \
             +hutch-ta/sent \
-            +hutch-ta/drafts
+            +hutch-ta/drafts \
+            +hutch-uber/hutch@uber \
+            +hutch-uber/archive \
+            +hutch-uber/git \
+            +hutch-uber/sent \
+            +hutch-uber/drafts \
+            +martin-ta/martin@ta \
+            +martin-ta/archive \
+            +martin-ta/sent \
+            +martin-ta/drafts

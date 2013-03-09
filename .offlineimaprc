@@ -1,7 +1,9 @@
+# vim: set filetype=ini :
 [general]
 ui = blinkenlights
-accounts = gmail, uni, hutch-ta
+accounts = gmail, uni, hutch-ta, hutch-uber, martin-ta
 pythonfile = ~/.mutt/offlineimap.py
+postsynchook = notmuch new
 
 [Account gmail]
 localrepository = gmail-local
@@ -20,7 +22,7 @@ nametrans = lambda folder: {'GMail':    'INBOX',
                             }.get(folder, folder)
 
 [Repository gmail-remote]
-maxconnections = 4
+maxconnections = 2
 type = Gmail
 cert_fingerprint = 6d1b5b5ee0180ab493b71d3b94534b5ab937d042
 remoteuser = martin.darmuentzel@gmail.com
@@ -45,7 +47,7 @@ nametrans = lambda folder:  {'Uni': 'INBOX',
                             }.get(folder, folder)
 
 [Repository uni-remote]
-maxconnections = 4
+maxconnections = 2
 type = IMAP
 remotehost = email.uni-rostock.de
 remoteuser = martin.darmuentzel@uni-rostock.de
@@ -72,12 +74,76 @@ nametrans = lambda folder:  {'hutch@ta':    'INBOX',
                             }.get(folder, folder)
 
 [Repository hutch-ta-remote]
-maxconnections = 4
+maxconnections = 2
 type = IMAP
 remotehost = fornax.uberspace.de
 remoteuser = hutch-hutch
 remotepasseval = get_password("hutch-ta")
 nametrans = lambda folder:  {'INBOX':                   'hutch@ta',
+                             'INBOX/Archive':           'archive',
+                             'INBOX/Drafts':            'drafts',
+                             'INBOX/Sent Messages':     'sent',
+                             'INBOX/HSHRO':             'hshro',
+                             'INBOX/RZL':               'rzl',
+                             'INBOX/Spam':              'spam',
+                             'INBOX/Trash':             'trash',
+                            }.get(folder, folder)
+
+[Account hutch-uber]
+localrepository = hutch-uber-local
+remoterepository = hutch-uber-remote
+status_backend = sqlite
+
+[Repository hutch-uber-local]
+type = Maildir
+localfolders = ~/Mail/hutch-uber
+nametrans = lambda folder:  {'hutch@uber':  'INBOX',
+                             'archive':     'INBOX/Archive',
+                             'drafts':      'INBOX/Drafts',
+                             'sent':        'INBOX/Sent Messages',
+                             'trash':       'INBOX/Deleted Messages',
+                             'git':         'INBOX/git',
+                            }.get(folder, folder)
+
+[Repository hutch-uber-remote]
+maxconnections = 2
+type = IMAP
+remotehost = fornax.uberspace.de
+remoteuser = hutch
+remotepasseval = get_password("hutch-uber")
+nametrans = lambda folder:  {'INBOX':                   'hutch@uber',
+                             'INBOX/Archive':           'archive',
+                             'INBOX/Drafts':            'drafts',
+                             'INBOX/Sent Messages':     'sent',
+                             'INBOX/Deleted Messages':  'trash',
+                             'INBOX/git':               'git',
+                            }.get(folder, folder)
+
+[Account martin-ta]
+localrepository = martin-ta-local
+remoterepository = martin-ta-remote
+status_backend = sqlite
+
+[Repository martin-ta-local]
+type = Maildir
+localfolders = ~/Mail/martin-ta
+nametrans = lambda folder:  {'martin@ta':   'INBOX',
+                             'archive':     'INBOX/Archive',
+                             'drafts':      'INBOX/Drafts',
+                             'sent':        'INBOX/Sent Messages',
+                             'hshro':       'INBOX/HSHRO',
+                             'rzl':         'INBOX/RZL',
+                             'spam':        'INBOX/Spam',
+                             'trash':       'INBOX/Trash',
+                            }.get(folder, folder)
+
+[Repository martin-ta-remote]
+maxconnections = 2
+type = IMAP
+remotehost = fornax.uberspace.de
+remoteuser = hutch-martin
+remotepasseval = get_password("martin-ta")
+nametrans = lambda folder:  {'INBOX':                   'martin@ta',
                              'INBOX/Archive':           'archive',
                              'INBOX/Drafts':            'drafts',
                              'INBOX/Sent Messages':     'sent',
