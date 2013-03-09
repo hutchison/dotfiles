@@ -65,7 +65,7 @@ if has("gui_macvim")
     set guifont=Inconsolata:h16
 endif
 if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
+    set guifont=Ubuntu\ Mono\ 11
 endif
 " Powerline setup:
 let g:Powerline_symbols='fancy'
