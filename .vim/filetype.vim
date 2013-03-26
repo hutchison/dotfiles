@@ -14,3 +14,6 @@ autocmd BufRead,BufNewFile *.j2 setfiletype jinja
 autocmd BufRead,BufNewFile *.muttrc setfiletype muttrc
 
 autocmd BufRead,BufNewFile *.m setfiletype octave
+
+autocmd InsertEnter * :set number
+autocmd InsertLeave * :set relativenumber
