@@ -27,7 +27,7 @@ set backup
 set backupdir=~/.vim/backup
 set directory=~/.vim/tmp
 set fileformats=unix,dos,mac
-"set autochdir
+set autochdir
 
 " hab ich noch drin, falls man es mal braucht
 "set spell
