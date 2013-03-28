@@ -197,3 +197,6 @@ nmap <S-F6> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 " vimwiki config:
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 let g:vimwiki_listsyms = '✗○◐●✓'
+
+" CTRL-P options:
+let g:ctrlp_cmd = 'CtrlPMRU'
