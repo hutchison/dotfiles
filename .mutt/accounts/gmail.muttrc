@@ -1,0 +1,18 @@
+# Einstellungen für GMail
+set from = "martin.darmuentzel@gmail.com"
+set hostname = "gmail.com"
+
+# Wie wird gesendet?
+set sendmail = "/usr/bin/msmtp -a gmail"
+
+# relevante Ordner:
+set spoolfile = "+GMail/INBOX"
+set mbox = "+GMail/archive"
+set postponed = "+GMail/drafts"
+set trash = "+GMail/trash"
+
+# Gesendete E-Mails nicht speichern, das macht Google Mail allein:
+unset record
+
+# für den 'A'-Hotkey lesen wir hotkeys.muttrc nochmals ein:
+source ~/.mutt/hotkeys.muttrc

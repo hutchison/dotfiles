@@ -1,0 +1,23 @@
+# Einstellungen
+#
+# der Standardeditor:
+set editor = vim
+# E-Mails von der spool-Mailbox zur mbox verschieben?
+set move = no
+# die übergeile Sortierfunktion:
+set sort=threads
+# und sonst sortieren wir so:
+set sort_aux = reverse-last-date-received
+# Sidebar
+set sidebar_delim   = '|'
+set sidebar_visible = yes
+set sidebar_width   = 24
+
+# generelle Servereinstellungen
+#
+# wie oft schauen wie nach, ob neue Mails da sind?
+set mail_check = 60
+# die aktuelle Mailbox ist aber öfter dran:
+set timeout = 10
+# One does not simply wait for msmtp to finish:
+set sendmail_wait = 0

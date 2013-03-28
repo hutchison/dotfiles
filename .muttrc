@@ -1,0 +1,13 @@
+source ~/.mutt/colors.muttrc
+source ~/.mutt/files.muttrc
+source ~/.mutt/formats.muttrc
+source ~/.mutt/header.muttrc
+source ~/.mutt/hotkeys.muttrc
+source ~/.mutt/mailboxes.muttrc
+source ~/.mutt/mailinglists.muttrc
+source ~/.mutt/pager.muttrc
+source ~/.mutt/settings.muttrc
+source ~/.mutt/write.muttrc
+
+source ~/.mutt/folder-hooks.muttrc
+source ~/.mutt/accounts/gmail.muttrc

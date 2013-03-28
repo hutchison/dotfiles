@@ -1,0 +1,21 @@
+# E-Mails schreiben
+#
+# mein richtiger Name
+set realname = "Martin Darmüntzel"
+# beim Erstellen Zieladresse und Betreff erfragen:
+set noautoedit
+# Header editieren macht Spaß:
+set edit_headers
+# gleich editieren, wenn wir antworten:
+# (macht aber irgendwie keinen Unterschied)
+set fast_reply
+# Zitierüberschrift:
+set attribution = "Zur Sternzeit %d schrieb %n:"
+# dem Reply to: Header antworten:
+set reply_to
+# für den Fall der Fälle antworten wir unter richtigem Namen:
+set reverse_name
+# in Antworten automatisch zitieren:
+set include
+# auch in Weiterleitungen die Nachricht einbinden:
+set forward_quote

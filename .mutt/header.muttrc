@@ -1,0 +1,8 @@
+# Header Einstellungen
+#
+# erstmal alle ignorieren:
+ignore *
+# und diese dann doch anzeigen:
+unignore from to cc date subject X-Mailer User-Agent reply-to
+# und zwar in dieser Reihenfolge:
+hdr_order from to cc date subject
