@@ -57,3 +57,7 @@ alias bc='bc -l'
 export EDITOR=vim
 alias e=$EDITOR
 export PAGER="vimpager"
+
+function man-preview() {
+  man -t "$@" | open -f -a Preview
+}
