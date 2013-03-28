@@ -139,6 +139,8 @@ autocmd BufNewFile *.py 0r ~/.vim/templates/python
 noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 "latex:
+autocmd BufNewFile,BufRead *.xtex setfiletype tex
+autocmd BufNewFile,BufRead *.xtex set makeprg=xelatex\ %
 let g:tex_flavor='latex'
 map <leader>t <ESC>:!pdflatex %<CR><CR>
 map <leader>z <ESC>:!ps4pdf %<CR><CR>
