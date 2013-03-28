@@ -189,6 +189,11 @@ augroup END
 " zum Tag/Funktionsdef. springen:
 nmap <leader>f <C-]>
 
+" NERDTree an- und abschalten:
+nmap <F6> :NERDTreeToggle<CR>
+
+nmap <S-F6> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
 " vimwiki config:
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 let g:vimwiki_listsyms = '✗○◐●✓'
