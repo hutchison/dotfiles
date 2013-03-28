@@ -60,7 +60,7 @@ if has("gui_macvim") || has("gui_running")
     colorscheme solarized
 endif
 if has("gui_macvim")
-    set guifont=Menlo\ Regular\ for\ Powerline:h12
+    set guifont=Monaco\ for\ Powerline:h12
 endif
 if has("gui_gtk2")
     set guifont=Inconsolata\ 12
