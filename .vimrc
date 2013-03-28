@@ -146,6 +146,8 @@ map <leader>t <ESC>:!pdflatex %<CR><CR>
 map <leader>z <ESC>:!ps4pdf %<CR><CR>
 vmap <leader>b <ESC>`>a}<ESC>`<i\textbf{<ESC>f}
 
+autocmd BufNewFile,BufRead *.muttrc setfiletype muttrc
+
 "make:
 nmap <leader>m :make<CR>
 
