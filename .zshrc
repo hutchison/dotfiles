@@ -36,8 +36,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-eval $(dircolors $HOME/.dircolors)
-
 DEFAULTPATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
 TEXPATH="/usr/texbin"
@@ -48,6 +46,8 @@ export PATH="$COREUTILSPATH:$DEFAULTPATH:$HOMEBIN:$PERLPATH:$TEXPATH:$MYPYTHONPA
 export PYTHONPATH="$HOME/Library/Python/2.7/site-packages:/usr/local/lib/python2.7/site-packages"
 
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+
+eval $(dircolors $HOME/.dircolors)
 
 alias ls='ls --color=auto'
 alias la='ls -AF'
