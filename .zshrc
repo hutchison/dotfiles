@@ -71,3 +71,5 @@ alias servieren="python3 -m http.server"
 function ev {
     evince $1 &
 }
+
+alias tt='t d -s "30 days ago"'
