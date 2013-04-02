@@ -170,6 +170,11 @@ nmap <leader>d "=strftime("%Y-%m-%d %H:%M")<CR>p
 imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 imap <silent> <C-D><C-F> <C-R>=strftime("[%H:%M] ")<CR>
 
+" relative Zeilennummern im Normalmodus:
+autocmd InsertLeave * :set relativenumber
+" absolute Zeilennummern im Einfügemodus:
+autocmd InsertEnter * :set number
+
 " Octave Syntax
 augroup filetypedetect
     au! BufRead,BufNewFile *.m setfiletype octave
