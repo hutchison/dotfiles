@@ -206,6 +206,7 @@ autocmd BufNewFile,BufRead *.j2 setfiletype jinja
 
 " normales LaTeX
 autocmd BufNewFile *.tex,*.latex 0r ~/.vim/templates/latex
+autocmd BufRead *.tex,*.latex set makeprg=pdflatex\ %
 
 "" jedi-vim:
 let g:jedi#popup_on_dot = 0
