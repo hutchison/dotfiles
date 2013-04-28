@@ -2,8 +2,32 @@
 #
 # Die bisherigen Kandidaten:
 # meine Kreation:
-source ~/.mutt/hutch-color.muttrc
+#source ~/.mutt/hutch-color.muttrc
 # Solarized
 #source ~/.mutt/solarized/mutt-colors-solarized-dark-256.muttrc
 # Zenburnt ist auch ganz nett:
 #source ~/.mutt/zenburnt-color.muttrc
+
+color index green default "~N"
+color index red default "~D"
+color index magenta default "~F"
+color index blue default "~T"
+color index default yellow "~v"
+
+color tree brightblue default
+
+color header cyan default "^Date:"
+color header green default "^From:"
+color header blue default "^To:"
+color header brightred default "^Subject:"
+color header brightmagenta default "^User-Agent:"
+color header yellow default "^Reply-To:"
+
+color status default blue
+color indicator default blue
+
+color body cyan default "^(=|_|-){4,}$"
+
+color attachment cyan default
+
+color error red default
