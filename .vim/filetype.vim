@@ -1,10 +1,10 @@
 " Templates:
-autocmd BufNewFile *.tex,*.latex    0r ~/.vim/templates/latex
-autocmd BufNewFile *.xtex,*.xelatex 0r ~/.vim/templates/xelatex
-autocmd BufNewFile *.py             0r ~/.vim/templates/python
+autocmd! BufNewFile *.tex,*.latex    0r ~/.vim/templates/latex
+autocmd! BufNewFile *.xtex,*.xelatex 0r ~/.vim/templates/xelatex
+autocmd! BufNewFile *.py             0r ~/.vim/templates/python
 
 autocmd BufRead,BufNewFile *.xtex,*.xelatex setfiletype tex
-autocmd BufRead,BufNewFile *.xtex,*.xelatex set makeprg=xelatex\ %
+autocmd BufRead,BufNewFile *.xtex,*.xelatex set makeprg=xelatex\ -interaction=batchmode\ %
 
 autocmd BufNewFile,BufRead *.ini,*/.hgrc,*/.hg/hgrc setfiletype ini
 
