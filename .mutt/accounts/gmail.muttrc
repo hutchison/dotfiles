@@ -3,7 +3,7 @@ set from = "martin.darmuentzel@gmail.com"
 set hostname = "gmail.com"
 
 # Wie wird gesendet?
-set sendmail = "/usr/bin/msmtp -a gmail"
+set sendmail = "msmtp -a gmail"
 
 # relevante Ordner:
 set spoolfile = "+GMail/INBOX"
