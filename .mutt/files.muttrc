@@ -5,7 +5,7 @@ set folder = ~/Mail
 # eine kleine Feineinstellung:
 set mbox_type = Maildir
 # goobook als Adressbuch:
-set query_command = "goobook query '%s'"
+set query_command = "contacts -Sf '%eTOKEN%n' '%s' | sed -e 's/TOKEN/\t/g'"
 # Datei für Zertifikate:
 set certificate_file = ~/.mutt/certificates
 # Datei für die Signatur (~/.signature wäre auch der default Wert):
