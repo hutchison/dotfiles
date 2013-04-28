@@ -1,0 +1,39 @@
+[general]
+ui = TTYUI
+accounts = GMail
+pythonfile = ~/.mutt/offlineimap.py
+fsync = False
+
+[Account GMail]
+localrepository = GMail-Local
+remoterepository = GMail-Remote
+status_backend = sqlite
+#postsynchook = notmuch new
+
+[Repository GMail-Local]
+type = Maildir
+localfolders = ~/Mail/GMail
+nametrans = lambda folder: {'GMail':   'INBOX',
+                            'drafts':  '[Google Mail]/Drafts',
+                            'sent':    '[Google Mail]/Sent Mail',
+                            'flagged': '[Google Mail]/Starred',
+                            'trash':   '[Google Mail]/Trash',
+                            'archive': '[Google Mail]/All Mail',
+                            }.get(folder, folder)
+
+[Repository GMail-Remote]
+maxconnections = 2
+type = Gmail
+remoteuser = martin.darmuentzel@googlemail.com
+remotepasseval = get_keychain_pass(account="martin.darmuentzel@googlemail.com",
+                                   server="imap.gmail.com")
+cert_fingerprint = 6d1b5b5ee0180ab493b71d3b94534b5ab937d042
+realdelete = no
+nametrans = lambda folder: {'INBOX':                   'GMail',
+                            '[Google Mail]/Drafts':    'drafts',
+                            '[Google Mail]/Sent Mail': 'sent',
+                            '[Google Mail]/Starred':   'flagged',
+                            '[Google Mail]/Trash':     'trash',
+                            '[Google Mail]/All Mail':  'archive',
+                            }.get(folder, folder)
+
