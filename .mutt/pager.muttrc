@@ -16,3 +16,5 @@ unset markers
 set reverse_alias
 # "old"? who cares?!
 set mark_old = no
+# folgende MIME-Typen werden sofort angezeigt (erfordert Eintrag in ~/.mailcap):
+auto_view text/html
