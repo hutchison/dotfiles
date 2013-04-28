@@ -23,8 +23,8 @@ color header brightred default "^Subject:"
 color header brightmagenta default "^User-Agent:"
 color header yellow default "^Reply-To:"
 
-color status default blue
-color indicator default blue
+color status white blue
+color indicator white blue
 
 color body cyan default "^(=|_|-){4,}$"
 
