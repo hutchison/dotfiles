@@ -22,7 +22,7 @@ macro index I "<change-folder>!<enter>" "go to inbox"
 # Mails archivieren:
 macro index A "<save-message>$mbox<enter>" "archive to mbox"
 # Sync email
-macro index O "<shell-escape>offlineimap<enter>"           "run offlineimap to sync all mail"
+macro index O "<shell-escape>offlineimap -q<enter>"           "run offlineimap to sync all mail"
 # Navigation in der sidebar:
 bind index,pager <down>   sidebar-next
 bind index,pager <up>     sidebar-prev
