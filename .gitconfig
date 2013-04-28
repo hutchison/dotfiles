@@ -4,6 +4,7 @@
 [core]
 	editor = vim
 	pager = less
+	precomposeunicode = true
 [color]
 	ui = auto
 [diff]
