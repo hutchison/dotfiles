@@ -47,7 +47,7 @@ TEXPATH="/usr/texbin"
 MYPYTHONPATH="$HOME/.local/bin"
 GAMESPATH="/usr/local/games"
 export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH:$HASKELLPATH"
-export PYTHONPATH="/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
+export PYTHONPATH="/usr/lib/python2.7/site-packages:/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 if [ -d "$HOME/.auswertung" ]; then
     export PATH="$PATH:$HOME/.auswertung"
 fi
