@@ -31,3 +31,6 @@ color body cyan default "^(=|_|-){4,}$"
 color attachment cyan default
 
 color error red default
+
+color quoted green default
+color quoted1 blue default
