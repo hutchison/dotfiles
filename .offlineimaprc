@@ -24,7 +24,7 @@ nametrans = lambda folder: {'GMail':    'INBOX',
 [Repository gmail-remote]
 maxconnections = 2
 type = Gmail
-cert_fingerprint = 6d1b5b5ee0180ab493b71d3b94534b5ab937d042
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 remoteuser = martin.darmuentzel@gmail.com
 remotepasseval = get_password("gmail")
 nametrans = lambda folder: {'INBOX':                    'GMail',
