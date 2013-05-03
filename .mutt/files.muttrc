@@ -11,7 +11,7 @@ set certificate_file = ~/.mutt/certificates
 # Datei für die Signatur (~/.signature wäre auch der default Wert):
 set signature = ~/.signature
 # Ordner für temporäre Dateien:
-set tmpdir = ~/tmp
+set tmpdir = ~/.tmp
 # Caches:
 set header_cache = ~/.mutt/cache/headers
 set message_cachedir = ~/.mutt/cache/bodies
