@@ -26,6 +26,7 @@ color index         color234        color247        "~v"        # collapsed thre
 # header
 color hdrdefault    color240        color234
 color header        color33         color234        "^(From)"
+color header        yellow          color234        "^(To)"
 color header        color135        color234        "^(Subject)"
 
 # quotations:
