@@ -1,1 +1,1 @@
-text/html; lynx -dump -force_html %s; copiousoutput; description=HTML Text;
+text/html; w3m -I %{charset} -T text/html -dump; copiousoutput; description=HTML Text;
