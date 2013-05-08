@@ -47,6 +47,8 @@ export PYTHONPATH="~/.local:/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
 
 alias la='ls -AF'
 
+eval $(dircolors -b ~/.dircolors)
+
 export EDITOR=vim
 alias e=$EDITOR
 alias se="sudoedit"
