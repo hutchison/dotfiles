@@ -1,1 +1,1 @@
-text/html; w3m -l %{charset} -T text/html -dump; copiousoutput; description=HTML Text;
+text/html; w3m -I %{charset} -T text/html -dump; copiousoutput; description=HTML Text;
