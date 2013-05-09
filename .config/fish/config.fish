@@ -6,7 +6,7 @@ function em; vim ~/.mutt/muttrc; end
 function eg; vim ~/.gitconfig; end
 
 set MUTT_BIN (which mutt)
-function mutt; bash --login -c "cd ~/Desktop; $MUTT_BIN"; end
+function mutt; bash --login -c "cd ~/Downloads; $MUTT_BIN"; end
 
 function g; git $argv; end
 
