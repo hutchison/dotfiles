@@ -16,6 +16,10 @@ function vs; vagrant suspend; end
 function o; open $argv; end
 function oo; open .; end
 
+function adg
+    sudo apt-get update; and sudo apt-get upgrade
+end
+
 function prepend_to_path -d "Prepend the given dir to PATH if it exists and is not already in it"
     if test -d $argv[1]
         if not contains $argv[1] $PATH
