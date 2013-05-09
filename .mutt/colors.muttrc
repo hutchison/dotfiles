@@ -34,3 +34,5 @@ color error red default
 
 color quoted green default
 color quoted1 blue default
+
+color sidebar_new magenta default
