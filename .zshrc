@@ -30,7 +30,7 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git vagrant colored-man)
+plugins=(git vagrant django)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -52,10 +52,16 @@ eval $(dircolors -b ~/.dircolors)
 export EDITOR=vim
 alias e=$EDITOR
 alias se="sudoedit"
+alias ez="e ~/.zshrc"
 export PAGER="less"
 
-alias a='ack'
-alias aa='ack -a'
+alias adg="sudo apt-get update && sudo apt-get upgrade"
+
+alias a='ack-grep'
+alias aa='a -a'
+
+alias mutt="cd ~/Downloads/ && mutt"
+alias lmutt="mutt -F ~/.muttrc-local"
 
 if [ "$COLORTERM" = "gnome-terminal" ]; then
     export TERM="xterm-256color"
