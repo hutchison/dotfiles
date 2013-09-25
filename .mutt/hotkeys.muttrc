@@ -27,3 +27,6 @@ macro index O "<shell-escape>offlineimap -q<enter>"           "run offlineimap t
 bind index,pager <down>   sidebar-next
 bind index,pager <up>     sidebar-prev
 bind index,pager <right>  sidebar-open
+# b toggles sidebar visibility
+macro index b '<enter-command>toggle sidebar_visible<enter>'
+macro pager b '<enter-command>toggle sidebar_visible<enter>'
