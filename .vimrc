@@ -219,3 +219,6 @@ nmap <F4> :BufExplorer<CR>
 
 " mittels CTRL + [hjkl] durch die Buffer springen:
 let g:miniBufExplMapWindowNavVim = 1
+
+" vimroom config:
+let g:vimroom_sidebar_height = 0
