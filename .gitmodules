@@ -77,3 +77,6 @@
 [submodule ".vim/bundle/gitgutter"]
 	path = .vim/bundle/gitgutter
 	url = git://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/bundle/vimroom"]
+	path = .vim/bundle/vimroom
+	url = https://github.com/mikewest/vimroom.git
