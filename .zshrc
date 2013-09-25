@@ -58,7 +58,7 @@ fi
 alias la='ls -AF'
 alias open='xdg-open'
 
-export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
+export EDITOR=vim
 alias e=$EDITOR
 alias se="sudoedit"
 if which vimpager >/dev/null 2>&1; then
