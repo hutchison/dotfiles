@@ -8,6 +8,7 @@ source ~/.mutt/mailinglists.muttrc
 source ~/.mutt/pager.muttrc
 source ~/.mutt/settings.muttrc
 source ~/.mutt/write.muttrc
+source ~/.mutt/gpg.muttrc
 
 source ~/.mutt/folder-hooks.muttrc
 source ~/.mutt/accounts/gmail.muttrc
