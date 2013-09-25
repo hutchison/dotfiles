@@ -45,6 +45,18 @@ set smartcase
 " setzt automatisch das g Flag bei Textersetzungen:
 set gdefault
 
+function! SetSolarizedBackground()
+    if strftime("%H") >= 5 && strftime("%H") < 17
+        if &background != 'light'
+            set background=light
+        endif
+    else
+        if &background != 'dark'
+            set background=dark
+        endif
+    endif
+endfunction
+
 " die richtige Farbwahl:
 colorscheme default
 set background=dark
@@ -56,12 +68,20 @@ endif
 if &term == "xterm-256color"
     set background=dark
     colorscheme solarized
+    call SetSolarizedBackground()
+    if has("autocmd")
+        autocmd bufwritepost * call SetSolarizedBackground()
+    endif
 endif
 if has("gui_macvim") || has("gui_running")
     set guioptions=aeirL
     set background=dark
     colorscheme solarized
     set autochdir
+    call SetSolarizedBackground()
+    if has("autocmd")
+        autocmd bufwritepost * call SetSolarizedBackground()
+    endif
 endif
 if has("gui_macvim")
     set guifont=Inconsolata:h16
@@ -69,6 +89,7 @@ endif
 if has("gui_gtk2")
     set guifont=Ubuntu\ Mono\ 11
 endif
+
 " Powerline setup:
 let g:Powerline_symbols='fancy'
 
