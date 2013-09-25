@@ -1,4 +1,5 @@
 function e; vim $argv; end
+function se; sudoedit $argv; end
 
 function ef; vim ~/.config/fish/config.fish; end
 function ev; vim ~/.vimrc; end
@@ -9,12 +10,16 @@ set MUTT_BIN (which mutt)
 function mutt; bash --login -c "cd ~/Downloads; $MUTT_BIN"; end
 
 function g; git $argv; end
+function bc; bc -l $argv; end
 
 function vu; vagrant up; end
 function vs; vagrant suspend; end
+function vssh; vagrant ssh; end
 
 function o; open $argv; end
 function oo; open .; end
+
+function uniapps; xfreerdp --sec tls -d uni-rostock.de -u md261 -x b -g 95% uniapps.uni-rostock.de; end
 
 function adg
     sudo apt-get update; and sudo apt-get upgrade
@@ -29,9 +34,17 @@ function prepend_to_path -d "Prepend the given dir to PATH if it exists and is n
 end
 
 prepend_to_path "$HOME/dotfiles/bin"
+prepend_to_path "$HOME/.local/bin"
 
 set -g -x fish_greeting ''
 set -g -x EDITOR vim
+
+if test $COLORTERM = "gnome-terminal"
+    set -g -x TERM "xterm-256color"
+end
+
+# dircolors has no fish support (yet), so we need to hack our way around:
+eval (dircolors -c ~/.dircolors | sed 's/setenv/set -x/')
 
 function git_prompt
     if git rev-parse --show-toplevel >/dev/null 2>&1
