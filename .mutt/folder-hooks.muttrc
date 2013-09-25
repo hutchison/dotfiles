@@ -1,3 +1,4 @@
 folder-hook "+gmail/*" source ~/.mutt/accounts/gmail.muttrc
 folder-hook "+uni/*" source ~/.mutt/accounts/uni.muttrc
 folder-hook "+hutch-ta/*" source ~/.mutt/accounts/hutch-ta.muttrc
+folder-hook "+martin-ta/*" source ~/.mutt/accounts/martin-ta.muttrc

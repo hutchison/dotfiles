@@ -1,0 +1,13 @@
+# Server Einstellungen:
+set from = "Martin Darmüntzel <martin@trivialanalog.de>"
+set hostname = "trivialanalog.de"
+
+# Wie wird gesendet?
+set sendmail = "/usr/bin/msmtp -a martin-ta"
+
+# Ordner:
+set spoolfile = "+martin-ta/martin@ta"
+set mbox = "+martin-ta/archive"
+set record = "+martin-ta/sent"
+set postponed = "+martin-ta/drafts"
+set trash = "+martin-ta/trash"
