@@ -27,7 +27,7 @@ type = Gmail
 remoteuser = martin.darmuentzel@googlemail.com
 remotepasseval = get_keychain_pass(account="martin.darmuentzel@googlemail.com",
                                    server="imap.gmail.com")
-cert_fingerprint = 6d1b5b5ee0180ab493b71d3b94534b5ab937d042
+cert_fingerprint = b0ba392bba326e6feb1add4d04fa0fb86cd173fa
 realdelete = no
 nametrans = lambda folder: {'INBOX':                   'GMail',
                             '[Google Mail]/Drafts':    'drafts',
