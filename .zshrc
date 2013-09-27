@@ -50,3 +50,6 @@ alias la='ls -AF'
 export EDITOR=vim
 alias e=$EDITOR
 export PAGER=less
+
+alias spam='spamc -L spam -U ~/tmp/spamd.sock <'
+alias ham='spamc -L ham -U ~/tmp/spamd.sock <'
