@@ -1,1 +1,4 @@
 text/html; w3m -I %{charset} -T text/html -dump; copiousoutput; description=HTML Text;
+application/msword; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Microsoft Word Document"; nametemplate=%s.doc;
+application/pdf; evince %s;
+image/*; eog '%s'; test=test -n "$DISPLAY";
