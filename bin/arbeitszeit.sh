@@ -2,7 +2,11 @@
 
 set -e
 
-JAHR=$(date +%Y)
+if [[ -z "$2" ]]; then
+    JAHR=$(date +%Y)
+else
+    JAHR=$2
+fi
 MONAT=$1
 MONATSNAME=$(date --date="$JAHR-$MONAT-1" +"%B")
 
