@@ -56,6 +56,8 @@ alias ez="e ~/.zshrc"
 export PAGER="less"
 
 alias adg="sudo apt-get update && sudo apt-get upgrade"
+alias ai="sudo apt-get install"
+alias as="apt-cache search"
 
 alias a='ack-grep'
 alias aa='a -a'
