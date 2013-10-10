@@ -83,3 +83,5 @@ function ev {
 }
 
 alias tt='t d -s "30 days ago"'
+
+alias v='vagrant'
