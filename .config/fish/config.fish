@@ -20,6 +20,7 @@ function o; open $argv; end
 function oo; open .; end
 
 function uniapps; xfreerdp --sec tls -d uni-rostock.de -u md261 -x b -g 95% uniapps.uni-rostock.de; end
+function dimmer; redshift -l 54:12 -t 5700:3600 -m randr 2> /dev/null &; end
 
 function adg
     sudo apt-get update; and sudo apt-get upgrade
