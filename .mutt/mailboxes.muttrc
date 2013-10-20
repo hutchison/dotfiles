@@ -3,23 +3,12 @@ mailboxes = +gmail/GMail \
             +gmail/archive \
             +gmail/MacHackers \
             +gmail/sent \
-            +gmail/drafts \
             +uni/Uni \
             +uni/Archive \
             +uni/Sent \
-            +uni/Drafts \
-            +hutch-ta/hutch@ta \
-            +hutch-ta/archive \
-            +hutch-ta/rzl \
-            +hutch-ta/hshro \
-            +hutch-ta/sent \
-            +hutch-ta/drafts \
-            +hutch-uber/hutch@uber \
-            +hutch-uber/archive \
-            +hutch-uber/git \
-            +hutch-uber/sent \
-            +hutch-uber/drafts \
             +martin-ta/martin@ta \
             +martin-ta/archive \
-            +martin-ta/sent \
-            +martin-ta/drafts
+            +martin-ta/python-de \
+            +martin-ta/rzl \
+            +martin-ta/hshro \
+            +martin-ta/sent
