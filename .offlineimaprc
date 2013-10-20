@@ -1,7 +1,7 @@
 # vim: set filetype=ini :
 [general]
 ui = basic
-accounts = gmail, uni, hutch-ta, hutch-uber, martin-ta
+accounts = gmail, uni, martin-ta
 pythonfile = ~/.mutt/offlineimap.py
 postsynchook = notmuch new
 
@@ -129,10 +129,12 @@ nametrans = lambda folder:  {'martin@ta':   'INBOX',
                              'archive':     'INBOX/Archive',
                              'drafts':      'INBOX/Drafts',
                              'sent':        'INBOX/Sent Messages',
-                             'hshro':       'INBOX/HSHRO',
-                             'rzl':         'INBOX/RZL',
-                             'spam':        'INBOX/Spam',
+                             'deleted':     'INBOX/Deleted Messages',
                              'trash':       'INBOX/Trash',
+                             'hshro':       'INBOX/hshro',
+                             'rzl':         'INBOX/rzl',
+                             'spam':        'INBOX/Spam',
+                             'python-de':   'INBOX/python-de',
                             }.get(folder, folder)
 
 [Repository martin-ta-remote]
@@ -144,8 +146,10 @@ nametrans = lambda folder:  {'INBOX':                   'martin@ta',
                              'INBOX/Archive':           'archive',
                              'INBOX/Drafts':            'drafts',
                              'INBOX/Sent Messages':     'sent',
-                             'INBOX/HSHRO':             'hshro',
-                             'INBOX/RZL':               'rzl',
+                             'INBOX/Deleted Messages':  'deleted',
+                             'INBOX/hshro':             'hshro',
+                             'INBOX/rzl':               'rzl',
                              'INBOX/Spam':              'spam',
                              'INBOX/Trash':             'trash',
+                             'INBOX/python-de':         'python-de',
                             }.get(folder, folder)
