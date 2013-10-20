@@ -217,6 +217,10 @@ nmap <F9> :NERDTreeToggle<CR>
 " Opens BufExplorer:
 nmap <F4> :BufExplorer<CR>
 
+" wendet "git stripspace" auf den Buffer an:
+imap <F8> <ESC>:%!git stripspace<CR>
+map <F8> <ESC>:%!git stripspace<CR>
+
 " mittels CTRL + [hjkl] durch die Buffer springen:
 let g:miniBufExplMapWindowNavVim = 1
 
