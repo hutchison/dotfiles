@@ -10,9 +10,13 @@ fi
 MONAT=$1
 MONATSNAME=$(date --date="$JAHR-$MONAT-1" +"%B")
 
-LETZTERTAG=$(cal $MONAT $JAHR | egrep "28|29|30|31" | tail -1 | awk '{print $NF}')
+LETZTERTAG=$(cal $MONAT $JAHR \
+    | egrep "28|29|30|31" \
+    | tail -1 \
+    | awk '{print $NF}')
 
-ZEITEN=$(t d -s "1.$MONAT.$JAHR" -e "$LETZTERTAG.$MONAT.$JAHR" | awk -f "$HOME/.local/bin/timetrap2latex.awk")
+ZEITEN=$(t d -s "1.$MONAT.$JAHR" -e "$LETZTERTAG.$MONAT.$JAHR" \
+    | awk -f "$HOME/.local/bin/timetrap2latex.awk")
 
 DATEIPREFIX="$JAHR-$MONAT"
 DATEINAME="$DATEIPREFIX.tex"
