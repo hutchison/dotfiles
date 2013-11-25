@@ -10,6 +10,8 @@
 	mnemonicprefix = true
 [merge]
 	tool = vimdiff
+[push]
+    default = current
 [alias]
 	st = status -bs
 	ci = commit -v
