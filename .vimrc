@@ -134,22 +134,10 @@ noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 "latex:
 let g:tex_flavor='latex'
 map <leader>t <ESC>:!pdflatex %<CR><CR>
-map <leader>z <ESC>:!ps4pdf %<CR><CR>
-vmap <leader>b <ESC>`>a}<ESC>`<i\textbf{<ESC>f}
 
 "make:
 nmap <leader>m :make<CR>
 nmap <F5> :make<CR>
-
-"haskell<leader> ghci:
-map <leader>g <ESC>:!ghci %<CR><CR>
-
-"java
-map <leader>j <ESC>:!javac -verbose %<CR>
-
-"gcc
-map <leader>b <ESC>:!gcc -Wall <C-R>=expand("%:t")<CR><CR><CR>
-map <leader>a <ESC>:!./a.out<CR>
 
 "coole vsplit maps:
 "verschiebt den Mittelbalken nach links bzw. rechts
