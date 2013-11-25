@@ -2,3 +2,4 @@ text/html; w3m -I %{charset} -T text/html -dump; copiousoutput; description=HTML
 application/msword; soffice --nologo --writer '%s'; edit=soffice --nologo --writer '%s'; test=test -n "$DISPLAY"; description="Microsoft Word Document"; nametemplate=%s.doc;
 application/pdf; evince %s;
 image/*; eog '%s'; test=test -n "$DISPLAY";
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; soffice --nologo --calc '%s'; edit=soffice --nologo --calc '%s'; test=test -n "$DISPLAY"; description="Microsoft Excel Document";
