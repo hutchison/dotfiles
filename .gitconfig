@@ -4,6 +4,13 @@
 [core]
 	editor = vim
 	pager = less
+	packedGitWindowSize = 16m
+	packedGitLimit = 64m
+[pack]
+	windowMemory = 64m
+	packSizeLimit = 64m
+	thread = 1
+	deltaCacheSize = 1m
 [color]
 	ui = auto
 [diff]
