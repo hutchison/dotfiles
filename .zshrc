@@ -53,3 +53,6 @@ export PAGER=less
 
 alias spam='spamc -L spam -U ~/tmp/spamd.sock <'
 alias ham='spamc -L ham -U ~/tmp/spamd.sock <'
+
+# um php in der Shell benutzen zu können:
+source /etc/profile.d/phpversion.sh
