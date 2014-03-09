@@ -80,3 +80,6 @@
 [submodule ".vim/bundle/vimroom"]
 	path = .vim/bundle/vimroom
 	url = https://github.com/mikewest/vimroom.git
+[submodule ".vim/bundle/vim-syntastic"]
+	path = .vim/bundle/vim-syntastic
+	url = https://github.com/scrooloose/syntastic.git
