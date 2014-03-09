@@ -10,7 +10,7 @@ set MUTT_BIN (which mutt)
 function mutt; bash --login -c "cd ~/Downloads; $MUTT_BIN"; end
 
 function g; git $argv; end
-function bc; bc -l $argv; end
+alias bc "bc -l"
 
 function vu; vagrant up; end
 function vs; vagrant suspend; end
