@@ -11,4 +11,5 @@ mailboxes = +gmail/GMail \
             +martin-ta/python-de \
             +martin-ta/rzl \
             +martin-ta/hshro \
-            +martin-ta/sent
+            +martin-ta/sent \
+            +martin-ta/spam
