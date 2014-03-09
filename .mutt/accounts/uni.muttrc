@@ -10,7 +10,7 @@ set spoolfile = "+uni/Uni"
 set mbox = "+uni/Archive"
 set record = "+uni/Sent"
 set postponed = "+uni/Drafts"
-set trash = "+uni/Trash"
+set trash = "+uni/Deleted Items"
 
 # für den 'A'-Hotkey lesen wir hotkeys.muttrc nochmals ein:
 source ~/.mutt/hotkeys.muttrc
