@@ -165,29 +165,13 @@ vmap <leader>b <ESC>`>a}<ESC>`<i\textbf{<ESC>f}
 nmap <leader>m :make<CR>
 nmap <F5> :make<CR>
 
-"haskell<leader> ghci:
-map <leader>g <ESC>:!ghci %<CR><CR>
-
-"java
-map <leader>j <ESC>:!javac -verbose %<CR>
-
-"gcc
-map <leader>b <ESC>:!gcc -Wall <C-R>=expand("%:t")<CR><CR><CR>
-map <leader>a <ESC>:!./a.out<CR>
-
 "coole vsplit maps:
 "verschiebt den Mittelbalken nach links bzw. rechts
 nmap <leader>- <C-W><
 nmap <leader>+ <C-W>>
 
 "buffer movement:
-nmap <M-right> <ESC>:bnext<CR>
-nmap <M-left> <ESC>:bprevious<CR>
-nmap <M-l> <ESC>:bnext<CR>
-nmap <M-h> <ESC>:bprevious<CR>
-nmap <leader>x <ESC>:bnext<CR>
-nmap <leader>y <ESC>:bprevious<CR>
-nmap <leader>w <ESC>:bnext<CR>
+nmap <leader>e <ESC>:bnext<CR>
 nmap <leader>q <ESC>:bprevious<CR>
 
 " window movement:
@@ -220,6 +204,9 @@ nmap <F4> :BufExplorer<CR>
 " wendet "git stripspace" auf den Buffer an:
 imap <F8> <ESC>:%!git stripspace<CR>
 map <F8> <ESC>:%!git stripspace<CR>
+
+" führt die aktuelle Datei aus
+nmap <leader>r :!./%<CR>
 
 " mittels CTRL + [hjkl] durch die Buffer springen:
 let g:miniBufExplMapWindowNavVim = 1
