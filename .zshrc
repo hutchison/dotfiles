@@ -55,6 +55,13 @@ if [ -d "$HOME/.auswertung" ]; then
     export PATH="$PATH:$HOME/.auswertung"
 fi
 
+# virtualenvwrapper stuff:
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENV_PYTHON=$VIRTUALENVWRAPPER_PYTHON
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/lemnos
+source $HOME/.local/bin/virtualenvwrapper.sh
+
 alias la='ls -AF'
 alias open='xdg-open'
 
