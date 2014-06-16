@@ -32,9 +32,6 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git@github.com:hutchison/oh-my-zsh.git
-[submodule ".config/awesome/vicious"]
-	path = .config/awesome/vicious
-	url = http://git.sysphere.org/vicious
 [submodule ".vim/bundle/powerline"]
 	path = .vim/bundle/powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
