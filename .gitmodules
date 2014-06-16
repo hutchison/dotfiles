@@ -83,3 +83,6 @@
 [submodule ".vim/bundle/vim-syntastic"]
 	path = .vim/bundle/vim-syntastic
 	url = https://github.com/scrooloose/syntastic.git
+[submodule ".vim/bundle/vim-salt"]
+	path = .vim/bundle/vim-salt
+	url = git@github.com:saltstack/salt-vim.git
