@@ -83,3 +83,6 @@
 [submodule ".vim/bundle/vim-salt"]
 	path = .vim/bundle/vim-salt
 	url = git@github.com:saltstack/salt-vim.git
+[submodule "vim.pony"]
+	path = .vim/bundle/pony
+	url = git@github.com:jmcomets/vim-pony.git
