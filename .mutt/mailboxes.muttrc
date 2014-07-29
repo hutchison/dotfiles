@@ -1,7 +1,6 @@
 # in der sidebar angezeigte Mailboxen:
 mailboxes = +gmail/GMail \
             +gmail/archive \
-            +gmail/MacHackers \
             +gmail/sent \
             +uni/Uni \
             +uni/Archive \
