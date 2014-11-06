@@ -55,6 +55,8 @@ if [ -d "$HOME/.auswertung" ]; then
     export PATH="$PATH:$HOME/.auswertung"
 fi
 
+export PYTHONIOENCODING=UTF-8
+
 # virtualenvwrapper stuff:
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export VIRTUALENV_PYTHON=$VIRTUALENVWRAPPER_PYTHON
