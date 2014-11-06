@@ -12,3 +12,5 @@ tags
 .mutt/cache/*
 .mutt/certificates
 .mutt/aliases
+
+.AppleDouble/*
