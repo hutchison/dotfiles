@@ -7,7 +7,7 @@ set move = no
 # die übergeile Sortierfunktion:
 set sort=threads
 # und sonst sortieren wir so:
-set sort_aux = reverse-last-date-received
+set sort_aux = date-received
 # Sidebar
 set sidebar_delim   = ' '
 set sidebar_visible = yes
