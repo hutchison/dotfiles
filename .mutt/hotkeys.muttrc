@@ -9,6 +9,7 @@ set quit
 bind pager 'w' previous-page
 bind pager 'j' next-line
 bind pager 'k' previous-line
+bind pager 'i' exit
 ## im Index:
 # Threads ein-/ausklappen:
 bind index <space> collapse-thread
