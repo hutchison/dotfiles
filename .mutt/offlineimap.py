@@ -2,9 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import subprocess
+import os
 
 def get_password(desc):
     command = "pass show " + desc
-    output = subprocess.check_output(command, shell=True,
-                                     stderr=subprocess.STDOUT)
+    with open(os.devnull, 'w') as DEVNULL:
+        output = subprocess.check_output(command, shell=True, stderr=DEVNULL)
     return output.rstrip()
