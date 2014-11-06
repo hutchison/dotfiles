@@ -86,5 +86,5 @@ alias dimmer='redshift -l 54:12 -t 5700:3600 -m randr 2> /dev/null &'
 alias uniapps='xfreerdp --sec tls -d uni-rostock.de -u md261 -x b -g 95% uniapps.uni-rostock.de'
 
 function learn_spam () {
-    ssh uber 'for f in ~/users/martin/.Spam/cur/*; do spamc -L spam -U ~/tmp/spamd.sock < $f; done'
+    ssh uber 'for f in ~/users/martin/.Spam/cur/*; do echo -n "$(spamc -L spam -U ~/tmp/spamd.sock < $f) "; grep -h ^Subject: $f; done'
 }
