@@ -87,3 +87,9 @@ alias tt='t d -s "30 days ago"'
 alias v='vagrant'
 
 alias calcurse='LC_ALL="en_US.UTF-8" calcurse'
+
+function zlsuche {
+    awk -F ';' '{print "| " $4 " " $5 " || " $2 " || — || {{n}}"}' $1 \
+        | sed 's/"//g' \
+        | grep $2
+}
