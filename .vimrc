@@ -54,7 +54,7 @@ colorscheme default
 set background=dark
 if &term == "xterm"
     set t_Co=256
-    colorscheme wombat
+    colorscheme default
     set background=light
 endif
 if &term == "xterm-256color"
