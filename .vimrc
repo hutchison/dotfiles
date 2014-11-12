@@ -21,9 +21,15 @@ filetype plugin indent on
 
 "set clipboard=unnamed
 
-set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
+if !empty(glob("~/.vim/backup"))
+    set backup
+    set backupdir=~/.vim/backup
+endif
+
+if !empty(glob("~/.vim/tmp"))
+    set directory=~/.vim/tmp
+endif
+
 set fileformats=unix,dos,mac
 "set autochdir
 
