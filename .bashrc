@@ -65,7 +65,7 @@ if which 'ls++' >/dev/null 2>&1; then
 fi
 
 # edit with what's on the system (vim vi nano - in that order):
-export EDITOR="$HOME/dotfiles/bin/sphyri.sh"
+export EDITOR="vim"
 set editing-mode vi
 
 # host-depending aliases (now with better overview):
