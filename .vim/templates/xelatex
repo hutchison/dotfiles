@@ -10,41 +10,37 @@ a4paper, %apaper,
 ]
 {scrartcl}
 
-% Zeichenbelegung der Schrift:
-\usepackage[T1]{fontenc}
-% UTF-8 rockt:
-\usepackage[utf8]{inputenc}
-% typografische Feinheiten:
-\usepackage{microtype}
-% XeLaTeX Pakete (z.B. zur Schriftauswahl):
-\usepackage{xltxtra, fontspec, xunicode}
-% Die Hauptschriftart:
-\setmainfont[Mapping=tex-text]{Minion Pro}
-% das KOMA-Skript erlaubt die Änderung bestimmter Überschriften etc.:
-\newcommand{\headerfont}{Gill Sans Std}
-\setkomafont{sectioning}{\fontspec{\headerfont}}
-\setkomafont{title}{\fontspec{\headerfont}}
-% Schriftart für Mathematik:
-\usepackage[
-  % schrumpft die Größe auf 95%:
-  %small
-]{eulervm}
-% Deutsche Sprache bei Silbentrennung und Datum:
-\usepackage[ngerman]{babel}
-% Korrigiert den Weißraum um Auslassungspunkte:
-\usepackage{ellipsis}
-
-% viele mathematische Symbole:
-\usepackage{amssymb}
-% St. Mary Road, liefert Symbole für theoretische Informatik (z.B. \lightning):
-\usepackage{stmaryrd}
 % _das_ Mathepaket schlechthin:
 \usepackage[
   %% Nummerierung von Gleichungen links:
   leqno,
   %% Ausgabe von Gleichungen linksbündig:
   fleqn,
-]{amsmath}
+]{mathtools}
+% und dazu noch ein paar Mathesymbole und so:
+% (muss vor mathspec geladen werden)
+\usepackage{amsmath, amssymb}
+
+% Um auch schöne Schriftarten auswählen zu können:
+\usepackage[MnSymbol]{mathspec}
+% Wir wollen, dass alle unsere Schriften für TeX und einander angepasst sind:
+\defaultfontfeatures{Mapping=tex-text, Scale=MatchLowercase}
+% Die Hauptschriftart:
+\setmainfont[Numbers=OldStyle]{Minion Pro}
+% Die Matheschriftart:
+\setmathsfont(Digits,Latin,Greek)[
+  Numbers={Lining, Proportional}
+]{Minion Pro}
+% Die Schriftart für serifenlose Texte (z.B. Überschriften):
+\setallsansfonts[]{Gill Sans Std}
+% Und die Schriftart für nichtproportionale Texte:
+\setallmonofonts[]{Latin Modern Mono}
+
+% Deutsche Sprache bei Silbentrennung und Datum:
+\usepackage[ngerman]{babel}
+
+% St. Mary Road, liefert Symbole für theoretische Informatik (z.B. \lightning):
+\usepackage{stmaryrd}
 
 % nutze die volle Seite als Satzspiegel:
 \usepackage[
@@ -58,21 +54,23 @@ a4paper, %apaper,
 % Breite
 \usepackage{array}
 % kann komplexe Linien in Tabellen ziehen:
-%\usepackage{hhline
+%\usepackage{hhline}
 % mehrseitige Tabellen:
 %\usepackage{longtable}
 % Tabellen mit gedehnten Spalten:
 %\usepackage{tabularx}
 % Pimpt enumerate auf (optionales Argument liefert Nummerierung):
 %\usepackage{enumerate}
+% Kann descriptions auf die selbe Höhe bringen:
+%\usepackage{enumitem}
 % Liefert Hyperlinks (\hyperref, \url, \href}
-%\usepackage{hyperref}
+\usepackage{hyperref}
 % Farben (wie bei TikZ):
 %\usepackage{xcolor}
 % Ändert den Zeilenabstand:
 \usepackage[
   % nur eine Möglichkeit auswählen:
-  singespacing
+  singlespacing
   %onehalfspacing
   %doublespacing
 ]{setspace}
@@ -100,6 +98,13 @@ a4paper, %apaper,
 %\usepackage[landscape]{geometry}
 % bietet gestrichelte vert. Linien in Tabellen (':')
 %\usepackage{arydshln}
+% Quelltext schön setzen:
+% (verlangt "xelatex -shell-escape"!)
+%\usepackage{minted}
+% um Bilder einzubinden:
+%\usepackage{graphicx}
+% um in Tabellen eine Zelle über mehrere Zeilen laufen zu lassen:
+%\usepackage{multirow}
 
 % eigene Mathesymbole:
 \DeclareMathOperator{\R}{\mathbb{R}}
@@ -116,12 +121,26 @@ a4paper, %apaper,
 \DeclareMathOperator{\ggT}{ggT}
 \DeclareMathOperator{\var}{var}
 
-
+% setzt die Einrückung bei Absätzen auf 0
 \parindent 0pt
 
 % Coole Zeichnungen:
 %\usepackage{tikz}
-%\usetikzlibrary{calc}
+%\usetikzlibrary{
+  %backgrounds,
+  %mindmap,
+  %shapes.geometric,
+  %shapes.symbols,
+  %shapes.misc,
+  %shapes.multipart,
+  %positioning,
+  %fit,
+  %calc,
+  %arrows,
+  %automata,
+  %trees,
+  %decorations.pathreplacing,
+%}
 
 % eigens gebaute Lochmarken:
 %\usepackage{eso-pic}
@@ -162,4 +181,3 @@ a4paper, %apaper,
 \end{center}
 
 \end{document}
-
