@@ -61,3 +61,7 @@ export PAGER=less
 function man-preview() {
   man -t "$@" | open -f -a Preview
 }
+
+function learn_spam () {
+  ssh uber 'for f in ~/users/martin/.Spam/cur/*; do spamc -L spam -U ~/tmp/spamd.sock < $f; done'
+}
