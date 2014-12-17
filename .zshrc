@@ -47,6 +47,13 @@ export PYTHONPATH="$HOME/Library/Python/2.7/site-packages:/usr/local/lib/python2
 
 export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 
+# virtualenvwrapper stuff:
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
+export VIRTUALENV_PYTHON=$VIRTUALENVWRAPPER_PYTHON
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/lemnos
+source $(which virtualenvwrapper.sh)
+
 eval $(dircolors $HOME/.dircolors)
 
 alias ls='ls --color=auto'
