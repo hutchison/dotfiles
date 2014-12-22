@@ -56,8 +56,7 @@ if &term == "xterm"
     set t_Co=256
     colorscheme default
     set background=light
-endif
-if &term == "xterm-256color"
+elseif &term == "xterm-256color"
     colorscheme solarized
     set background=dark
 endif
