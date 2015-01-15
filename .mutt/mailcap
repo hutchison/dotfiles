@@ -1,3 +1,4 @@
 text/html; w3m -I %{charset} -T text/html -dump; copiousoutput; description=HTML Text;
 application/msword; catdoc '%s'; copiousoutput; description=Word;
 application/vnd.openxmlformats-officedocument.wordprocessingml.document; catdoc '%s'; copiousoutput; description=Word;
+image/jpeg; eog %s;
