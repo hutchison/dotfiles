@@ -108,7 +108,6 @@ a4paper, %apaper,
 
 % eigene Mathesymbole:
 \DeclareMathOperator{\R}{\mathbb{R}}
-\DeclareMathOperator{\C}{\mathbb{C}}
 \DeclareMathOperator{\Z}{\mathbb{Z}}
 \DeclareMathOperator{\K}{\mathbb{K}}
 \DeclareMathOperator{\N}{\mathbb{N}}
