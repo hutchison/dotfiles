@@ -32,6 +32,9 @@ DISABLE_AUTO_UPDATE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git vagrant django)
 
+# enable Bash-style comments:
+setopt interactivecomments
+
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
