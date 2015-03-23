@@ -62,8 +62,8 @@ elseif &term == "xterm-256color"
 endif
 " falls wir per SSH verbunden sind, gibt's kein fancy colorscheme:
 if $SSH_CONNECTION
-    colorscheme default
-    set background=light
+    colorscheme ir_black
+    set background=dark
 endif
 if has("gui_macvim") || has("gui_running")
     set guioptions=aeirL
