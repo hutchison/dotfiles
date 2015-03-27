@@ -9,6 +9,8 @@ set number
 set numberwidth=4
 set ruler
 set scrolloff=5
+set relativenumber
+set cursorline
 
 set encoding=utf-8
 if &readonly == 0
