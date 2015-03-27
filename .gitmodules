@@ -62,9 +62,6 @@
 [submodule ".mutt/mutt-solarized"]
 	path = .mutt/mutt-solarized
 	url = git://github.com/altercation/mutt-colors-solarized.git
-[submodule ".vim/bundle/jedi-vim"]
-	path = .vim/bundle/jedi-vim
-	url = git://github.com/davidhalter/jedi-vim.git
 [submodule ".vim/bundle/tabular"]
 	path = .vim/bundle/tabular
 	url = git://github.com/godlygeek/tabular.git
