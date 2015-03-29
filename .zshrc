@@ -53,20 +53,15 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
-
-DEFAULTPATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
-RUBYPATH="$HOME/.gem/ruby/1.9.1/bin"
-HASKELLPATH="$HOME/.cabal/bin"
-TEXPATH="/usr/texbin"
-MYPYTHONPATH="$HOME/.local/bin"
-GAMESPATH="/usr/games"
-export PATH="$DEFAULTPATH:$PERLPATH:$RUBYPATH:$TEXPATH:$MYPYTHONPATH:$HASKELLPATH:$GAMESPATH"
-export PYTHONPATH="/usr/lib/python2.7/site-packages:/usr/local/lib/python2.7/site-packages:$PYTHONPATH"
-if [ -d "$HOME/.auswertung" ]; then
-    export PATH="$PATH:$HOME/.auswertung"
+# Pfade:
+DEFAULTPATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+if [[ -d "$HOME/.gem/ruby/1.9.1/bin" ]]    ; then
+    RUBYBINPATH="$HOME/.gem/ruby/1.9.1/bin"
 fi
+if [[ -d "$HOME/.local/bin" ]]    ; then
+    HOMEBINPATH="$HOME/.local/bin"
+fi
+export PATH="$DEFAULTPATH:$HOMEBINPATH:$RUBYBINPATH"
 
 export PYTHONIOENCODING=UTF-8
 
