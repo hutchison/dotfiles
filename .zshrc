@@ -6,8 +6,13 @@ ZSH=$HOME/dotfiles/.oh-my-zsh
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ZSH_THEME="hutch"
-eval $(dircolors -b $HOME/.dircolors)
 
+# Lade meine dircolors, sofern vorhanden:
+if [[ -f $HOME/.dircolors ]]; then
+    eval $(dircolors -b $HOME/.dircolors)
+else
+    >&2 echo "$HOME/.dircolors nicht vorhanden"
+fi
 unsetopt BEEP
 
 # Example aliases
