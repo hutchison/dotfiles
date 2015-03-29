@@ -42,7 +42,14 @@ INTERACTIVE_COMMENTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git debian django systemadmin gpg-agent)
+plugins=(git nyan django systemadmin gpg-agent)
+if [[ $OSTYPE == "darwin"* ]]; then
+    plugins=("${plugins[@]}" brew)
+elif [[ $OSTYPE == "linux-gnu" ]]; then
+    plugins=("${plugins[@]}" debian)
+else
+    >&2 echo "Kein Mac oder Linux. Wo bin ich?"
+fi
 
 source $ZSH/oh-my-zsh.sh
 
