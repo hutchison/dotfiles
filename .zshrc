@@ -63,14 +63,19 @@ if [[ -d "$HOME/.local/bin" ]]    ; then
 fi
 export PATH="$DEFAULTPATH:$HOMEBINPATH:$RUBYBINPATH"
 
+# Python stuff:
 export PYTHONIOENCODING=UTF-8
 
 # virtualenvwrapper stuff:
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 export VIRTUALENV_PYTHON=$VIRTUALENVWRAPPER_PYTHON
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/lemnos
-source $HOME/.local/bin/virtualenvwrapper.sh
+if [[ -f $HOME/.local/bin/virtualenvwrapper.sh ]]; then
+    source $HOME/.local/bin/virtualenvwrapper.sh
+else
+    >&2 echo "$HOME/.local/bin/virtualenvwrapper.sh nicht vorhanden"
+fi
 
 alias la='ls -AF'
 alias open='xdg-open'
