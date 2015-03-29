@@ -77,18 +77,20 @@ else
     >&2 echo "$HOME/.local/bin/virtualenvwrapper.sh nicht vorhanden"
 fi
 
-alias la='ls -AF'
-alias open='xdg-open'
+# Aliase und Funktionen:
+alias ls="ls --color=auto"
+alias la="ls -AF"
+
+alias bc='bc -l'
+
+if [[ -x $(which xdg-open) ]]; then
+    alias open='xdg-open'
+fi
 
 export EDITOR=vim
 alias e=$EDITOR
 alias se="sudoedit"
-if which vimpager >/dev/null 2>&1; then
-    export PAGER="vimpager"
-else
-    export PAGER="less"
-fi
-
+export PAGER="less"
 if [ "$COLORTERM" = "gnome-terminal" ]; then
     export TERM="xterm-256color"
 fi
