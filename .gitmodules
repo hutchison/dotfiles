@@ -74,3 +74,6 @@
 [submodule ".vim/bundle/vim-better-whitespace"]
 	path = .vim/bundle/vim-better-whitespace
 	url = git://github.com/ntpeters/vim-better-whitespace.git
+[submodule "powerline"]
+	path = powerline
+	url = https://github.com/powerline/powerline.git
