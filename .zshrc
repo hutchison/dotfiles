@@ -96,8 +96,6 @@ if [[ "$COLORTERM" == "gnome-terminal" ]]; then
     export TERM="xterm-256color"
 fi
 
-alias dimmer='redshift -l 54:12 -t 5700:3600 -m randr 2> /dev/null &'
-
 # connect via xfreerdp to uniapps.uni-rostock.de
 alias uniapps='xfreerdp --sec tls -d uni-rostock.de -u md261 -x b -g 95% uniapps.uni-rostock.de'
 
