@@ -97,7 +97,11 @@ if [[ "$COLORTERM" == "gnome-terminal" ]]; then
 fi
 
 # connect via xfreerdp to uniapps.uni-rostock.de
-alias uniapps='xfreerdp --sec tls -d uni-rostock.de -u md261 -x b -g 95% uniapps.uni-rostock.de'
+if [ $(which xfreerdp) ]; then
+    function uniapps () {
+        xfreerdp --sec tls -d uni-rostock.de -u "$1" -x b -g 95% uniapps.uni-rostock.de
+    }
+fi
 
 function learn_spam () {
     ssh uber 'for f in ~/users/martin/.Spam/cur/*; do echo -n "$(spamc -L spam -U ~/tmp/spamd.sock < $f) "; grep -h ^Subject: $f; done'
