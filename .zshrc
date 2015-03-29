@@ -13,6 +13,8 @@ if [[ -f $HOME/.dircolors ]]; then
 else
     >&2 echo "$HOME/.dircolors nicht vorhanden"
 fi
+
+# Bitte nicht piepen. Das nervt:
 unsetopt BEEP
 
 # Example aliases
