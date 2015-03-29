@@ -7,8 +7,10 @@ ZSH=$HOME/dotfiles/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="hutch"
 
+# Bitte nicht piepen. Das nervt:
+unsetopt BEEP
+
 # Example aliases
-alias zshconfig="$EDITOR ~/.zshrc"
 alias reload="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -27,46 +29,84 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
+# Zeilen mit einem # am Anfang werden als Kommentare interpretiert:
+INTERACTIVE_COMMENTS="true"
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew nyan)
+plugins=(git nyan django systemadmin gpg-agent)
+if [[ $OSTYPE == "darwin"* ]]; then
+    plugins=("${plugins[@]}" brew)
+elif [[ $OSTYPE == "linux-gnu" ]]; then
+    plugins=("${plugins[@]}" debian)
+else
+    >&2 echo "Kein Mac oder Linux. Wo bin ich?"
+fi
 
 source $ZSH/oh-my-zsh.sh
 
-# Customize to your needs...
+# Pfade:
+DEFAULTPATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+if [[ -d "$HOME/.gem/ruby/1.9.1/bin" ]]    ; then
+    RUBYBINPATH="$HOME/.gem/ruby/1.9.1/bin"
+fi
+if [[ -d "$HOME/.local/bin" ]]    ; then
+    HOMEBINPATH="$HOME/.local/bin"
+fi
+export PATH="$DEFAULTPATH:$HOMEBINPATH:$RUBYBINPATH"
 
-DEFAULTPATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
-PERLPATH="/usr/bin/vendor_perl:/usr/bin/core_perl"
-TEXPATH="/usr/texbin"
-HOMEBIN="$HOME/bin"
-COREUTILSPATH="/usr/local/opt/coreutils/libexec/gnubin"
-export PATH="$COREUTILSPATH:$DEFAULTPATH:$HOMEBIN:$PERLPATH:$TEXPATH"
-
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
+# Python stuff:
+export PYTHONIOENCODING=UTF-8
 
 # virtualenvwrapper stuff:
 export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 export VIRTUALENV_PYTHON=$VIRTUALENVWRAPPER_PYTHON
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/lemnos
-source $(which virtualenvwrapper.sh)
+if [[ -f $HOME/.local/bin/virtualenvwrapper.sh ]]; then
+    source $HOME/.local/bin/virtualenvwrapper.sh
+else
+    >&2 echo "$HOME/.local/bin/virtualenvwrapper.sh nicht vorhanden"
+fi
 
-eval $(dircolors $HOME/.dircolors)
+# Lade meine dircolors, sofern vorhanden:
+if [[ -f $HOME/.dircolors ]]; then
+    eval $(dircolors -b $HOME/.dircolors)
+else
+    >&2 echo "$HOME/.dircolors nicht vorhanden"
+fi
 
-alias ls='ls --color=auto'
-alias la='ls -AF'
+# Aliase und Funktionen:
+alias ls="ls --color=auto"
+alias la="ls -AF"
 
 alias bc='bc -l'
 
+if [[ -x $(which xdg-open) ]]; then
+    alias open='xdg-open'
+fi
+
 export EDITOR=vim
 alias e=$EDITOR
-export PAGER=less
+alias se="sudoedit"
+export PAGER="less"
 
-function man-preview() {
-  man -t "$@" | open -f -a Preview
-}
+if [[ "$COLORTERM" == "gnome-terminal" ]]; then
+    export TERM="xterm-256color"
+fi
+
+# connect via xfreerdp to uniapps.uni-rostock.de
+if [ $(which xfreerdp) ]; then
+    function uniapps () {
+        xfreerdp --sec tls -d uni-rostock.de -u "$1" -x b -g 95% uniapps.uni-rostock.de
+    }
+fi
 
 function learn_spam () {
-  ssh uber 'for f in ~/users/martin/.Spam/cur/*; do spamc -L spam -U ~/tmp/spamd.sock < $f; done'
+    ssh uber 'for f in ~/users/martin/.Spam/cur/*; do echo -n "$(spamc -L spam -U ~/tmp/spamd.sock < $f) "; grep -h ^Subject: $f; done'
+}
+
+function learn_ham () {
+    ssh uber 'for f in ~/users/martin/.Archive/cur/*; do echo -n "$(spamc -L ham -U ~/tmp/spamd.sock < $f) "; grep -h ^Subject: $f; done'
 }
