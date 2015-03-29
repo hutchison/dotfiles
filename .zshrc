@@ -54,7 +54,10 @@ fi
 if [[ -d "$HOME/.local/bin" ]]; then
     HOMEBINPATH="$HOME/.local/bin"
 fi
-export PATH="$DEFAULTPATH:$HOMEBINPATH:$RUBYBINPATH"
+if [[ -d "/usr/local/opt/coreutils/libexec/gnubin" ]]; then
+    HOMEBREWGNUBINPATH="/usr/local/opt/coreutils/libexec/gnubin"
+fi
+export PATH="$HOMEBREWGNUBINPATH:$DEFAULTPATH:$HOMEBINPATH:$RUBYBINPATH"
 
 # Python stuff:
 export PYTHONIOENCODING=UTF-8
