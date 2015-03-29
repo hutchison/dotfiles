@@ -18,7 +18,6 @@ fi
 unsetopt BEEP
 
 # Example aliases
-alias zshconfig="vim ~/.zshrc"
 alias reload="source ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
