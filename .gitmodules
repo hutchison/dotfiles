@@ -74,3 +74,6 @@
 [submodule "powerline"]
 	path = powerline
 	url = https://github.com/powerline/powerline.git
+[submodule ".vim/bundle/vimwiki"]
+	path = .vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki.git
