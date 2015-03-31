@@ -1,5 +1,7 @@
 call pathogen#infect()
 
+set rtp+=~/dotfiles/powerline/powerline/bindings/vim
+
 set nocompatible
 
 let mapleader=','
