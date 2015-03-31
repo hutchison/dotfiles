@@ -108,6 +108,10 @@ if [[ -f /etc/profile.d/phpversion.sh ]]; then
     source /etc/profile.d/phpversion.sh
 fi
 
+if [[ -f "$HOME/bin/composer.phar" ]]; then
+    alias composer='php ~/bin/composer.phar'
+fi
+
 export EDITOR=vim
 alias e=$EDITOR
 alias se="sudoedit"
