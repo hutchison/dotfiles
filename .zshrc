@@ -94,6 +94,11 @@ if [[ -x $(which xdg-open) ]]; then
     alias open='xdg-open'
 fi
 
+# generate new passwords:
+if [[ -x $(which pwgen) ]]; then
+    alias neuespw='pwgen -B 12 1'
+fi
+
 export EDITOR=vim
 alias e=$EDITOR
 alias se="sudoedit"
