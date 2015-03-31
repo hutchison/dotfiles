@@ -7,13 +7,6 @@ ZSH=$HOME/dotfiles/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="hutch"
 
-# Lade meine dircolors, sofern vorhanden:
-if [[ -f $HOME/.dircolors ]]; then
-    eval $(dircolors -b $HOME/.dircolors)
-else
-    >&2 echo "$HOME/.dircolors nicht vorhanden"
-fi
-
 # Bitte nicht piepen. Das nervt:
 unsetopt BEEP
 
@@ -75,6 +68,13 @@ if [[ -f $HOME/.local/bin/virtualenvwrapper.sh ]]; then
     source $HOME/.local/bin/virtualenvwrapper.sh
 else
     >&2 echo "$HOME/.local/bin/virtualenvwrapper.sh nicht vorhanden"
+fi
+
+# Lade meine dircolors, sofern vorhanden:
+if [[ -f $HOME/.dircolors ]]; then
+    eval $(dircolors -b $HOME/.dircolors)
+else
+    >&2 echo "$HOME/.dircolors nicht vorhanden"
 fi
 
 # Aliase und Funktionen:
