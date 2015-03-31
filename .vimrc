@@ -69,7 +69,6 @@ if &term == "xterm"
 endif
 
 if &term == "xterm-256color"
-    set background=dark
     colorscheme solarized
     call SetSolarizedBackground()
     if has("autocmd")
@@ -79,7 +78,6 @@ endif
 
 if has("gui_macvim") || has("gui_running")
     set guioptions=aeirL
-    set background=dark
     colorscheme solarized
     set autochdir
     call SetSolarizedBackground()
