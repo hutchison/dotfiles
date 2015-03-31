@@ -93,7 +93,7 @@ if has("gui_macvim")
 endif
 
 if has("gui_gtk2")
-    set guifont=Ubuntu\ Mono\ 11
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 endif
 
 " Powerline setup:
