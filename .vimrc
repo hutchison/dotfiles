@@ -161,12 +161,8 @@ noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 "latex:
 let g:tex_flavor='latex'
-map <leader>t <ESC>:!pdflatex %<CR><CR>
-map <leader>z <ESC>:!ps4pdf %<CR><CR>
-vmap <leader>b <ESC>`>a}<ESC>`<i\textbf{<ESC>f}
 
 "make:
-nmap <leader>m :make<CR>
 nmap <F5> :make<CR>
 
 "coole vsplit maps:
@@ -178,14 +174,7 @@ nmap <leader>+ <C-W>>
 nmap <leader>e <ESC>:bnext<CR>
 nmap <leader>q <ESC>:bprevious<CR>
 
-" window movement:
-nmap <M-h> <C-W>h
-nmap <M-l> <C-W>l
-nmap <M-j> <C-W>j
-nmap <M-k> <C-W>k
-
 "Datum einfügen
-nmap <leader>d "=strftime("%Y-%m-%d %H:%M")<CR>p
 imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
 imap <silent> <C-D><C-F> <C-R>=strftime("[%H:%M] ")<CR>
 
@@ -201,19 +190,3 @@ let g:vimwiki_listsyms = '✗○◐●✓'
 
 " NERDTree ein-/ausblenden:
 nmap <F9> :NERDTreeToggle<CR>
-
-" Opens BufExplorer:
-nmap <F4> :BufExplorer<CR>
-
-" wendet "git stripspace" auf den Buffer an:
-imap <F8> <ESC>:%!git stripspace<CR>
-map <F8> <ESC>:%!git stripspace<CR>
-
-" führt die aktuelle Datei aus
-nmap <leader>r :!./%<CR>
-
-" mittels CTRL + [hjkl] durch die Buffer springen:
-let g:miniBufExplMapWindowNavVim = 1
-
-" vimroom config:
-let g:vimroom_sidebar_height = 0
