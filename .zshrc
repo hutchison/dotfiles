@@ -103,6 +103,11 @@ if [[ -x $(which t) ]]; then
     alias tt='t d -s "30 days ago"'
 fi
 
+# um php in der Shell benutzen zu können:
+if [[ -f /etc/profile.d/phpversion.sh ]]; then
+    source /etc/profile.d/phpversion.sh
+fi
+
 export EDITOR=vim
 alias e=$EDITOR
 alias se="sudoedit"
