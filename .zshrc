@@ -86,6 +86,10 @@ alias la="ls -AF"
 
 alias bc='bc -l'
 
+if [[ -d "$HOME/Downloads/" ]]; then
+    alias mutt='cd "$HOME/Downloads" && mutt'
+fi
+
 if [[ -x $(which xdg-open) ]]; then
     alias open='xdg-open'
 fi
