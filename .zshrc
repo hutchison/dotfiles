@@ -67,10 +67,10 @@ export VIRTUALENVWRAPPER_PYTHON=$(which python3)
 export VIRTUALENV_PYTHON=$VIRTUALENVWRAPPER_PYTHON
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/lemnos
-if [[ -f $HOME/.local/bin/virtualenvwrapper.sh ]]; then
-    source $HOME/.local/bin/virtualenvwrapper.sh
+if [[ -x $(which virtualenvwrapper.sh) ]]; then
+    source $(which virtualenvwrapper.sh)
 else
-    >&2 echo "$HOME/.local/bin/virtualenvwrapper.sh nicht vorhanden"
+    >&2 echo "virtualenvwrapper.sh nicht vorhanden"
 fi
 
 # Lade meine dircolors, sofern vorhanden:
