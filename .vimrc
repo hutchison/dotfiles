@@ -61,11 +61,13 @@ endfunction
 " die richtige Farbwahl:
 colorscheme default
 set background=dark
+
 if &term == "xterm"
     set t_Co=256
     colorscheme wombat
     set background=light
 endif
+
 if &term == "xterm-256color"
     set background=dark
     colorscheme solarized
@@ -74,6 +76,7 @@ if &term == "xterm-256color"
         autocmd bufwritepost * call SetSolarizedBackground()
     endif
 endif
+
 if has("gui_macvim") || has("gui_running")
     set guioptions=aeirL
     set background=dark
@@ -84,9 +87,11 @@ if has("gui_macvim") || has("gui_running")
         autocmd bufwritepost * call SetSolarizedBackground()
     endif
 endif
+
 if has("gui_macvim")
     set guifont=Inconsolata:h16
 endif
+
 if has("gui_gtk2")
     set guifont=Ubuntu\ Mono\ 11
 endif
