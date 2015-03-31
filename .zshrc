@@ -100,7 +100,7 @@ if [[ "$COLORTERM" == "gnome-terminal" ]]; then
 fi
 
 # connect via xfreerdp to uniapps.uni-rostock.de
-if [ $(which xfreerdp) ]; then
+if [[ -x $(which xfreerdp) ]]; then
     function uniapps () {
         xfreerdp --sec tls -d uni-rostock.de -u "$1" -x b -g 95% uniapps.uni-rostock.de
     }
