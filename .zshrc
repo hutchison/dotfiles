@@ -99,6 +99,10 @@ if [[ -x $(which pwgen) ]]; then
     alias neuespw='pwgen -B 12 1'
 fi
 
+if [[ -x $(which t) ]]; then
+    alias tt='t d -s "30 days ago"'
+fi
+
 export EDITOR=vim
 alias e=$EDITOR
 alias se="sudoedit"
