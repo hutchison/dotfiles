@@ -116,12 +116,7 @@ set laststatus=2
 
 set nofoldenable
 
-set expandtab
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
 set linebreak
-set textwidth=80
 set autoindent smartindent
 set smarttab
 
