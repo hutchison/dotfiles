@@ -110,6 +110,7 @@ fi
 
 if [[ -f "$HOME/bin/composer.phar" ]]; then
     alias composer='php ~/bin/composer.phar'
+fi
 
 if [[ -x $(which timetrap) ]]; then
     alias tt='timetrap d -s "30 days ago"'
