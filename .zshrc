@@ -59,6 +59,9 @@ if [[ -d "/usr/local/opt/coreutils/libexec/gnubin" ]]; then
 fi
 export PATH="$HOMEBREWGNUBINPATH:$DEFAULTPATH:$HOMEBINPATH:$RUBYBINPATH"
 
+MANPATH="$MANPATH:$HOME/.local/share/man"
+export MANPATH
+
 # Python stuff:
 export PYTHONIOENCODING=UTF-8
 
