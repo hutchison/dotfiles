@@ -124,7 +124,7 @@ set autoindent smartindent
 set smarttab
 
 "schaltet hlsearch aus
-noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+noremap <silent> <return> :nohlsearch<Bar>:echo<CR>
 
 "latex:
 let g:tex_flavor='latex'
@@ -138,8 +138,8 @@ nmap <leader>- <C-W><
 nmap <leader>+ <C-W>>
 
 "buffer movement:
-nmap <leader>e <ESC>:bnext<CR>
-nmap <leader>q <ESC>:bprevious<CR>
+nnoremap <space> :bnext<CR>
+nnoremap <backspace> :bprevious<CR>
 
 "Datum einfügen
 imap <silent> <C-D><C-D> <C-R>=strftime("%Y-%m-%d %H:%M")<CR>
