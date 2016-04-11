@@ -64,6 +64,9 @@ endfunction
 colorscheme default
 set background=dark
 
+" clearing uses the current background color
+" (damit vim in tmux funktioniert)
+set t_ut=
 if &term == "xterm"
     set t_Co=256
     colorscheme wombat
