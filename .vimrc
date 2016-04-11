@@ -157,3 +157,14 @@ let g:vimwiki_listsyms = '✗○◐●✓'
 
 " NERDTree ein-/ausblenden:
 nmap <F9> :NERDTreeToggle<CR>
+
+function! FixEmail()
+	set tw=80
+	%!fmt -s -w 80
+	%s/\s\+$//e
+	%s/\(.*: .*\)$\n^$/\1/
+	%s/^$\n\{2,\}//e
+endfunction
+
+command Txml :%!tidy -q -i --show-errors 0 -xml -utf8
+command Thtml :%!tidy -q -i --show-errors 0 -utf8
