@@ -57,7 +57,7 @@ fi
 if [[ -d "/usr/local/opt/coreutils/libexec/gnubin" ]]; then
     HOMEBREWGNUBINPATH="/usr/local/opt/coreutils/libexec/gnubin"
 fi
-export PATH="$HOMEBREWGNUBINPATH:$DEFAULTPATH:$HOMEBINPATH:$RUBYBINPATH"
+export PATH="$HOMEBINPATH:$HOMEBREWGNUBINPATH:$DEFAULTPATH:$RUBYBINPATH"
 
 MANPATH="$MANPATH:$HOME/.local/share/man"
 export MANPATH
