@@ -31,6 +31,7 @@ DISABLE_AUTO_UPDATE="true"
 
 # Zeilen mit einem # am Anfang werden als Kommentare interpretiert:
 INTERACTIVE_COMMENTS="true"
+setopt interactivecomments
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
