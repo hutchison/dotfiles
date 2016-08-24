@@ -143,3 +143,12 @@ function learn_spam () {
 function learn_ham () {
     ssh uber 'for f in ~/users/martin/.Archive/cur/*; do echo -n "$(spamc -L ham -U ~/tmp/spamd.sock < $f) "; grep -h ^Subject: $f; done'
 }
+
+function mount_joerdis() {
+    TARGET="$HOME/joerdis"
+    if ! mountpoint -q "$TARGET"; then
+        sshfs md@joerdis:/home/md $TARGET
+    fi
+}
+
+mount_joerdis
