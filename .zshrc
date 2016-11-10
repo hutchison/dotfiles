@@ -49,8 +49,8 @@ source $ZSH/oh-my-zsh.sh
 
 # Pfade:
 DEFAULTPATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
-if [[ -d "$HOME/.gem/ruby/1.9.1/bin" ]]; then
-    RUBYBINPATH="$HOME/.gem/ruby/1.9.1/bin"
+if [[ -d "$HOME/.gem/ruby/2.3.0/bin" ]]; then
+    RUBYBINPATH="$HOME/.gem/ruby/2.3.0/bin"
 fi
 if [[ -d "$HOME/.local/bin" ]]; then
     HOMEBINPATH="$HOME/.local/bin"
