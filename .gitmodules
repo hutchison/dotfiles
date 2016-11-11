@@ -83,3 +83,6 @@
 [submodule "gnome-terminal-colors-solarized"]
 	path = gnome-terminal-colors-solarized
 	url = git@github.com:Anthony25/gnome-terminal-colors-solarized.git
+[submodule ".vim/bundle/vim-better-whitespace"]
+	path = .vim/bundle/vim-better-whitespace
+	url = https://github.com/ntpeters/vim-better-whitespace.git
