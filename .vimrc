@@ -159,12 +159,40 @@ let g:vimwiki_listsyms = '✗○◐●✓'
 nmap <F9> :NERDTreeToggle<CR>
 
 function! FixEmail()
+	" wir nehmen par für die Formatierung:
+	set formatprg=par\ -w80eq
+	" -w80		setzt die Textbreit auf 80
+	" -e		entfernt überflüssige Leerzeilen
+	" -q		versteht Zitate in E-Mails
+	set ft=mail
 	set tw=80
-	%!fmt -s -w 80
-	%s/\s\+$//e
-	%s/\(.*: .*\)$\n^$/\1/
-	%s/^$\n\{2,\}//e
+
+	" mittels vim-better-whitespace:
+	StripWhitespace
+
+	" zitiert die E-Mail von Anfang bis Ende:
+	normal /.
+	normal GI> 
+
+	" und nochmal:
+	StripWhitespace
+
+	" formatiert die E-Mail ab dem Betreff-Header:
+	" (dieser steht meist am Ende)
+	normal /Betreff:
+	normal j
+	normal /\w
+	normal VGgq
+
+	" Ersetzt die überlüssigen Leerzeilen
+	" am Anfang durch genau 2 Leerzeilen:
+	normal gg
+	normal V/./ek
+	normal c
+	normal gg
 endfunction
+
+nmap <F8> :call FixEmail()<CR>
 
 command Txml :%!tidy -q -i --show-errors 0 -xml -utf8
 command Thtml :%!tidy -q -i --show-errors 0 -utf8
