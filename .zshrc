@@ -150,5 +150,3 @@ function mount_joerdis() {
         sshfs md@joerdis:/home/md $TARGET
     fi
 }
-
-mount_joerdis
