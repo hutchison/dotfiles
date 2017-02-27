@@ -86,3 +86,6 @@
 [submodule ".vim/bundle/vim-better-whitespace"]
 	path = .vim/bundle/vim-better-whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace.git
+[submodule ".vim/bundle/vim-afterglow"]
+	path = .vim/bundle/vim-afterglow
+	url = https://github.com/danilo-augusto/vim-afterglow.git
