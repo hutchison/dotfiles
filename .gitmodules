@@ -89,3 +89,6 @@
 [submodule ".vim/bundle/vim-afterglow"]
 	path = .vim/bundle/vim-afterglow
 	url = https://github.com/danilo-augusto/vim-afterglow.git
+[submodule ".vim/vim-mediawiki-syntax"]
+	path = .vim/vim-mediawiki-syntax
+	url = https://github.com/chikamichi/mediawiki.vim.git
