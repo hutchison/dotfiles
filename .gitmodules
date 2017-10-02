@@ -92,3 +92,6 @@
 [submodule ".vim/vim-mediawiki-syntax"]
 	path = .vim/vim-mediawiki-syntax
 	url = https://github.com/chikamichi/mediawiki.vim.git
+[submodule ".vim/bundle/icalendar-syntax"]
+	path = .vim/bundle/icalendar-syntax
+	url = https://github.com/dannywillems/vim-icalendar.git
