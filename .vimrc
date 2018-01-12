@@ -158,6 +158,9 @@ nnoremap L f,a<CR><ESC>w
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 let g:vimwiki_listsyms = '✗○◐●✓'
 
+""" Syntastic
+let g:syntastic_python_checkers = ["flake8", "pyflakes"]
+
 " NERDTree ein-/ausblenden:
 nmap <F9> :NERDTreeToggle<CR>
 
