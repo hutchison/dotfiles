@@ -151,6 +151,9 @@ nmap <leader>f <C-]>
 " nächstes falsch geschriebenes Wort:
 nmap <leader>s ]s
 
+" springt zum nächsten Komma und setzt danach eine neue Zeile:
+nnoremap L f,a<CR><ESC>w
+
 " vimwiki config:
 let g:vimwiki_list = [{'path': '~/Dropbox/vimwiki/'}]
 let g:vimwiki_listsyms = '✗○◐●✓'
