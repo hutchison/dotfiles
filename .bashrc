@@ -95,7 +95,7 @@ alias vimrc='vim ~/.vimrc'
 alias py='python2.7'
 
 alias servieren='python -m http.server'
-alias neuespw='pwgen -B 12 1'
+alias neuespw='pwgen -B 20 1'
 
 # Alias for taskwarrior
 alias tw='task'
