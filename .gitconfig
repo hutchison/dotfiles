@@ -16,14 +16,15 @@
 	tool = vimdiff
 	summary = true
 [alias]
-	st = status -sb
-	ci = commit -v
+	ad = add
 	br = branch
+	ci = commit -v
 	co = checkout
 	df = diff
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
-	ad = add
-	unstage = reset HEAD
 	mff = merge --no-ff --log
+	re = remote -v
+	st = status -sb
+	unstage = reset HEAD
 [push]
 	default = matching
