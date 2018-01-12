@@ -104,7 +104,7 @@ fi
 
 # generate new passwords:
 if [[ -x $(which pwgen) ]]; then
-    alias neuespw='pwgen -B 12 1'
+    alias neuespw='pwgen -B 20 1'
 fi
 
 if [[ -x $(which t) ]]; then
