@@ -154,3 +154,21 @@ function mount_joerdis() {
         sshfs md@joerdis:/home/md $TARGET
     fi
 }
+
+if command_exists iconv ; then
+    function latin1_to_utf8 () {
+        filename=$(basename "$1")
+        extension="${filename##*.}"
+        filename="${filename%.*}"
+
+        iconv -f latin1 -t utf8 "$1" > "$filename"_utf8."$extension"
+    }
+
+    function utf8_to_latin1 () {
+        filename=$(basename "$1")
+        extension="${filename##*.}"
+        filename="${filename%.*}"
+
+        iconv -f utf8 -t latin1 "$1" > "$filename"_latin1."$extension"
+    }
+fi
