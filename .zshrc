@@ -47,6 +47,10 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
+function command_exists() {
+       command -v $1 > /dev/null 2>&1
+}
+
 # Pfade:
 DEFAULTPATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 if [[ -d "$HOME/.gem/ruby/2.3.0/bin" ]]; then
