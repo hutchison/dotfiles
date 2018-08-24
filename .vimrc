@@ -176,7 +176,7 @@ nmap <F8> :call FixEmail()<CR>
 
 function! FixXML()
 	set ft=xml
-	execute "%!tidy -q -i --show-errors 0 -xml -utf8"
+	execute "%!tidy -q -i --show-errors 1 -xml -utf8"
 	StripWhitespace
 endfunction
 
